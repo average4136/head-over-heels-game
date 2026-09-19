@@ -48,6 +48,12 @@ shape = SubResource("CapsuleShape2D_bl7gc")
 position = Vector2(0, -9)
 target_position = Vector2(0, 19)
 
+[node name="Camera2D" type="Camera2D" parent="Character physics (node2d)/Body" unique_id=1832002142]
+position = Vector2(-1, -218)
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_right = 0
+
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
 mass = 3.0
@@ -64,7 +70,3 @@ texture = ExtResource("2_nytcm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Head" unique_id=1748685107]
 position = Vector2(-4, -98)
 shape = SubResource("CircleShape2D_53v2a")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
-position = Vector2(-1, -218)
-zoom = Vector2(0.5, 0.5)

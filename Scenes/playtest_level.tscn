@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://5rgbom8l51lt"]
 
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_h3lg6"]
-[ext_resource type="Texture2D" uid="uid://18fofanlpi3m" path="res://Assets/Hannah's Drawn Assets/stone block.png" id="2_iabvn"]
+[ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="2_iabvn"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00yqa"]
 
 [node name="World" type="Node2D" unique_id=1389158044]
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
 position = Vector2(6, -3)
 
-[node name="StoneBlock" type="Sprite2D" parent="." unique_id=1405878330]
-position = Vector2(-675, 698)
-texture = ExtResource("2_iabvn")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1537513157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1565396655]
+shape = SubResource("WorldBoundaryShape2D_00yqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=755891392]
+position = Vector2(1.5000305, 212)
+scale = Vector2(2.482438, 1.2070707)
+texture = ExtResource("2_iabvn")
