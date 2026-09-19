@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dqyftoe55durm"]
+
+[ext_resource type="Texture2D" uid="uid://cjv8cierj1i4s" path="res://Assets/Hannah's Drawn Assets/ice block.png" id="1_cukdt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_00yqa"]
+friction = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa70v"]
+size = Vector2(51, 20)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1447629716]
+scale = Vector2(5, 5)
+physics_material_override = SubResource("PhysicsMaterial_00yqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=644094137]
+position = Vector2(15.5, 0)
+shape = SubResource("RectangleShape2D_fa70v")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1592349346]
+position = Vector2(-1.6391277e-06, 1.4901161e-07)
+scale = Vector2(0.055609755, 0.057692308)
+texture = ExtResource("1_cukdt")

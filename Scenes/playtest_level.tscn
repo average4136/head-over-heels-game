@@ -3,30 +3,77 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="1_h3lg6"]
 [ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="2_iabvn"]
 [ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="3_h3lg6"]
+[ext_resource type="Texture2D" uid="uid://cphuuhqlegouj" path="res://Assets/Hannah's Drawn Assets/cloud.png" id="4_82pr1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fa70v"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_17vin"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00yqa"]
 
 [node name="World" type="Node2D" unique_id=1389158044]
 
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
-position = Vector2(6, -3)
+[node name="left wall" type="StaticBody2D" parent="." unique_id=297116669]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1537513157]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left wall" unique_id=1616038031]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_fa70v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1565396655]
+[node name="right wall" type="StaticBody2D" parent="." unique_id=2064300796]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=349010929]
+shape = SubResource("WorldBoundaryShape2D_17vin")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1537513157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1565396655]
 shape = SubResource("WorldBoundaryShape2D_00yqa")
 
-[node name="GrassBlock3" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=685390045]
+[node name="GrassBlock3" type="Sprite2D" parent="Floor/CollisionShape2D" unique_id=685390045]
 position = Vector2(1153, 174)
 texture = ExtResource("2_iabvn")
 
-[node name="GrassBlock" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=467663871]
+[node name="GrassBlock" type="Sprite2D" parent="Floor/CollisionShape2D" unique_id=467663871]
 position = Vector2(-689, 175)
 texture = ExtResource("2_iabvn")
 
-[node name="GrassBlock2" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=364993220]
+[node name="GrassBlock2" type="Sprite2D" parent="Floor/CollisionShape2D" unique_id=364993220]
 position = Vector2(232, 173)
 texture = ExtResource("2_iabvn")
 
-[node name="Stone platform" parent="." unique_id=107939614 instance=ExtResource("3_h3lg6")]
-position = Vector2(205, -306)
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
+position = Vector2(6, -3)
+
+[node name="Start area" type="Node2D" parent="." unique_id=1905083718]
+
+[node name="Stone platform2" parent="Start area" unique_id=859276587 instance=ExtResource("3_h3lg6")]
+position = Vector2(240, -87)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform" parent="Start area" unique_id=2081943453 instance=ExtResource("3_h3lg6")]
+position = Vector2(466, -88)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cloud" type="Sprite2D" parent="." unique_id=354234418]
+position = Vector2(-651, -788)
+scale = Vector2(0.670205, 0.6756624)
+texture = ExtResource("4_82pr1")
+
+[node name="Stone platform2" parent="." unique_id=107939614 instance=ExtResource("3_h3lg6")]
+position = Vector2(696, -175)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform" parent="." unique_id=1020643056 instance=ExtResource("3_h3lg6")]
+position = Vector2(922, -176)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform3" parent="." unique_id=793650110 instance=ExtResource("3_h3lg6")]
+position = Vector2(696, -87)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform4" parent="." unique_id=1248862601 instance=ExtResource("3_h3lg6")]
+position = Vector2(922, -88)
+scale = Vector2(0.5, 0.5)
