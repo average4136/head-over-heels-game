@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://qni30skgklgv"]
+
+[ext_resource type="Texture2D" uid="uid://cxy7f5wwf50rr" path="res://Assets/Hannah's Drawn Assets/temp bg.png" id="1_5ad7v"]
+[ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="2_ohw5t"]
+[ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="3_er11t"]
+[ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="4_r7v20"]
+[ext_resource type="Texture2D" uid="uid://cjv8cierj1i4s" path="res://Assets/Hannah's Drawn Assets/ice block.png" id="5_j2i3t"]
+[ext_resource type="Texture2D" uid="uid://bittqe7wlf0o" path="res://Assets/Hannah's Drawn Assets/flower.png" id="6_fgrko"]
+
+[node name="TempBg" type="Sprite2D" unique_id=2059343350]
+position = Vector2(-1150.172, -1288)
+scale = Vector2(2.2578125, 2.2578125)
+texture = ExtResource("1_5ad7v")
+
+[node name="TempBg" type="Sprite2D" parent="." unique_id=172712956]
+position = Vector2(647.60565, -781.7301)
+scale = Vector2(4.132977, 3.3755407)
+texture = ExtResource("1_5ad7v")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1646305626]
+position = Vector2(-548, -23)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="NewHead" type="Sprite2D" parent="Node2D" unique_id=1848783051]
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("2_ohw5t")
+
+[node name="NewBody" type="Sprite2D" parent="Node2D" unique_id=847861546]
+position = Vector2(-20, 457.00006)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_er11t")
+
+[node name="GrassBlock" type="Sprite2D" parent="Node2D" unique_id=1708382387]
+position = Vector2(16, 967.0001)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("4_r7v20")
+
+[node name="GrassBlock2" type="Sprite2D" parent="Node2D" unique_id=79232452]
+position = Vector2(1002.00006, 955.0001)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("4_r7v20")
+
+[node name="IceBlock" type="Sprite2D" parent="Node2D" unique_id=1962937865]
+position = Vector2(2193.0002, 461.00006)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("5_j2i3t")
+
+[node name="IceBlock2" type="Sprite2D" parent="Node2D" unique_id=814135943]
+position = Vector2(3254.0005, -22)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("5_j2i3t")
+
+[node name="Flower" type="Sprite2D" parent="Node2D" unique_id=926302368]
+position = Vector2(-1658.7694, 703.0001)
+scale = Vector2(1.9230771, 1.9230771)
+texture = ExtResource("6_fgrko")
