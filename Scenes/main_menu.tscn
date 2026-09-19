@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dnpa2bicce1oq"]
+
+[ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_06t4h"]
+
+[node name="Main_Menu" type="Control" unique_id=435935605]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594007017]
+modulate = Color(0, 0.01666689, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.531
+offset_top = 3.0
+offset_bottom = 2.9119873
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=1122144363]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+action_mode = 0
+button_mask = 5
+text = "Start Game "
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=186436862]
+modulate = Color(0.89, 0.14833336, 0, 1)
+self_modulate = Color(1, 0, 0.016666412, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -299.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer2" unique_id=1857087957]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 100
+text = "Advanced Settings"
+alignment = 1
+
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_button_pressed"]
