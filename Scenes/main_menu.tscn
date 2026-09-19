@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnpa2bicce1oq"]
 
 [ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_48xlc"]
 
 [node name="Main_Menu" type="Control" unique_id=435935605]
 layout_mode = 3
@@ -25,6 +26,7 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="PanelContainer" unique_id=1122144363]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 50
 action_mode = 0
 button_mask = 5
@@ -46,6 +48,7 @@ grow_vertical = 0
 [node name="CheckButton" type="CheckButton" parent="PanelContainer2" unique_id=1857087957]
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 50
 text = " Settings"
 alignment = 1
@@ -59,6 +62,7 @@ offset_bottom = 518.0
 
 [node name="Button" type="Button" parent="PanelContainer3" unique_id=993245516]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 50
 button_mask = 5
 text = "Exit"

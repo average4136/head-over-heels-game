@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqvy7jbhvbvnl"]
 
 [ext_resource type="Script" uid="uid://d07x5gpbf5lgt" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_i44u3"]
 
 [node name="Settings" type="Control" unique_id=45946157]
 layout_mode = 3
@@ -35,7 +36,8 @@ offset_left = 34.0
 offset_top = -3.0
 offset_right = 264.0
 offset_bottom = 25.0
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_i44u3")
+theme_override_font_sizes/font_size = 40
 text = "Mute"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1642201258]
@@ -47,6 +49,7 @@ offset_bottom = 613.0
 
 [node name="Button" type="Button" parent="PanelContainer" unique_id=727804088]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i44u3")
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
