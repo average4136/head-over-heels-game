@@ -1,49 +1,82 @@
 [gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
 
-[ext_resource type="Script" uid="uid://nflbu3wklwh4" path="res://Scripts/character.gd" id="1_owm7s"]
+[ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_owm7s"]
 [ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
 [ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_ejsiy"]
+[ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
+[ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="5_ejsiy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5r6hy"]
-radius = 12.0
-height = 50.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53v2a"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bl7gc"]
+radius = 22.0
+height = 82.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bl7gc"]
-radius = 98.19178
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bl7gc"]
 
-[node name="Character" type="CharacterBody2D" unique_id=1994425259]
+[sub_resource type="CircleShape2D" id="CircleShape2D_53v2a"]
+radius = 43.011627
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_53v2a"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53v2a"]
+distance = -41.0
+
+[node name="character" type="Node2D" unique_id=1796156875]
+
+[node name="Body" type="RigidBody2D" parent="." unique_id=447719997]
+mass = 1.5
+physics_material_override = SubResource("PhysicsMaterial_5r6hy")
+lock_rotation = true
+linear_damp = 2.0
+angular_damp = 5.0
 script = ExtResource("1_owm7s")
 
-[node name="CharacterCollision" type="CollisionShape2D" parent="." unique_id=1132989001]
-position = Vector2(0, 5)
-shape = SubResource("CapsuleShape2D_5r6hy")
-
-[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=2015889549]
-node_a = NodePath("../HeadSprite/Head")
-node_b = NodePath("../Body")
-
-[node name="BodySprite" type="Sprite2D" parent="." unique_id=31486428]
-position = Vector2(2.1645474, 12.124998)
-scale = Vector2(0.17871092, 0.17871092)
+[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=1146294933]
+position = Vector2(5, -54)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_ejsiy")
 
-[node name="Body" type="RigidBody2D" parent="." unique_id=1826728095]
-position = Vector2(0, 9.536743e-07)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=375401037]
+position = Vector2(1, -49)
+shape = SubResource("CapsuleShape2D_bl7gc")
 
-[node name="BodyCollision" type="CollisionShape2D" parent="Body" unique_id=10208387]
-position = Vector2(1, 14)
-shape = SubResource("CapsuleShape2D_53v2a")
+[node name="Head" type="RigidBody2D" parent="." unique_id=1180459420]
+position = Vector2(4, -59)
+mass = 2.5
+physics_material_override = SubResource("PhysicsMaterial_bl7gc")
+gravity_scale = 1.5
+linear_damp = 1.0
+angular_damp = 1.5
+script = ExtResource("3_nytcm")
 
-[node name="HeadSprite" type="Sprite2D" parent="." unique_id=442699097]
-position = Vector2(1, -4)
-scale = Vector2(0.14257813, 0.14257813)
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=152879513]
+position = Vector2(-1, -91)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_nytcm")
 
-[node name="Head" type="RigidBody2D" parent="HeadSprite" unique_id=552306758]
-position = Vector2(0, -25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1748685107]
+position = Vector2(-4, -98)
+shape = SubResource("CircleShape2D_53v2a")
 
-[node name="HeadCollision" type="CollisionShape2D" parent="HeadSprite/Head" unique_id=800234570]
-position = Vector2(-7.013699, 10.972603)
-shape = SubResource("CircleShape2D_bl7gc")
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=482596865]
+position = Vector2(2, -111)
+node_a = NodePath("../Body")
+node_b = NodePath("../Head")
+angular_limit_enabled = true
+angular_limit_lower = -1.5707964
+angular_limit_upper = 1.5707964
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
+position = Vector2(-1, -218)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1517356905]
+physics_material_override = SubResource("PhysicsMaterial_53v2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1984839801]
+shape = SubResource("WorldBoundaryShape2D_53v2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=860695602]
+position = Vector2(390.99988, 174)
+scale = Vector2(7.929687, 1)
+texture = ExtResource("5_ejsiy")

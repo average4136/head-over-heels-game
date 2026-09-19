@@ -1,11 +1,16 @@
 extends RigidBody2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Nothing yet!
+#
+# Because this node is already a RigidBody2D,
+# Godot is naturally handling things like:
+#
+# - gravity
+# - momentum
+# - collisions
+#
+# The PinJoint2D connects this body to our torso.
+#
+# We're going to get the NATURAL physics feeling good
+# before adding fake physics.
