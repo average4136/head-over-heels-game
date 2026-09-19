@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ciivhu14qujp7" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cvdhpb86ydlrh" path="res://Scenes/head.tscn" id="3_wrm1d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5r6hy"]
 distance = -10.0
@@ -22,3 +23,13 @@ shape = SubResource("WorldBoundaryShape2D_5r6hy")
 position = Vector2(-402.5, 82)
 scale = Vector2(6.263672, 0.546875)
 texture = ExtResource("2_qxrlw")
+
+[node name="Head" parent="." unique_id=1858516502 instance=ExtResource("3_wrm1d")]
+position = Vector2(3, -251)
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=1649503852]
+position = Vector2(0, -169)
+node_a = NodePath("../Player")
+node_b = NodePath("../Head")
+length = 4.0
+stiffness = 64.0

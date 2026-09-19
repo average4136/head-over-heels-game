@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cvdhpb86ydlrh"]
+
+[ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="1_8w53r"]
+[ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="1_dnf71"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_53v2a"]
+radius = 100.005
+
+[node name="Head" type="RigidBody2D" unique_id=1858516502]
+gravity_scale = -1.621
+script = ExtResource("1_dnf71")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=278416466]
+texture = ExtResource("1_8w53r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125934209]
+position = Vector2(-6, -12)
+shape = SubResource("CircleShape2D_53v2a")

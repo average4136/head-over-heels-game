@@ -7,7 +7,7 @@
 radius = 52.0
 height = 174.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2079875564]
+[node name="Player" type="CharacterBody2D" unique_id=1582449643]
 script = ExtResource("1_cvnsp")
 
 [node name="Body" type="Sprite2D" parent="." unique_id=1807789250]
