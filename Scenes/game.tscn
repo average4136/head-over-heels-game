@@ -28,8 +28,9 @@ texture = ExtResource("2_qxrlw")
 position = Vector2(3, -251)
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=1649503852]
-position = Vector2(0, -169)
+position = Vector2(2, -164)
 node_a = NodePath("../Player")
 node_b = NodePath("../Head")
-length = 4.0
+length = 2.0
 stiffness = 64.0
+damping = 16.0

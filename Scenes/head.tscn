@@ -7,7 +7,7 @@
 radius = 100.005
 
 [node name="Head" type="RigidBody2D" unique_id=1858516502]
-gravity_scale = -1.621
+constant_force = Vector2(0, 100)
 script = ExtResource("1_dnf71")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=278416466]
