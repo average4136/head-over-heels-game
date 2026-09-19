@@ -1,7 +1,8 @@
 extends RigidBody2D
 
+@export var max_speed: float = 300.0
 @export var move_force: float = 15000.0
-@export var jump_force: float = 800.0
+@export var jump_force: float = 1600.0
 
 func _physics_process(_delta: float) -> void:
 	var input_direction := Input.get_axis(
@@ -19,6 +20,9 @@ func _physics_process(_delta: float) -> void:
 		)
 
 		apply_central_force(movement_force)
+		
+		if abs(linear_velocity.x) > max_speed:
+			linear_velocity.x = sign(linear_velocity.x) * max_speed
 
 	# Small controlled jump
 	if Input.is_action_just_pressed("jump"):

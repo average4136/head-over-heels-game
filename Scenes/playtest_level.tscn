@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5rgbom8l51lt"]
 
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="1_82pr1"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_h3lg6"]
 [ext_resource type="Texture2D" uid="uid://cy5t0md2i7mgu" path="res://Assets/girl.png" id="2_kptn1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_17vin"]
@@ -16,6 +17,9 @@ size = Vector2(1152, 20)
 size = Vector2(123, 28)
 
 [node name="playtest level" type="Node2D" unique_id=289128594]
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
+position = Vector2(323, 626)
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=1150920871]
 physics_material_override = SubResource("PhysicsMaterial_17vin")
