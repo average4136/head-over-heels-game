@@ -81,6 +81,6 @@ physics_material_override = SubResource("PhysicsMaterial_53v2a")
 shape = SubResource("WorldBoundaryShape2D_53v2a")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=860695602]
-position = Vector2(390.99988, 174)
+position = Vector2(380.00003, 176)
 scale = Vector2(7.929687, 1)
 texture = ExtResource("5_ejsiy")

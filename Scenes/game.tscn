@@ -1,29 +1,25 @@
 [gd_scene format=3 uid="uid://wovadvlseaw3"]
 
-[ext_resource type="PackedScene" uid="uid://ciivhu14qujp7" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scenes/panel.gd" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
-[ext_resource type="PackedScene" uid="uid://cvdhpb86ydlrh" path="res://Scenes/head.tscn" id="3_wrm1d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5r6hy"]
 distance = -10.0
 
 [node name="Game" type="Node2D" unique_id=186248331]
 
-[node name="Player" parent="." unique_id=2079875564 instance=ExtResource("1_ebmjs")]
-position = Vector2(1, -2)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=121040221]
+position = Vector2(9, -131)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=121040221]
-position = Vector2(8, -129)
-
-[node name="Panel" type="Panel" parent="Player/Camera2D" unique_id=967056252]
+[node name="Panel" type="Panel" parent="Camera2D" unique_id=967056252]
 offset_left = 341.0
 offset_top = -323.0
 offset_right = 574.0
 offset_bottom = -262.0
 script = ExtResource("2_3dryh")
+metadata/_edit_use_anchors_ = true
 
-[node name="seconds" type="Label" parent="Player/Camera2D/Panel" unique_id=1201956335]
+[node name="seconds" type="Label" parent="Camera2D/Panel" unique_id=1201956335]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.34800002
@@ -38,8 +34,9 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "00:"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="mseconds" type="Label" parent="Player/Camera2D/Panel" unique_id=1666684731]
+[node name="mseconds" type="Label" parent="Camera2D/Panel" unique_id=1666684731]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.66400003
@@ -53,8 +50,9 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "000"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="minutes" type="Label" parent="Player/Camera2D/Panel" unique_id=1405314877]
+[node name="minutes" type="Label" parent="Camera2D/Panel" unique_id=1405314877]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.305
@@ -67,6 +65,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "00:"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TestGround" type="StaticBody2D" parent="." unique_id=220009935]
 
@@ -77,14 +76,3 @@ shape = SubResource("WorldBoundaryShape2D_5r6hy")
 position = Vector2(-402.00003, 83)
 scale = Vector2(6.263672, 0.546875)
 texture = ExtResource("2_qxrlw")
-
-[node name="Head" parent="." unique_id=1858516502 instance=ExtResource("3_wrm1d")]
-position = Vector2(3, -251)
-
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=1649503852]
-position = Vector2(2, -164)
-node_a = NodePath("../Player")
-node_b = NodePath("../Head")
-length = 2.0
-stiffness = 64.0
-damping = 16.0

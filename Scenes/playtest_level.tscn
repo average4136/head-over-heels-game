@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="1_82pr1"]
 [ext_resource type="Texture2D" uid="uid://cy5t0md2i7mgu" path="res://Assets/girl.png" id="2_kptn1"]
-[ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_fhco1"]
-[ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="4_pfjso"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_17vin"]
 
@@ -65,16 +63,6 @@ texture = ExtResource("1_82pr1")
 position = Vector2(959, 239)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_kptn1")
-
-[node name="Body" type="Sprite2D" parent="." unique_id=1381131617]
-position = Vector2(348.25, 598)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_fhco1")
-
-[node name="Head" type="Sprite2D" parent="." unique_id=1797837084]
-position = Vector2(348.125, 568)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_pfjso")
 
 [node name="Platform0" type="StaticBody2D" parent="." unique_id=394226471]
 position = Vector2(488, 552)
