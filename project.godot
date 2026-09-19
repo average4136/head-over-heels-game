@@ -11,17 +11,14 @@ config_version=5
 [application]
 
 config/name="head-over-heels-game"
-run/main_scene="uid://dnpa2bicce1oq"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-<<<<<<< Updated upstream
 DialogueManager="*uid://cwqd6oecf5ejj"
-=======
 Leaderboard="*uid://dyxg2d0ul3han"
->>>>>>> Stashed changes
 
 [display]
 
