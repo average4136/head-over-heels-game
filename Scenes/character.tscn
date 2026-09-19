@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
 [ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_ejsiy"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
-[ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="5_ejsiy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
 
@@ -17,12 +16,8 @@ height = 82.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_53v2a"]
 radius = 43.011627
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_53v2a"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53v2a"]
-distance = -41.0
-
-[node name="character" type="Node2D" unique_id=1796156875]
+[node name="Guy" type="Node2D" unique_id=1796156875]
+scale = Vector2(0.25, 0.25)
 
 [node name="Body" type="RigidBody2D" parent="." unique_id=447719997]
 physics_material_override = SubResource("PhysicsMaterial_5r6hy")
@@ -73,14 +68,3 @@ angular_limit_upper = 1.2217305
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
 position = Vector2(-1, -218)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1517356905]
-physics_material_override = SubResource("PhysicsMaterial_53v2a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1984839801]
-shape = SubResource("WorldBoundaryShape2D_53v2a")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=860695602]
-position = Vector2(380.00003, 176)
-scale = Vector2(7.929687, 1)
-texture = ExtResource("5_ejsiy")
