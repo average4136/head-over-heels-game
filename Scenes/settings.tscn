@@ -16,6 +16,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -30,10 +31,24 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/mute" unique_id=1905703565]
 layout_mode = 0
-offset_left = 28.0
-offset_right = 258.0
-offset_bottom = 23.0
+offset_left = 34.0
+offset_top = -3.0
+offset_right = 264.0
+offset_bottom = 25.0
 theme_override_font_sizes/font_size = 20
 text = "Mute"
 
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1642201258]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 546.0
+offset_right = 687.0
+offset_bottom = 613.0
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=727804088]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_back_button_pressed"]

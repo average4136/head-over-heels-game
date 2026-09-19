@@ -7,6 +7,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -680.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
@@ -14,16 +15,17 @@ script = ExtResource("1_28flt")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594007017]
 modulate = Color(0, 0.01666689, 1, 1)
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.531
-offset_top = 3.0
-offset_bottom = 2.9119873
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -38.5
+offset_right = 294.0
+offset_bottom = 38.5
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="PanelContainer" unique_id=1122144363]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 50
 action_mode = 0
 button_mask = 5
 text = "Start Game "
@@ -32,20 +34,35 @@ text = "Start Game "
 modulate = Color(0.89, 0.14833336, 0, 1)
 self_modulate = Color(1, 0, 0.016666412, 1)
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -299.0
-grow_horizontal = 2
+anchors_preset = -1
+anchor_top = 0.56200004
+anchor_right = 1.0400001
+anchor_bottom = 0.68100005
+offset_top = -0.17602539
+offset_right = -195.88004
+offset_bottom = -0.2880249
 grow_vertical = 0
 
 [node name="CheckButton" type="CheckButton" parent="PanelContainer2" unique_id=1857087957]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 100
-text = "Advanced Settings"
+theme_override_font_sizes/font_size = 50
+text = " Settings"
 alignment = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="." unique_id=1398797098]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 438.0
+offset_right = 296.0
+offset_bottom = 518.0
+
+[node name="Button" type="Button" parent="PanelContainer3" unique_id=993245516]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+button_mask = 5
+text = "Exit"
 
 [connection signal="pressed" from="PanelContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="PanelContainer2/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="PanelContainer3/Button" to="." method="_on_button_exit_pressed"]
