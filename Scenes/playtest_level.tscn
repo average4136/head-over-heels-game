@@ -77,7 +77,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_pfjso")
 
 [node name="Platform0" type="StaticBody2D" parent="." unique_id=394226471]
-position = Vector2(469, 548)
+position = Vector2(488, 552)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform0" unique_id=1732347244]
 position = Vector2(11, 1)
@@ -89,7 +89,7 @@ scale = Vector2(0.23974608, 0.109374985)
 texture = ExtResource("1_82pr1")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=713922939]
-position = Vector2(633, 471)
+position = Vector2(661, 468)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=119286355]
 shape = SubResource("RectangleShape2D_00yqa")
@@ -112,7 +112,7 @@ scale = Vector2(0.23974608, 0.109374985)
 texture = ExtResource("1_82pr1")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1963855058]
-position = Vector2(806, 383)
+position = Vector2(800, 386)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=98197431]
 position = Vector2(0, 3)
