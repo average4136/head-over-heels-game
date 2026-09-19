@@ -17,7 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< Updated upstream
 DialogueManager="*uid://cwqd6oecf5ejj"
+=======
+Leaderboard="*uid://dyxg2d0ul3han"
+>>>>>>> Stashed changes
 
 [display]
 

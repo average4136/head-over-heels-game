@@ -2,22 +2,10 @@
 
 [ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_48xlc"]
-[ext_resource type="Script" uid="uid://dyxg2d0ul3han" path="res://Scenes/leaderboard_container.gd" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://dyxg2d0ul3han" path="res://Scenes/Leaderboard.gd" id="3_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://cdwckcet2rg5j" path="res://Assets/DownBad_Logo_V0.5.png" id="4_ce3w2"]
 
 [sub_resource type="GDScript" id="GDScript_ce3w2"]
-script/source = "extends VBoxContainer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [node name="Main_Menu" type="Control" unique_id=435935605]
 layout_mode = 3
@@ -26,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 2.0
-offset_right = -655.0
+offset_right = -654.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -99,7 +87,7 @@ anchor_bottom = 0.44000003
 offset_left = 846.0
 offset_right = 777.27795
 offset_bottom = 3.8799744
-script = ExtResource("3_1ehe0")
+script = ExtResource("3_ce3w2")
 
 [node name="NamesContainer" type="VBoxContainer" parent="LeaderboardContainer" unique_id=320594901]
 custom_maximum_size = Vector2(350, 300)
