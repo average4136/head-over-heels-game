@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
+[gd_scene format=3 uid="uid://f35fieba5uhg"]
 
 [ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_owm7s"]
 [ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
@@ -9,7 +9,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bl7gc"]
 radius = 22.0
-height = 48.0
+height = 82.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bl7gc"]
 
@@ -17,10 +17,48 @@ height = 48.0
 radius = 43.011627
 
 [node name="Guy" type="Node2D" unique_id=1796156875]
+scale = Vector2(0.25, 0.25)
 
-[node name="Character physics (node2d)" type="Node2D" parent="." unique_id=1374272924]
+[node name="Body" type="RigidBody2D" parent="." unique_id=447719997]
+physics_material_override = SubResource("PhysicsMaterial_5r6hy")
+gravity_scale = 0.5
+lock_rotation = true
+linear_damp = 2.0
+angular_damp = 5.0
+script = ExtResource("1_owm7s")
 
-[node name="PinJoint2D" type="PinJoint2D" parent="Character physics (node2d)" unique_id=482596865]
+[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=1146294933]
+position = Vector2(5, -54)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ejsiy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=375401037]
+position = Vector2(1, -49)
+shape = SubResource("CapsuleShape2D_bl7gc")
+
+[node name="GroundRay" type="RayCast2D" parent="Body" unique_id=157841590]
+position = Vector2(0, -9)
+target_position = Vector2(0, 19)
+
+[node name="Head" type="RigidBody2D" parent="." unique_id=1180459420]
+position = Vector2(4, -59)
+mass = 4.5
+physics_material_override = SubResource("PhysicsMaterial_bl7gc")
+gravity_scale = 1.5
+linear_damp = 0.2
+angular_damp = 0.2
+script = ExtResource("3_nytcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=152879513]
+position = Vector2(-1, -91)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nytcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1748685107]
+position = Vector2(-4, -98)
+shape = SubResource("CircleShape2D_53v2a")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=482596865]
 position = Vector2(2, -111)
 node_a = NodePath("../Body")
 node_b = NodePath("../Head")
@@ -28,43 +66,5 @@ angular_limit_enabled = true
 angular_limit_lower = -1.2217305
 angular_limit_upper = 1.2217305
 
-[node name="Body" type="RigidBody2D" parent="Character physics (node2d)" unique_id=447719997]
-physics_material_override = SubResource("PhysicsMaterial_5r6hy")
-lock_rotation = true
-linear_damp = 2.0
-angular_damp = 5.0
-script = ExtResource("1_owm7s")
-
-[node name="Sprite2D" type="Sprite2D" parent="Character physics (node2d)/Body" unique_id=1146294933]
-position = Vector2(5, -54)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ejsiy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Body" unique_id=375401037]
-position = Vector2(0, -31)
-shape = SubResource("CapsuleShape2D_bl7gc")
-
-[node name="GroundRay" type="RayCast2D" parent="Character physics (node2d)/Body" unique_id=157841590]
-position = Vector2(0, -9)
-target_position = Vector2(0, 19)
-
-[node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
-position = Vector2(4, -59)
-mass = 3.0
-physics_material_override = SubResource("PhysicsMaterial_bl7gc")
-linear_damp = 0.2
-angular_damp = 0.2
-script = ExtResource("3_nytcm")
-
-[node name="Sprite2D" type="Sprite2D" parent="Character physics (node2d)/Head" unique_id=152879513]
-position = Vector2(-2, -92)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_nytcm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Head" unique_id=1748685107]
-position = Vector2(-4, -98)
-shape = SubResource("CircleShape2D_53v2a")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
 position = Vector2(-1, -218)
-zoom = Vector2(0.5, 0.5)
