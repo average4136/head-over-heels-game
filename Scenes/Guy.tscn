@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
 [ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_ejsiy"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
-[ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="5_an1sd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
 
@@ -16,8 +15,6 @@ height = 48.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_53v2a"]
 radius = 43.011627
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00yqa"]
 
 [node name="Guy" type="Node2D" unique_id=1796156875]
 
@@ -33,7 +30,6 @@ angular_limit_upper = 1.2217305
 
 [node name="Body" type="RigidBody2D" parent="Character physics (node2d)" unique_id=447719997]
 physics_material_override = SubResource("PhysicsMaterial_5r6hy")
-gravity_scale = 0.5
 lock_rotation = true
 linear_damp = 2.0
 angular_damp = 5.0
@@ -54,14 +50,14 @@ target_position = Vector2(0, 19)
 
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
-mass = 2.0
+mass = 3.0
 physics_material_override = SubResource("PhysicsMaterial_bl7gc")
 linear_damp = 0.2
 angular_damp = 0.2
 script = ExtResource("3_nytcm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Character physics (node2d)/Head" unique_id=152879513]
-position = Vector2(-1, -91)
+position = Vector2(-2, -92)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_nytcm")
 
@@ -71,13 +67,4 @@ shape = SubResource("CircleShape2D_53v2a")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
 position = Vector2(-1, -218)
-
-[node name="test ground" type="StaticBody2D" parent="." unique_id=1770531167]
-
-[node name="test ground shape" type="CollisionShape2D" parent="test ground" unique_id=1392299464]
-shape = SubResource("WorldBoundaryShape2D_00yqa")
-
-[node name="test ground sprite" type="Sprite2D" parent="test ground/test ground shape" unique_id=715654776]
-position = Vector2(-49.000015, 126)
-scale = Vector2(2.5429688, 1)
-texture = ExtResource("5_an1sd")
+zoom = Vector2(0.5, 0.5)
