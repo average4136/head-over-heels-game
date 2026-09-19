@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnpa2bicce1oq"]
 
-[ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_28flt"]
 
 [node name="Main_Menu" type="Control" unique_id=435935605]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06t4h")
+script = ExtResource("1_28flt")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594007017]
 modulate = Color(0, 0.01666689, 1, 1)
@@ -48,3 +48,4 @@ text = "Advanced Settings"
 alignment = 1
 
 [connection signal="pressed" from="PanelContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer2/CheckButton" to="." method="_on_check_button_pressed"]
