@@ -54,3 +54,8 @@ texture = ExtResource("5_j2i3t")
 position = Vector2(-1658.7694, 703.0001)
 scale = Vector2(1.9230771, 1.9230771)
 texture = ExtResource("6_fgrko")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=307743506]
+position = Vector2(-352.47748, -97.882355)
+scale = Vector2(-35803.02, 748.25464)
+zoom = Vector2(0.1, 0.1)
