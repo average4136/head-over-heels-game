@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://br5q2akebk30i" path="res://Main_Menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_48xlc"]
 [ext_resource type="Script" uid="uid://dyxg2d0ul3han" path="res://Scenes/leaderboard_container.gd" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://cdwckcet2rg5j" path="res://Assets/DownBad_Logo_V0.5.png" id="4_ce3w2"]
 
 [sub_resource type="GDScript" id="GDScript_ce3w2"]
 script/source = "extends VBoxContainer
@@ -23,20 +24,24 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -680.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = -655.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
 
 [node name="StartContainer" type="PanelContainer" parent="." unique_id=1594007017]
-modulate = Color(0, 0.01666689, 1, 1)
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -38.5
-offset_right = 294.0
-offset_bottom = 38.5
+anchors_preset = -1
+anchor_top = 0.44200003
+anchor_right = 0.623
+anchor_bottom = 0.558
+offset_left = 429.0
+offset_top = 112.51199
+offset_right = 428.861
+offset_bottom = 114.415985
 grow_vertical = 2
 
 [node name="Startbutton" type="Button" parent="StartContainer" unique_id=1122144363]
@@ -48,16 +53,15 @@ button_mask = 5
 text = "Start Game "
 
 [node name="Settingscontainer" type="PanelContainer" parent="." unique_id=186436862]
-modulate = Color(0.89, 0.14833336, 0, 1)
-self_modulate = Color(1, 0, 0.016666412, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.56200004
 anchor_right = 1.0400001
 anchor_bottom = 0.68100005
-offset_top = -0.17602539
-offset_right = -195.88004
-offset_bottom = -0.2880249
+offset_left = 429.0
+offset_top = 112.25198
+offset_right = 223.27997
+offset_bottom = 112.13995
 grow_vertical = 0
 
 [node name="Settings button" type="CheckButton" parent="Settingscontainer" unique_id=1857087957]
@@ -65,7 +69,7 @@ layout_mode = 2
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 50
-text = " Settings"
+text = " Settings "
 alignment = 1
 
 [node name="Exitcontainer" type="PanelContainer" parent="." unique_id=1398797098]
@@ -75,10 +79,10 @@ anchor_left = 0.002
 anchor_top = 0.44200003
 anchor_right = 0.62700003
 anchor_bottom = 0.799
-offset_left = 0.055999935
-offset_top = 151.58398
-offset_right = 0.05596924
-offset_bottom = 0.24798584
+offset_left = 427.014
+offset_top = 270.512
+offset_right = 426.88898
+offset_bottom = 112.675964
 
 [node name="ExitButton" type="Button" parent="Exitcontainer" unique_id=993245516]
 layout_mode = 2
@@ -92,10 +96,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.754
 anchor_bottom = 0.44000003
-offset_left = 1.0
-offset_top = -4.0
-offset_right = 0.11199951
-offset_bottom = -0.120025635
+offset_left = 846.0
+offset_right = 777.27795
+offset_bottom = 3.8799744
 script = ExtResource("3_1ehe0")
 
 [node name="NamesContainer" type="VBoxContainer" parent="LeaderboardContainer" unique_id=320594901]
@@ -127,9 +130,11 @@ size_flags_stretch_ratio = 0.7
 
 [node name="Label" type="Label" parent="LeaderboardContainer/NamesContainer/First" unique_id=1624519842]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = -0.279
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -0.0029993057
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -186,6 +191,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=90277366]
+
+[node name="DownBadLogoV0_5" type="Sprite2D" parent="." unique_id=285365223]
+position = Vector2(374, 252.00003)
+rotation = -0.29147
+scale = Vector2(0.39321485, 0.309733)
+texture = ExtResource("4_ce3w2")
 
 [connection signal="pressed" from="StartContainer/Startbutton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Settingscontainer/Settings button" to="." method="_on_check_button_pressed"]
