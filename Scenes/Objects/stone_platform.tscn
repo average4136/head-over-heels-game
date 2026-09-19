@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bqg68mukgpldk"]
+
+[ext_resource type="Texture2D" uid="uid://18fofanlpi3m" path="res://Assets/Hannah's Drawn Assets/stone block.png" id="1_m3v05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00yqa"]
+size = Vector2(460.52563, 176)
+
+[node name="Stone platform" type="StaticBody2D" unique_id=107939614]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=718035827]
+position = Vector2(224.02563, 82.928345)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_m3v05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=13148116]
+position = Vector2(220.26282, 88.6189)
+shape = SubResource("RectangleShape2D_00yqa")
