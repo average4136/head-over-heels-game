@@ -15,6 +15,10 @@ run/main_scene="uid://dnpa2bicce1oq"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*uid://cwqd6oecf5ejj"
+
 [display]
 
 window/subwindows/embed_subwindows=false
