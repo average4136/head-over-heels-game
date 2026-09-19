@@ -1,16 +1,49 @@
 [gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
 
-[ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="1_isa4f"]
-[ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_syf7y"]
+[ext_resource type="Script" uid="uid://nflbu3wklwh4" path="res://Scripts/character.gd" id="1_owm7s"]
+[ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
+[ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_ejsiy"]
 
-[node name="Node2D" type="Node2D" unique_id=1952535700]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5r6hy"]
+radius = 12.0
+height = 50.0
 
-[node name="Body" type="Sprite2D" parent="." unique_id=1830541882]
-position = Vector2(172.75, 354)
-scale = Vector2(0.9264151, 1)
-texture = ExtResource("1_isa4f")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53v2a"]
 
-[node name="Head" type="Sprite2D" parent="." unique_id=1743323157]
-position = Vector2(173.75, 232)
-scale = Vector2(0.93018866, 0.8828125)
-texture = ExtResource("2_syf7y")
+[sub_resource type="CircleShape2D" id="CircleShape2D_bl7gc"]
+radius = 98.19178
+
+[node name="Character" type="CharacterBody2D" unique_id=1994425259]
+script = ExtResource("1_owm7s")
+
+[node name="CharacterCollision" type="CollisionShape2D" parent="." unique_id=1132989001]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_5r6hy")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=2015889549]
+node_a = NodePath("../HeadSprite/Head")
+node_b = NodePath("../Body")
+
+[node name="BodySprite" type="Sprite2D" parent="." unique_id=31486428]
+position = Vector2(2.1645474, 12.124998)
+scale = Vector2(0.17871092, 0.17871092)
+texture = ExtResource("3_ejsiy")
+
+[node name="Body" type="RigidBody2D" parent="." unique_id=1826728095]
+position = Vector2(0, 9.536743e-07)
+
+[node name="BodyCollision" type="CollisionShape2D" parent="Body" unique_id=10208387]
+position = Vector2(1, 14)
+shape = SubResource("CapsuleShape2D_53v2a")
+
+[node name="HeadSprite" type="Sprite2D" parent="." unique_id=442699097]
+position = Vector2(1, -4)
+scale = Vector2(0.14257813, 0.14257813)
+texture = ExtResource("2_nytcm")
+
+[node name="Head" type="RigidBody2D" parent="HeadSprite" unique_id=552306758]
+position = Vector2(0, -25)
+
+[node name="HeadCollision" type="CollisionShape2D" parent="HeadSprite/Head" unique_id=800234570]
+position = Vector2(-7.013699, 10.972603)
+shape = SubResource("CircleShape2D_bl7gc")

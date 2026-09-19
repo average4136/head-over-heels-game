@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://wovadvlseaw3"]
 
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/character.tscn" id="1_ebmjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53v2a"]
+size = Vector2(490, 24)
+
 [node name="Game" type="Node2D" unique_id=186248331]
+
+[node name="Character" parent="." unique_id=1994425259 instance=ExtResource("1_ebmjs")]
+position = Vector2(48, -33)
+
+[node name="Camera2D" type="Camera2D" parent="Character" unique_id=965827731]
+position = Vector2(1, -6)
+position_smoothing_enabled = true
+
+[node name="TempFloor" type="Area2D" parent="." unique_id=2017784746]
+
+[node name="FloorCollision" type="CollisionShape2D" parent="TempFloor" unique_id=1783692039]
+position = Vector2(-17, 15)
+shape = SubResource("RectangleShape2D_53v2a")
