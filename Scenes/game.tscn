@@ -76,3 +76,21 @@ shape = SubResource("WorldBoundaryShape2D_5r6hy")
 position = Vector2(-402.00003, 83)
 scale = Vector2(6.263672, 0.546875)
 texture = ExtResource("2_qxrlw")
+
+[node name="test for leaderboard" type="Panel" parent="." unique_id=238612829]
+offset_left = 426.0
+offset_top = -72.0
+offset_right = 583.0
+offset_bottom = 5.0
+
+[node name="Button" type="Button" parent="test for leaderboard" unique_id=841595743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "end
+"
+
+[connection signal="pressed" from="test for leaderboard/Button" to="Camera2D/Panel" method="_pressed"]

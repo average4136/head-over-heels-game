@@ -1,4 +1,5 @@
-extends PanelContainer
+extends Node
+
 
 const SAVE_PATH := "user://leaderboard.json"
 const MAX_ENTRIES := 5
