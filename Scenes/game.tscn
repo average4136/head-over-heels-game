@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://wovadvlseaw3"]
 
-[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/character.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://ciivhu14qujp7" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_53v2a"]
-size = Vector2(490, 24)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5r6hy"]
+distance = -10.0
 
 [node name="Game" type="Node2D" unique_id=186248331]
 
-[node name="Character" parent="." unique_id=1994425259 instance=ExtResource("1_ebmjs")]
-position = Vector2(48, -33)
+[node name="Player" parent="." unique_id=2079875564 instance=ExtResource("1_ebmjs")]
 
-[node name="Camera2D" type="Camera2D" parent="Character" unique_id=965827731]
-position = Vector2(1, -6)
-position_smoothing_enabled = true
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=121040221]
+position = Vector2(8, -129)
 
-[node name="TempFloor" type="Area2D" parent="." unique_id=2017784746]
+[node name="TestGround" type="StaticBody2D" parent="." unique_id=220009935]
 
-[node name="FloorCollision" type="CollisionShape2D" parent="TempFloor" unique_id=1783692039]
-position = Vector2(-17, 15)
-shape = SubResource("RectangleShape2D_53v2a")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestGround" unique_id=1842546149]
+shape = SubResource("WorldBoundaryShape2D_5r6hy")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestGround" unique_id=490349659]
+position = Vector2(-402.5, 82)
+scale = Vector2(6.263672, 0.546875)
+texture = ExtResource("2_qxrlw")
