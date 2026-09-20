@@ -37,6 +37,8 @@
 [ext_resource type="PackedScene" uid="uid://dgtc6gb710wj4" path="res://Scenes/Objects/win_portal.tscn" id="31_c3nyq"]
 [ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="32_1kn2x"]
 [ext_resource type="Script" uid="uid://c7teuwgciumwy" path="res://Scripts/level_narration.gd" id="37_3dbdo"]
+[ext_resource type="Texture2D" uid="uid://c7td0slghhm2a" path="res://Assets/Stages/fields/front.png" id="38_fphub"]
+[ext_resource type="Texture2D" uid="uid://dtbf2fua3gog" path="res://Assets/Stages/fields/sun glow.png" id="39_oby1a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
 
@@ -1221,7 +1223,7 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(-347, -3394)
+position = Vector2(-593, 1664)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
 position = Vector2(1040, -3048)
@@ -1268,3 +1270,25 @@ text = "00"
 
 [node name="LevelNarration" type="Node" parent="." unique_id=225916827]
 script = ExtResource("37_3dbdo")
+
+[node name="FRONT" type="Parallax2D" parent="." unique_id=1268715122]
+scale = Vector2(1.5628406, 1.5628407)
+scroll_scale = Vector2(1.5, 1)
+scroll_offset = Vector2(-804.0001, 1276)
+repeat_size = Vector2(2560, 0)
+repeat_times = 3
+
+[node name="Sprite2D2" type="Sprite2D" parent="FRONT" unique_id=534261844]
+position = Vector2(517.0074, -3289.523)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("38_fphub")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=662249228]
+scale = Vector2(1.0000001, 1)
+scroll_scale = Vector2(0.01, 1)
+scroll_offset = Vector2(-804, 1276)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=570927268]
+position = Vector2(335.99994, -7000)
+scale = Vector2(2.1984372, 2.198437)
+texture = ExtResource("39_oby1a")
