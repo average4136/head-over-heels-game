@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://027hqydkot6p"
 
 DialogueManager="*uid://cwqd6oecf5ejj"
 Leaderboard="*uid://dyxg2d0ul3han"
+MenuTheme="*uid://brqkv3x8lxa7s"
 
 [display]
 
