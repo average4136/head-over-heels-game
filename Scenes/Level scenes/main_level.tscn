@@ -283,6 +283,9 @@ _data = {
 &"snow flakes": SubResource("Animation_as0jg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00yqa"]
+size = Vector2(2792, 2496)
+
 [sub_resource type="Animation" id="Animation_124nk"]
 length = 0.001
 tracks/0/type = "value"
@@ -651,9 +654,6 @@ _data = {
 &"lady": SubResource("Animation_653pj")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_00yqa"]
-size = Vector2(2792, 48)
-
 [node name="Main_level" type="Node2D" unique_id=1377921325]
 
 [node name="Grass section" type="Node2D" parent="." unique_id=1854164821]
@@ -967,36 +967,86 @@ rotation = -0.2044917
 scale = Vector2(0.13114315, 0.13114315)
 texture = ExtResource("16_dqwkk")
 
+[node name="StaticBody2D13" parent="Ice section" unique_id=1917025966 instance=ExtResource("14_63cjw")]
+position = Vector2(-784.00006, -336.00006)
+rotation = -0.2617994
+
 [node name="Space scene" type="Node2D" parent="." unique_id=1401743406]
 position = Vector2(0, -2512)
+
+[node name="star platform5" parent="Space scene" unique_id=1978004385 instance=ExtResource("20_ebg3b")]
+position = Vector2(-48.00006, -328)
+rotation = -0.2617994
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Gravity changer" type="Area2D" parent="Space scene" unique_id=1038892291]
+script = ExtResource("29_xwawq")
+
+[node name="GravityArea" type="CollisionShape2D" parent="Space scene/Gravity changer" unique_id=403814585]
+position = Vector2(12, -544)
+shape = SubResource("RectangleShape2D_00yqa")
+
+[node name="yellow block" parent="Space scene/Gravity changer" unique_id=605724736 instance=ExtResource("19_1kn2x")]
+position = Vector2(-456, 31.999996)
+rotation = 1.5707964
+scale = Vector2(2.9200072, 1)
+
+[node name="yellow block2" parent="Space scene/Gravity changer" unique_id=1999110828 instance=ExtResource("19_1kn2x")]
+position = Vector2(-696, 112)
+rotation = 1.5707964
+scale = Vector2(2.5600023, 1)
+
+[node name="star platform4" parent="Space scene" unique_id=1685131188 instance=ExtResource("20_ebg3b")]
+position = Vector2(944, -416)
+
+[node name="yellow block6" parent="Space scene" unique_id=1486895548 instance=ExtResource("19_1kn2x")]
+position = Vector2(1176, -760)
+rotation = 1.5707964
+scale = Vector2(1.3071389, 0.55597335)
+
+[node name="yellow block7" parent="Space scene" unique_id=1347957828 instance=ExtResource("19_1kn2x")]
+position = Vector2(959.99994, -1200)
+rotation = 0.2617994
+scale = Vector2(1.3071389, 0.55597335)
+
+[node name="yellow block8" parent="Space scene" unique_id=999544969 instance=ExtResource("19_1kn2x")]
+position = Vector2(968.0001, -1176)
+rotation = 2.8797934
+scale = Vector2(1.3071389, 0.55597335)
+
+[node name="Node2D6" parent="Space scene" unique_id=1185949341 instance=ExtResource("16_xx7rc")]
+position = Vector2(160, 0)
+scale = Vector2(1.4517812, 0.9467006)
+
+[node name="Node2D8" parent="Space scene" unique_id=2067539016 instance=ExtResource("16_xx7rc")]
+position = Vector2(447.99997, 24)
+rotation = 0.2617994
+scale = Vector2(0.89178056, 0.9467006)
 
 [node name="Launch booster" parent="Space scene" unique_id=1783831224 instance=ExtResource("8_cd86f")]
 position = Vector2(56, 880)
 
-[node name="Node2D" parent="Space scene" unique_id=1185949341 instance=ExtResource("16_xx7rc")]
-position = Vector2(-495.00012, 511)
-scale = Vector2(2.5316777, 1.6942071)
+[node name="Node2D" parent="Space scene" unique_id=1853873468 instance=ExtResource("16_xx7rc")]
+position = Vector2(-304, 504)
+scale = Vector2(0.9921097, 1.5867499)
 
 [node name="Moon Platform" parent="Space scene" unique_id=1750695849 instance=ExtResource("17_xwawq")]
-position = Vector2(-890.9999, 132)
+position = Vector2(-951.99994, 104)
 scale = Vector2(1.0313267, 1.0351115)
 
-[node name="Node2D2" parent="Space scene" unique_id=833490131 instance=ExtResource("16_xx7rc")]
-position = Vector2(848, -152)
-
 [node name="Node2D3" parent="Space scene" unique_id=2113411147 instance=ExtResource("16_xx7rc")]
-position = Vector2(-1118.9999, 302)
-rotation = 0.98937374
+position = Vector2(-951.99994, -16)
+rotation = 0.5235988
 
 [node name="Node2D4" parent="Space scene" unique_id=779374657 instance=ExtResource("16_xx7rc")]
-position = Vector2(662, 251)
-scale = Vector2(0.36703715, 0.9467006)
+position = Vector2(680, 264)
+scale = Vector2(0.89178056, 0.9467006)
 
 [node name="Node2D5" parent="Space scene" unique_id=1599191259 instance=ExtResource("16_xx7rc")]
 position = Vector2(918, 133)
 
 [node name="Node2D7" parent="Space scene" unique_id=982224993 instance=ExtResource("16_xx7rc")]
-position = Vector2(-437, 30)
+position = Vector2(-392, 24)
 
 [node name="Moon Platform2" parent="Space scene" unique_id=1600983948 instance=ExtResource("17_xwawq")]
 position = Vector2(367, 338)
@@ -1007,29 +1057,32 @@ position = Vector2(-293, 317)
 scale = Vector2(0.27518362, 0.27518368)
 texture = ExtResource("18_c3nyq")
 
-[node name="yellow block" parent="Space scene" unique_id=605724736 instance=ExtResource("19_1kn2x")]
+[node name="yellow block" parent="Space scene" unique_id=346829729 instance=ExtResource("19_1kn2x")]
 position = Vector2(320, -341)
 
 [node name="yellow block2" parent="Space scene" unique_id=1722391459 instance=ExtResource("19_1kn2x")]
-position = Vector2(-268, -342)
+position = Vector2(-400, -320)
+scale = Vector2(1, 0.68)
 
 [node name="yellow block3" parent="Space scene" unique_id=502756796 instance=ExtResource("19_1kn2x")]
 position = Vector2(-169, -101)
 
-[node name="star platform" parent="Space scene" unique_id=1685131188 instance=ExtResource("20_ebg3b")]
-position = Vector2(-791, -280)
+[node name="star platform" parent="Space scene" unique_id=227261879 instance=ExtResource("20_ebg3b")]
+position = Vector2(-776, -224)
+rotation = -0.2617994
+scale = Vector2(1.6000012, 1.12)
 
 [node name="star platform2" parent="Space scene" unique_id=765817856 instance=ExtResource("20_ebg3b")]
-position = Vector2(965.92993, -374.8081)
-rotation = -0.82849085
+position = Vector2(720.00006, -360)
+rotation = -0.2617994
 
 [node name="yellow block4" parent="Space scene" unique_id=4311996 instance=ExtResource("19_1kn2x")]
-position = Vector2(-1164.0001, -242)
+position = Vector2(-1152, -128)
 scale = Vector2(0.48800763, 1.850894)
 
 [node name="yellow block5" parent="Space scene" unique_id=973751788 instance=ExtResource("19_1kn2x")]
-position = Vector2(517.92993, -606.8082)
-rotation = 0.196726
+position = Vector2(200, -848.0001)
+rotation = 0.2617994
 scale = Vector2(1.3071389, 0.55597335)
 
 [node name="StarDecor" type="Sprite2D" parent="Space scene" unique_id=1347354900]
@@ -1046,6 +1099,7 @@ texture = ExtResource("18_c3nyq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Space scene/RocketDecor2" unique_id=1906059546]
 libraries/ = SubResource("AnimationLibrary_cfp5c")
+autoplay = &"spaceship movement"
 
 [node name="Moon Platform3" parent="Space scene" unique_id=729836404 instance=ExtResource("17_xwawq")]
 position = Vector2(-150, -768)
@@ -1059,6 +1113,7 @@ texture = ExtResource("22_u65hd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Space scene/AlienDecor" unique_id=1699135365]
 libraries/ = SubResource("AnimationLibrary_g6goi")
+autoplay = &"alien_jump"
 
 [node name="star platform3" parent="Space scene" unique_id=149001681 instance=ExtResource("20_ebg3b")]
 position = Vector2(-1159.0701, -880.8082)
@@ -1116,17 +1171,10 @@ texture = ExtResource("29_64l46")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Space scene/PORTAL/LADY" unique_id=584950052]
 libraries/ = SubResource("AnimationLibrary_txng3")
-
-[node name="Gravity changer" type="Area2D" parent="Space scene" unique_id=1038892291]
-script = ExtResource("29_xwawq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Space scene/Gravity changer" unique_id=403814585]
-position = Vector2(12, 680)
-shape = SubResource("RectangleShape2D_00yqa")
+autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(-240, -1584)
+position = Vector2(400, -2864)
 
-[node name="StaticBody2D9" parent="." unique_id=1917025966 instance=ExtResource("14_63cjw")]
-position = Vector2(-784.00006, -336.00006)
-rotation = -0.2617994
+[node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
+position = Vector2(1040, -3048)
