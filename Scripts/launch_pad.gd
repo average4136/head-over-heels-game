@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var launch_force: float = 1500.0
+@export var launch_force: float = 5000.0
 
 
 func _ready() -> void:

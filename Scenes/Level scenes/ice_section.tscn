@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
-[ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="5_oskd4"]
+[ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="4_oskd4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
 
@@ -26,16 +26,8 @@ rotation = -1.5707964
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=588323181]
 shape = SubResource("WorldBoundaryShape2D_oskd4")
 
-[node name="Blue_block" parent="." unique_id=602105709 instance=ExtResource("1_i0ptw")]
-position = Vector2(-504, 56)
-scale = Vector2(4.960001, 1)
-
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("2_7d2j5")]
-position = Vector2(920, -16)
-
-[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("3_7d2j5")]
-position = Vector2(791.99994, -640)
-scale = Vector2(2.5910778, 2.5910778)
+position = Vector2(264, -768)
 
 [node name="StaticBody2D" parent="." unique_id=1447629716 instance=ExtResource("4_k0s5y")]
 position = Vector2(479.99997, 15.999993)
@@ -46,22 +38,104 @@ scale = Vector2(3.4314842, 5)
 position = Vector2(704, 48.000004)
 scale = Vector2(11.240002, 5.12)
 
-[node name="Launch booster" parent="." unique_id=1384817862 instance=ExtResource("5_oskd4")]
-position = Vector2(-1032.0001, -96)
-
 [node name="Blue_block2" parent="." unique_id=1246383732 instance=ExtResource("1_i0ptw")]
-position = Vector2(-856, -384)
-rotation = 1.5707964
-scale = Vector2(1.9600003, 0.6)
-
-[node name="Blue_block3" parent="." unique_id=351789983 instance=ExtResource("1_i0ptw")]
-position = Vector2(-752, -592)
+position = Vector2(-808, -416.00003)
+scale = Vector2(0.63516, 0.6)
 
 [node name="Blue_block4" parent="." unique_id=23454002 instance=ExtResource("1_i0ptw")]
-position = Vector2(-392, -616)
+position = Vector2(-376, -576)
 
 [node name="Blue_block5" parent="." unique_id=223574707 instance=ExtResource("1_i0ptw")]
-position = Vector2(-48, -656)
+position = Vector2(-56, -632)
 
 [node name="Blue_block6" parent="." unique_id=1384170651 instance=ExtResource("1_i0ptw")]
-position = Vector2(272, -688)
+position = Vector2(328, -688)
+scale = Vector2(1.2800006, 1)
+
+[node name="StaticBody2D3" parent="." unique_id=1413809715 instance=ExtResource("4_k0s5y")]
+position = Vector2(-918.99994, 57.000004)
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D4" parent="." unique_id=1767213189 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D9" parent="." unique_id=1488552054 instance=ExtResource("4_k0s5y")]
+position = Vector2(-918.99994, 57.000004)
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D10" parent="." unique_id=2127219765 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D15" parent="." unique_id=2142455854 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1176, -431.99997)
+rotation = 1.3089969
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D5" parent="." unique_id=1982382064 instance=ExtResource("4_k0s5y")]
+position = Vector2(1032, -856.00006)
+rotation = -1.118756
+
+[node name="Stone platform4" parent="." unique_id=107939614 instance=ExtResource("4_oskd4")]
+position = Vector2(1080, -1064)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D6" parent="." unique_id=100221925 instance=ExtResource("4_k0s5y")]
+position = Vector2(832, -743.99994)
+rotation = -0.49741888
+
+[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("3_7d2j5")]
+position = Vector2(792, -640)
+scale = Vector2(2.5910778, 2.591078)
+
+[node name="half-pipe" type="Node2D" parent="." unique_id=195263425]
+
+[node name="StaticBody2D12" parent="half-pipe" unique_id=128638646 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1092, -1177.0001)
+rotation = 2.0943952
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="half-pipe" unique_id=1748724303 instance=ExtResource("4_k0s5y")]
+position = Vector2(-943.9999, -1264.9999)
+rotation = 2.6179938
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D14" parent="half-pipe" unique_id=1807697188 instance=ExtResource("4_k0s5y")]
+position = Vector2(-763.00006, -1319)
+rotation = 2.8797934
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D15" parent="half-pipe" unique_id=1404031372 instance=ExtResource("4_k0s5y")]
+position = Vector2(-568, -1321.0001)
+rotation = -3.1415925
+scale = Vector2(5.239565, 5.239565)
+
+[node name="half-pipe2" type="Node2D" parent="." unique_id=1292036042]
+position = Vector2(-1173.0002, -277)
+rotation = -1.5132004
+
+[node name="StaticBody2D15" parent="half-pipe2" unique_id=1932960133 instance=ExtResource("4_k0s5y")]
+position = Vector2(-293.62143, 414.58978)
+rotation = 1.5707964
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D12" parent="half-pipe2" unique_id=823438843 instance=ExtResource("4_k0s5y")]
+position = Vector2(-270.4242, 260.99976)
+rotation = 1.8325958
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="half-pipe2" unique_id=182698041 instance=ExtResource("4_k0s5y")]
+position = Vector2(-158.91243, 110.33087)
+rotation = 2.3561945
+scale = Vector2(5.5971236, 5.239565)
+
+[node name="Blue_block3" parent="." unique_id=602105709 instance=ExtResource("1_i0ptw")]
+position = Vector2(760, -1064)
+scale = Vector2(0.9723535, 0.82164687)
+
+[node name="Blue_block7" parent="." unique_id=87445004 instance=ExtResource("1_i0ptw")]
+position = Vector2(-616, -504)
+scale = Vector2(0.63516, 0.6)
