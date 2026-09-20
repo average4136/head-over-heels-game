@@ -10,7 +10,7 @@ scale = Vector2(0.16979787, 0.16979787)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1371123100]
 position = Vector2(-697, 579)
-polygon = PackedVector2Array(70, 1, 328, -1, 713, -7, 939, -12, 1202, -15, 1321, -17, 1331, -38, 1327, -295, 1320, -601, 1313, -912, 1306, -1165, 1231, -1156, 991, -1112, 989, -1046, 999, -911, 800, -905, 806, -699, 571, -697, 578, -510, 342, -529, 342, -333, 179, -363, 159, -169, -20, -193, -13, 3)
+polygon = PackedVector2Array(70, 1, 328, -1, 713, -7, 939, -12, 1202, -15, 1321, -17, 1331, -38, 1327, -295, 1320, -601, 1313, -912, 1309.493, -1114.9314, 1026.804, -1114.9314, 508.54065, -549.55316, -9.722658, -31.289852, -13, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionPolygon2D" unique_id=55427572]
 position = Vector2(697, -579)
