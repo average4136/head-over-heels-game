@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://btkss35dirufr"]
 
-[ext_resource type="Texture2D" uid="uid://cskcx5plrag31" path="res://Assets/Hannah's Drawn Assets/Gradient BG.png" id="1_dxw6d"]
-[ext_resource type="PackedScene" uid="uid://d3eu5ubs45wai" path="res://Scenes/Objects/Grey_block.tscn" id="2_spkxt"]
-[ext_resource type="PackedScene" uid="uid://cbp0wqs0t0y8s" path="res://Scenes/Objects/moon_platform.tscn" id="3_vqv81"]
-[ext_resource type="Texture2D" uid="uid://do5gjr26uy436" path="res://Assets/Decorations/rocket decor.png" id="4_spkxt"]
-[ext_resource type="PackedScene" uid="uid://v5o01rr38e1d" path="res://Scenes/Objects/yellow_block.tscn" id="5_jq4nj"]
-[ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="6_124nk"]
-[ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_dxw6d"]
-[ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_124nk"]
+[ext_resource type="Texture2D" uid="uid://cskcx5plrag31" path="res://Assets/Hannah's Drawn Assets/Gradient BG.png" id="1_huob2"]
+[ext_resource type="PackedScene" uid="uid://d3eu5ubs45wai" path="res://Scenes/Objects/Grey_block.tscn" id="2_8wo2k"]
+[ext_resource type="PackedScene" uid="uid://cbp0wqs0t0y8s" path="res://Scenes/Objects/moon_platform.tscn" id="3_fjhv3"]
+[ext_resource type="Texture2D" uid="uid://do5gjr26uy436" path="res://Assets/Decorations/rocket decor.png" id="4_xynxa"]
+[ext_resource type="PackedScene" uid="uid://v5o01rr38e1d" path="res://Scenes/Objects/yellow_block.tscn" id="5_bc4y4"]
+[ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_ad6b8"]
+[ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="7_1k4pw"]
+[ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_dauer"]
 
 [sub_resource type="Animation" id="Animation_124nk"]
 length = 0.001
@@ -138,67 +138,67 @@ _data = {
 [node name="GradientBg" type="Sprite2D" parent="." unique_id=1264902900]
 position = Vector2(-23.000004, 3950.0002)
 scale = Vector2(3.2093222, 4.4489923)
-texture = ExtResource("1_dxw6d")
+texture = ExtResource("1_huob2")
 
-[node name="Node2D" parent="." unique_id=1185949341 instance=ExtResource("2_spkxt")]
+[node name="Node2D" parent="." unique_id=1185949341 instance=ExtResource("2_8wo2k")]
 position = Vector2(-563.00006, 511)
 scale = Vector2(2.5316777, 1.6942071)
 
-[node name="Moon Platform" parent="." unique_id=1750695849 instance=ExtResource("3_vqv81")]
+[node name="Moon Platform" parent="." unique_id=1750695849 instance=ExtResource("3_fjhv3")]
 position = Vector2(-959, 132.00002)
 scale = Vector2(1.0313267, 1.0351115)
 
-[node name="Node2D2" parent="." unique_id=1431751909 instance=ExtResource("2_spkxt")]
+[node name="Node2D2" parent="." unique_id=1431751909 instance=ExtResource("2_8wo2k")]
 position = Vector2(780, -152)
 
-[node name="Node2D3" parent="." unique_id=578760428 instance=ExtResource("2_spkxt")]
+[node name="Node2D3" parent="." unique_id=578760428 instance=ExtResource("2_8wo2k")]
 position = Vector2(-1187, 301.99994)
 rotation = 0.98937374
 
-[node name="Node2D4" parent="." unique_id=1882188515 instance=ExtResource("2_spkxt")]
+[node name="Node2D4" parent="." unique_id=1882188515 instance=ExtResource("2_8wo2k")]
 position = Vector2(594, 251.00003)
 scale = Vector2(0.36703715, 0.9467006)
 
-[node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_spkxt")]
+[node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_8wo2k")]
 position = Vector2(850, 133)
 
-[node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_spkxt")]
+[node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_8wo2k")]
 position = Vector2(73, 461)
 scale = Vector2(0.7300851, 0.2657136)
 
-[node name="Node2D7" parent="." unique_id=955187897 instance=ExtResource("2_spkxt")]
+[node name="Node2D7" parent="." unique_id=955187897 instance=ExtResource("2_8wo2k")]
 position = Vector2(-505, 30)
 
-[node name="Moon Platform2" parent="." unique_id=1554874488 instance=ExtResource("3_vqv81")]
+[node name="Moon Platform2" parent="." unique_id=1554874488 instance=ExtResource("3_fjhv3")]
 position = Vector2(299, 338)
 scale = Vector2(0.6416152, 0.69061464)
 
 [node name="RocketDecor" type="Sprite2D" parent="." unique_id=461076328]
 position = Vector2(-361.00003, 317)
 scale = Vector2(0.27518362, 0.27518368)
-texture = ExtResource("4_spkxt")
+texture = ExtResource("4_xynxa")
 
-[node name="yellow block" parent="." unique_id=605724736 instance=ExtResource("5_jq4nj")]
+[node name="yellow block" parent="." unique_id=605724736 instance=ExtResource("5_bc4y4")]
 position = Vector2(252, -341)
 
-[node name="yellow block2" parent="." unique_id=1517800864 instance=ExtResource("5_jq4nj")]
+[node name="yellow block2" parent="." unique_id=1517800864 instance=ExtResource("5_bc4y4")]
 position = Vector2(-336, -342)
 
-[node name="yellow block3" parent="." unique_id=956577508 instance=ExtResource("5_jq4nj")]
+[node name="yellow block3" parent="." unique_id=956577508 instance=ExtResource("5_bc4y4")]
 position = Vector2(-237, -101)
 
-[node name="star platform" parent="." unique_id=1685131188 instance=ExtResource("6_dxw6d")]
+[node name="star platform" parent="." unique_id=1685131188 instance=ExtResource("6_ad6b8")]
 position = Vector2(-859, -280)
 
-[node name="star platform2" parent="." unique_id=1071983857 instance=ExtResource("6_dxw6d")]
+[node name="star platform2" parent="." unique_id=1071983857 instance=ExtResource("6_ad6b8")]
 position = Vector2(706, -408.99997)
 rotation = -0.82849085
 
-[node name="yellow block4" parent="." unique_id=1287986369 instance=ExtResource("5_jq4nj")]
+[node name="yellow block4" parent="." unique_id=1287986369 instance=ExtResource("5_bc4y4")]
 position = Vector2(-1232.0001, -242)
 scale = Vector2(0.48800763, 1.850894)
 
-[node name="yellow block5" parent="." unique_id=1930980042 instance=ExtResource("5_jq4nj")]
+[node name="yellow block5" parent="." unique_id=1930980042 instance=ExtResource("5_bc4y4")]
 position = Vector2(258, -641.00006)
 rotation = 0.196726
 scale = Vector2(1.3071389, 0.55597335)
@@ -206,19 +206,19 @@ scale = Vector2(1.3071389, 0.55597335)
 [node name="StarDecor" type="Sprite2D" parent="." unique_id=377873062]
 position = Vector2(-200, -143)
 scale = Vector2(0.17638484, 0.17638484)
-texture = ExtResource("6_124nk")
+texture = ExtResource("7_1k4pw")
 
 [node name="RocketDecor2" type="Sprite2D" parent="." unique_id=1351557]
 self_modulate = Color(0.24612969, 0.24190512, 0.3474766, 0.77254903)
 position = Vector2(532.99994, -979.99994)
 rotation = -1.2117052
 scale = Vector2(0.59129065, 0.5912907)
-texture = ExtResource("4_spkxt")
+texture = ExtResource("4_xynxa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RocketDecor2" unique_id=312437958]
 libraries/ = SubResource("AnimationLibrary_2anaj")
 
-[node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_vqv81")]
+[node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_fjhv3")]
 position = Vector2(-241.00003, -742)
 scale = Vector2(1.5276088, 1.6838567)
 
@@ -226,7 +226,7 @@ scale = Vector2(1.5276088, 1.6838567)
 position = Vector2(-44.000004, -979)
 rotation = -0.2617994
 scale = Vector2(0.27999818, 0.27999818)
-texture = ExtResource("8_124nk")
+texture = ExtResource("8_dauer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AlienDecor" unique_id=1828851517]
 libraries/ = SubResource("AnimationLibrary_6es0x")
