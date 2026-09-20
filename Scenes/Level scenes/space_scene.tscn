@@ -468,7 +468,7 @@ texture = ExtResource("4_xynxa")
 libraries/ = SubResource("AnimationLibrary_2anaj")
 
 [node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_fjhv3")]
-position = Vector2(-49.0701, -707.8081)
+position = Vector2(-218, -768)
 scale = Vector2(1.5276088, 1.6838567)
 
 [node name="AlienDecor" type="Sprite2D" parent="." unique_id=1104665968]
