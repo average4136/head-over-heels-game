@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
 
 [ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_owm7s"]
+[ext_resource type="AudioStream" uid="uid://5ftn1qe7l63v" path="res://Assets/SFX/step.mp3" id="2_gcrjn"]
 [ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_vknx4"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
 [ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="4_vknx4"]
@@ -34,6 +35,13 @@ lock_rotation = true
 linear_damp = 2.0
 angular_damp = 5.0
 script = ExtResource("1_owm7s")
+max_speed = null
+move_force = null
+jump_force = null
+
+[node name="step" type="AudioStreamPlayer" parent="Character physics (node2d)/Body" unique_id=1852543016]
+unique_name_in_owner = true
+stream = ExtResource("2_gcrjn")
 
 [node name="NewBody" type="Sprite2D" parent="Character physics (node2d)/Body" unique_id=2036346560]
 position = Vector2(-2.2888184e-05, -47.999996)
