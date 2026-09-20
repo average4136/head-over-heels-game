@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
+[gd_scene format=3 uid="uid://cyajayqvahtgv"]
 
 [ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_owm7s"]
 [ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_dj1yd"]
@@ -65,6 +65,7 @@ texture = ExtResource("4_an1sd")
 position = Vector2(-4, -98)
 shape = SubResource("CircleShape2D_53v2a")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1832002142]
+[node name="GuyCam" type="Camera2D" parent="." unique_id=1832002142]
 position = Vector2(-1, -218)
 zoom = Vector2(0.5, 0.5)
+drag_vertical_enabled = true
