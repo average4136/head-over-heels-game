@@ -7,10 +7,51 @@
 [ext_resource type="PackedScene" uid="uid://cwbv4iwydbj34" path="res://Scenes/Objects/Leaf_block.tscn" id="5_xmgho"]
 [ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="7_j1d2w"]
 [ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="7_xmgho"]
+[ext_resource type="Texture2D" uid="uid://bljw3sjkh0m3n" path="res://Assets/Decorations/tree decor.png" id="8_n02xx"]
+[ext_resource type="Texture2D" uid="uid://bvqnfi7ife36w" path="res://Assets/Decorations/bush decor.png" id="9_w5b0t"]
+[ext_resource type="Texture2D" uid="uid://bgm8ebfl1wpqt" path="res://Assets/Decorations/flower decor.png" id="10_2tlxi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jm2at"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xmgho"]
+
+[sub_resource type="Animation" id="Animation_n02xx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-726, -806)]
+}
+
+[sub_resource type="Animation" id="Animation_w5b0t"]
+resource_name = "cloud move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-726, -806), Vector2(-111, -990)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2tlxi"]
+_data = {
+&"RESET": SubResource("Animation_n02xx"),
+&"cloud move": SubResource("Animation_w5b0t")
+}
 
 [node name="Grass scene" type="Node2D" unique_id=610116829]
 
@@ -104,3 +145,42 @@ scale = Vector2(1.7194263, 1.7194263)
 
 [node name="Launch booster2" parent="." unique_id=1769609741 instance=ExtResource("7_xmgho")]
 position = Vector2(-1024, -592)
+
+[node name="TreeDecor" type="Sprite2D" parent="." unique_id=429222409]
+position = Vector2(-1152, -29.00003)
+scale = Vector2(0.25880423, 0.25880423)
+texture = ExtResource("8_n02xx")
+
+[node name="BushDecor" type="Sprite2D" parent="." unique_id=595655799]
+position = Vector2(-981, 135)
+scale = Vector2(0.2909961, 0.2909961)
+texture = ExtResource("9_w5b0t")
+
+[node name="TreeDecor2" type="Sprite2D" parent="." unique_id=314288787]
+position = Vector2(151, -690)
+rotation = 3.1415927
+scale = Vector2(0.22744878, -0.24957219)
+texture = ExtResource("8_n02xx")
+
+[node name="FlowerDecor" type="Sprite2D" parent="." unique_id=1040143008]
+position = Vector2(72, -465)
+scale = Vector2(0.15745524, 0.15745524)
+texture = ExtResource("10_2tlxi")
+
+[node name="FlowerDecor2" type="Sprite2D" parent="." unique_id=55686723]
+self_modulate = Color(0.35839754, 0.64806694, 0.95248777, 1)
+position = Vector2(-536, -506.00003)
+scale = Vector2(-0.22197801, 0.22197801)
+texture = ExtResource("10_2tlxi")
+
+[node name="BushDecor2" type="Sprite2D" parent="." unique_id=1261107350]
+position = Vector2(-814, -512)
+scale = Vector2(0.20002364, 0.20002364)
+texture = ExtResource("9_w5b0t")
+
+[node name="Cloud block5" parent="." unique_id=1102404540 instance=ExtResource("4_jm2at")]
+position = Vector2(-726, -806)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cloud block5" unique_id=2031450640]
+libraries/ = SubResource("AnimationLibrary_2tlxi")
+autoplay = &"cloud move"
