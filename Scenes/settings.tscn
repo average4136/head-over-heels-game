@@ -35,7 +35,8 @@ value = 1.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Volume"
+theme_override_fonts/font = ExtResource("2_i44u3")
+text = "Master Volume"
 
 [node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=636734395]
 layout_mode = 2
