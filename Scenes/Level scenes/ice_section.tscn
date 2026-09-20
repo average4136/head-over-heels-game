@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
-[ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="4_oskd4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
 
@@ -27,7 +26,7 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_oskd4")
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("2_7d2j5")]
-position = Vector2(880, -16)
+position = Vector2(-776, -1392)
 
 [node name="StaticBody2D" parent="." unique_id=1447629716 instance=ExtResource("4_k0s5y")]
 position = Vector2(479.99997, 15.999993)
@@ -67,10 +66,6 @@ scale = Vector2(8.68077, 5.239567)
 [node name="StaticBody2D5" parent="." unique_id=1982382064 instance=ExtResource("4_k0s5y")]
 position = Vector2(1032, -856.00006)
 rotation = -1.118756
-
-[node name="Stone platform4" parent="." unique_id=107939614 instance=ExtResource("4_oskd4")]
-position = Vector2(1080, -1064)
-scale = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D6" parent="." unique_id=100221925 instance=ExtResource("4_k0s5y")]
 position = Vector2(832, -743.99994)
@@ -161,3 +156,10 @@ rotation = 0.5235988
 [node name="StaticBody2D12" parent="." unique_id=728208068 instance=ExtResource("4_k0s5y")]
 position = Vector2(344.00003, -1304.0001)
 rotation = 1.0471976
+
+[node name="Blue_block8" parent="." unique_id=1732477621 instance=ExtResource("1_i0ptw")]
+position = Vector2(1208, -1016)
+
+[node name="Blue_block9" parent="." unique_id=1151197475 instance=ExtResource("1_i0ptw")]
+position = Vector2(-160, -1400)
+scale = Vector2(1.2800019, 1)
