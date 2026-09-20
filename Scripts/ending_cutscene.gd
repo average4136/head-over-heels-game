@@ -1,20 +1,120 @@
 extends "res://Scripts/cutscene_player.gd"
 
+@export_file("*.tscn") var next_scene: String = "res://Scenes/Main_Menu.tscn"
+
+func _ready() -> void:
+	super._ready()
+	if ost:
+		ost.play()
+
 func _setup_slides() -> void:
 	slides = [
-		{"text": "\"You made it boy.\"", "img": null, "audio": null, "time": 3.0},
-		{"text": "\"Will you cure me now?\"", "img": null, "audio": null, "time": 3.0},
-		{"text": "\"You've gotten really good with that head though, I feel like you should keep it\"", "img": null, "audio": null, "time": 4.0},
-		{"text": "...", "img": null, "audio": null, "time": 2.0},
-		{"text": "\"you're no fun. fine. walk through that portal. but hear my word, i cannot guarantee your syndrome to be fixed. that is truth. its up to you\"", "img": null, "audio": null, "time": 5.0},
-		{"text": "\"wait, WHAT?\"", "img": null, "audio": null, "time": 2.0},
-		{"text": "*Teleporting...*", "img": null, "audio": null, "time": 2.0},
-		{"text": "\"hey, excuse me! wait up!\"", "img": null, "audio": null, "time": 3.0},
-		{"text": "\"hm?\"", "img": null, "audio": null, "time": 2.0},
-		{"text": "\"shoot. i must look so stupid. i should say nevermind. she must be so disgusted\"", "img": null, "audio": null, "time": 4.0},
-		{"text": "*She turns around, smiling and listening intently.*", "img": null, "audio": null, "time": 3.5},
-		{"text": "\"i guess that stupid omni-whatever being was right...\"", "img": null, "audio": null, "time": 3.5},
-		{"text": "\"its all just in my head.\"", "img": null, "audio": null, "time": 3.0},
-		{"text": "\"i feel so light.\"", "img": null, "audio": null, "time": 3.0},
-		{"text": "<<<< Hi, my name is... >>>>\n\nDOWN BAD.", "img": null, "audio": null, "time": 5.0}
+		{
+			"text": "*Teleporting...*",
+			"img": null,
+			"audio": null,
+			"time": 1.5
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/ACTUAL_Ending_Cutscene_0.5.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Op_Scene_shoes_dream_no_grass.png"),
+			"audio": null,
+			"time": 2.0
+		},
+		{
+			"text": "Boy: \"Hey, excuse me! Wait up!\"",
+			"img": preload("res://Assets/Cutscenes/Op_Scene_03_strut_dream.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Girl_Ending_Cutscene_Face_Reveal_V0.5.png"),
+			"audio": null,
+			"time": 0.5
+		},
+		{
+			"text": "\"Hm?\"",
+			"img": preload("res://Assets/Cutscenes/Girl_Ending_Cutscene_Face_Reveal_V0.5.png"),
+			"audio": null,
+			"time": 2.5
+		},
+		{
+			"text": "(Shoot. I must look so stupid.)",
+			"img": preload("res://Assets/Cutscenes/End_Goober.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "(I should say never mind, she must be so disgusted...)",
+			"img": preload("res://Assets/Cutscenes/End_Goober.png"),
+			"audio": null,
+			"time": 4.0
+		},
+		{
+			"text": "(Wait, what?)",
+			"img": null,
+			"audio": null,
+			"time": 2.5
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Girl_Smile.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Boy_0.5.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Boy_Smile.png"),
+			"audio": null,
+			"time": 1.0
+		},
+		{
+			"text": "(I guess that stupid omni-whatever being was right...)",
+			"img": preload("res://Assets/Cutscenes/Boy_Smile.png"),
+			"audio": null,
+			"time": 4.0
+		},
+		{
+			"text": "(It was all just in my head.)",
+			"img": preload("res://Assets/Cutscenes/Boy_Smile.png"),
+			"audio": null,
+			"time": 3.0
+		},
+		{
+			"text": "",
+			"img": preload("res://Assets/Cutscenes/Boy_Smile.png"),
+			"audio": null,
+			"time": 0.5
+		},
+		{
+			"text": "\"Hi, my name is...\"",
+			"img": preload("res://Assets/Cutscenes/Boy_Smile_Talk.png"),
+			"audio": null,
+			"time": 4.0
+		},
+		{
+			"text": "THE END",
+			"img": null,
+			"audio": null,
+			"time": 5.0
+		},
 	]
+
+func _on_cutscene_finished() -> void:
+	if ost:
+		ost.stop()
+	if ResourceLoader.exists(next_scene):
+		get_tree().change_scene_to_file(next_scene)
