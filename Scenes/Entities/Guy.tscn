@@ -35,9 +35,6 @@ lock_rotation = true
 linear_damp = 2.0
 angular_damp = 5.0
 script = ExtResource("1_owm7s")
-max_speed = null
-move_force = null
-jump_force = null
 
 [node name="step" type="AudioStreamPlayer" parent="Character physics (node2d)/Body" unique_id=1852543016]
 unique_name_in_owner = true

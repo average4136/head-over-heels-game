@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 		
 		# SFX
 		if canPlay: 
- 			if ground_ray.is_colliding(): 
+			if ground_ray.is_colliding(): 
 				step_player.play()
 			canPlay = false
 			timer = setTimer
