@@ -89,7 +89,7 @@ grow_vertical = 0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=90277366]
 
 [node name="DownBadLogoV0_5" type="Sprite2D" parent="." unique_id=285365223]
-position = Vector2(301.99997, 239.00003)
+position = Vector2(313.99997, 237.99997)
 rotation = -0.29147
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("4_ce3w2")
@@ -123,8 +123,8 @@ theme_override_font_sizes/font_size = 50
 alignment = 1
 
 [node name="Settings" type="Sprite2D" parent="Settings button" unique_id=51740853]
-position = Vector2(46.999977, 71)
-scale = Vector2(0.5332163, 0.5995455)
+position = Vector2(35.799965, 70)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_n45e2")
 
 [node name="CheckButton" type="CheckButton" parent="." unique_id=920543323]
@@ -140,7 +140,7 @@ offset_right = 0.45593262
 offset_bottom = 0.015991211
 
 [node name="Leaderboard" type="Sprite2D" parent="CheckButton" unique_id=1413498083]
-position = Vector2(74, 59)
+position = Vector2(62.799988, 58)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_opfnp")
 
