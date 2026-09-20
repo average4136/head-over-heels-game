@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://v1jygcdtoqi3"]
 
-[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="1_xtvdm"]
 [ext_resource type="PackedScene" uid="uid://cdimgs0cna7jf" path="res://Scenes/Objects/Green_block.tscn" id="2_ayo57"]
 [ext_resource type="PackedScene" uid="uid://j04lyk05824u" path="res://Scenes/Objects/flower_platform.tscn" id="3_j4y42"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="4_jm2at"]
@@ -54,9 +53,6 @@ _data = {
 }
 
 [node name="Grass scene" type="Node2D" unique_id=610116829]
-
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_xtvdm")]
-position = Vector2(-792, 200)
 
 [node name="flower platform" parent="." unique_id=847648505 instance=ExtResource("3_j4y42")]
 position = Vector2(448.00003, 40.000008)

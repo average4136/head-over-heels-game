@@ -3,14 +3,602 @@
 [ext_resource type="PackedScene" uid="uid://btkss35dirufr" path="res://Scenes/Level scenes/space_scene.tscn" id="1_ymnsd"]
 [ext_resource type="PackedScene" uid="uid://bo6c58ha16686" path="res://Scenes/Level scenes/ice_section.tscn" id="2_rpe6i"]
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="3_rpe6i"]
+[ext_resource type="PackedScene" uid="uid://v1jygcdtoqi3" path="res://Scenes/Level scenes/grass_scene.tscn" id="4_moskh"]
+[ext_resource type="PackedScene" uid="uid://j04lyk05824u" path="res://Scenes/Objects/flower_platform.tscn" id="5_icq10"]
+[ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="6_swabi"]
+[ext_resource type="PackedScene" uid="uid://cwbv4iwydbj34" path="res://Scenes/Objects/Leaf_block.tscn" id="7_4dcjm"]
+[ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="8_cd86f"]
+[ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="9_75afy"]
+[ext_resource type="PackedScene" uid="uid://cdimgs0cna7jf" path="res://Scenes/Objects/Green_block.tscn" id="10_63cjw"]
+[ext_resource type="Texture2D" uid="uid://bljw3sjkh0m3n" path="res://Assets/Decorations/tree decor.png" id="11_eqv6n"]
+[ext_resource type="Texture2D" uid="uid://bvqnfi7ife36w" path="res://Assets/Decorations/bush decor.png" id="12_dqwkk"]
+[ext_resource type="Texture2D" uid="uid://bgm8ebfl1wpqt" path="res://Assets/Decorations/flower decor.png" id="13_ri2gq"]
+[ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="14_63cjw"]
+[ext_resource type="PackedScene" uid="uid://dh3th1iwygrwr" path="res://Scenes/Objects/blue_block.tscn" id="15_eqv6n"]
+[ext_resource type="Texture2D" uid="uid://4kjsfp1wquao" path="res://Assets/Decorations/snowman decor.png" id="16_dqwkk"]
+[ext_resource type="Texture2D" uid="uid://blc5jar0yjodd" path="res://Assets/Decorations/dead tree decor.png" id="17_ri2gq"]
+[ext_resource type="Texture2D" uid="uid://esb74ncp4fey" path="res://Assets/Decorations/snow flakes decor.png" id="18_s05jb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t1hc7"]
+
+[sub_resource type="Animation" id="Animation_n02xx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-726, -806)]
+}
+
+[sub_resource type="Animation" id="Animation_w5b0t"]
+resource_name = "cloud move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-726, -806), Vector2(-111, -990)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dn0eg"]
+_data = {
+&"RESET": SubResource("Animation_n02xx"),
+&"cloud move": SubResource("Animation_w5b0t")
+}
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dn0eg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp70f"]
+
+[sub_resource type="Animation" id="Animation_qgp8j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SnowFlakesDecor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-874, -1078)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-716.7898, -1129.9878)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SnowFlakesDecor:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.528827]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SnowFlakesDecor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.15832794, 0.15832794)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.17977612, 0.17977612)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../SnowFlakesDecor:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_as0jg"]
+resource_name = "snow flakes"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SnowFlakesDecor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-874, -1078), Vector2(-960.99994, -920), Vector2(-841.00006, -767.00006), Vector2(-948.00006, -643), Vector2(-928.00006, -461.00006), Vector2(-924, -137.00012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-716.7898, -1129.9878), Vector2(-659.00006, -968.00006), Vector2(-742, -790.9999), Vector2(-678.00006, -680.00006), Vector2(-733, -472.99988), Vector2(-733, -472.99988)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SnowFlakesDecor:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.23325504, 0.45925373, -0.28628817, 0.46947002, 0.305868]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.528827, -1.8225012, -0.9574488, -1.8871491, -1.0028851, -1.0028851]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SnowFlakesDecor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.15832794, 0.15832794), Vector2(0.12730174, 0.12730174), Vector2(0.13258082, 0.13258082), Vector2(0.10498144, 0.10498144), Vector2(0.12863466, 0.12863466), Vector2(0.15832794, 0.15832794)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.17977612, 0.17977612), Vector2(0.2084075, 0.2084075), Vector2(0.10596736, 0.10596736), Vector2(0.13970774, 0.13970774), Vector2(0.110211596, 0.110211596), Vector2(0.110211596, 0.110211596)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../SnowFlakesDecor:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_47uv7"]
+_data = {
+&"RESET": SubResource("Animation_qgp8j"),
+&"snow flakes": SubResource("Animation_as0jg")
+}
 
 [node name="Main_level" type="Node2D" unique_id=1377921325]
 
 [node name="Space Scene" parent="." unique_id=1614508694 instance=ExtResource("1_ymnsd")]
+visible = false
 position = Vector2(56, -3280)
 
 [node name="Ice_section" parent="." unique_id=1675132565 instance=ExtResource("2_rpe6i")]
+visible = false
 position = Vector2(0, 1)
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(560, -960)
+visible = false
+position = Vector2(-24, 864)
+
+[node name="Grass scene" parent="." unique_id=610116829 instance=ExtResource("4_moskh")]
+visible = false
+position = Vector2(0, 1352)
+
+[node name="Grass section" type="Node2D" parent="." unique_id=1854164821]
+position = Vector2(0, 1480)
+
+[node name="flower platform" parent="Grass section" unique_id=847648505 instance=ExtResource("5_icq10")]
+position = Vector2(448.00003, 40.000008)
+rotation = -0.2617994
+scale = Vector2(0.8618077, 0.8618077)
+
+[node name="Cloud block" parent="Grass section" unique_id=532234708 instance=ExtResource("6_swabi")]
+position = Vector2(1016, -432)
+
+[node name="Node2D2" parent="Grass section" unique_id=292330263 instance=ExtResource("7_4dcjm")]
+position = Vector2(768, -64)
+
+[node name="left wall" type="StaticBody2D" parent="Grass section" unique_id=874738611]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass section/left wall" unique_id=1724233148]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_s05jb")
+
+[node name="right wall" type="StaticBody2D" parent="Grass section" unique_id=1926217923]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass section/right wall" unique_id=939426432]
+shape = SubResource("WorldBoundaryShape2D_t1hc7")
+
+[node name="Launch booster" parent="Grass section" unique_id=1384817862 instance=ExtResource("8_cd86f")]
+position = Vector2(776, -208)
+
+[node name="Stone platform" parent="Grass section" unique_id=107939614 instance=ExtResource("9_75afy")]
+position = Vector2(-384.00003, 152.00002)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform2" parent="Grass section" unique_id=1558409731 instance=ExtResource("9_75afy")]
+position = Vector2(16.000065, 128)
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform3" parent="Grass section" unique_id=1714801075 instance=ExtResource("9_75afy")]
+position = Vector2(15.999999, 48)
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Cloud block2" parent="Grass section" unique_id=1219393259 instance=ExtResource("6_swabi")]
+position = Vector2(1104, -88)
+rotation = -3.1415927
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Node2D3" parent="Grass section" unique_id=1923038160 instance=ExtResource("10_63cjw")]
+position = Vector2(504, -392)
+
+[node name="Node2D4" parent="Grass section" unique_id=693253289 instance=ExtResource("10_63cjw")]
+position = Vector2(128, -400)
+
+[node name="Node2D5" parent="Grass section" unique_id=1777768358 instance=ExtResource("10_63cjw")]
+position = Vector2(-136, -400)
+
+[node name="Node2D6" parent="Grass section" unique_id=962723361 instance=ExtResource("10_63cjw")]
+position = Vector2(-776, -400)
+
+[node name="Node2D7" parent="Grass section" unique_id=1247881055 instance=ExtResource("10_63cjw")]
+position = Vector2(-1016, -400)
+
+[node name="Stone platform4" parent="Grass section" unique_id=32203010 instance=ExtResource("9_75afy")]
+position = Vector2(-184.00002, 96.000015)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform5" parent="Grass section" unique_id=337879422 instance=ExtResource("9_75afy")]
+position = Vector2(-584, 208.00003)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="GROUND" parent="Grass section" unique_id=964464008 instance=ExtResource("10_63cjw")]
+position = Vector2(-24, 256)
+scale = Vector2(9.919999, 1)
+
+[node name="Cloud block3" parent="Grass section" unique_id=1670646421 instance=ExtResource("6_swabi")]
+position = Vector2(960, -824)
+rotation = -2.8797934
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Cloud block4" parent="Grass section" unique_id=368846884 instance=ExtResource("6_swabi")]
+position = Vector2(616, -880)
+rotation = -3.1415927
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Launch booster2" parent="Grass section" unique_id=2122838365 instance=ExtResource("8_cd86f")]
+position = Vector2(-1024, -592)
+
+[node name="TreeDecor" type="Sprite2D" parent="Grass section" unique_id=729177636]
+position = Vector2(-1152, -29.00003)
+scale = Vector2(0.25880423, 0.25880423)
+texture = ExtResource("11_eqv6n")
+
+[node name="BushDecor" type="Sprite2D" parent="Grass section" unique_id=2082645201]
+position = Vector2(-981, 135)
+scale = Vector2(0.2909961, 0.2909961)
+texture = ExtResource("12_dqwkk")
+
+[node name="TreeDecor2" type="Sprite2D" parent="Grass section" unique_id=2024202473]
+position = Vector2(151, -690)
+rotation = 3.1415927
+scale = Vector2(0.22744878, -0.24957219)
+texture = ExtResource("11_eqv6n")
+
+[node name="FlowerDecor" type="Sprite2D" parent="Grass section" unique_id=174626850]
+position = Vector2(72, -465)
+scale = Vector2(0.15745524, 0.15745524)
+texture = ExtResource("13_ri2gq")
+
+[node name="FlowerDecor2" type="Sprite2D" parent="Grass section" unique_id=2108576719]
+self_modulate = Color(0.35839754, 0.64806694, 0.95248777, 1)
+position = Vector2(-536, -506.00003)
+scale = Vector2(-0.22197801, 0.22197801)
+texture = ExtResource("13_ri2gq")
+
+[node name="BushDecor2" type="Sprite2D" parent="Grass section" unique_id=2115005934]
+position = Vector2(-814, -512)
+scale = Vector2(0.20002364, 0.20002364)
+texture = ExtResource("12_dqwkk")
+
+[node name="Cloud block5" parent="Grass section" unique_id=610268577 instance=ExtResource("6_swabi")]
+position = Vector2(-726, -806)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grass section/Cloud block5" unique_id=483646281]
+libraries/ = SubResource("AnimationLibrary_dn0eg")
+autoplay = &"cloud move"
+
+[node name="Ice section" type="Node2D" parent="." unique_id=216930691]
+
+[node name="left wall" type="StaticBody2D" parent="Ice section" unique_id=2006606401]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ice section/left wall" unique_id=1495303238]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_dn0eg")
+
+[node name="right wall" type="StaticBody2D" parent="Ice section" unique_id=177495337]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ice section/right wall" unique_id=1872416736]
+shape = SubResource("WorldBoundaryShape2D_cp70f")
+
+[node name="StaticBody2D" parent="Ice section" unique_id=1447629716 instance=ExtResource("14_63cjw")]
+position = Vector2(479.99997, 15.999993)
+rotation = 0.2617994
+scale = Vector2(3.4314842, 5)
+
+[node name="StaticBody2D2" parent="Ice section" unique_id=530690351 instance=ExtResource("14_63cjw")]
+position = Vector2(704, 48.000004)
+scale = Vector2(11.240002, 5.12)
+
+[node name="Blue_block2" parent="Ice section" unique_id=602105709 instance=ExtResource("15_eqv6n")]
+position = Vector2(-808, -416.00003)
+scale = Vector2(0.63516, 0.6)
+
+[node name="Blue_block4" parent="Ice section" unique_id=853212973 instance=ExtResource("15_eqv6n")]
+position = Vector2(-128, -648)
+
+[node name="Blue_block6" parent="Ice section" unique_id=1458463555 instance=ExtResource("15_eqv6n")]
+position = Vector2(376, -704)
+scale = Vector2(0.68634856, 0.8976628)
+
+[node name="StaticBody2D4" parent="Ice section" unique_id=1720991358 instance=ExtResource("14_63cjw")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D10" parent="Ice section" unique_id=2039731883 instance=ExtResource("14_63cjw")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D15" parent="Ice section" unique_id=1194130147 instance=ExtResource("14_63cjw")]
+position = Vector2(-1176, -431.99997)
+rotation = 1.3089969
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D5" parent="Ice section" unique_id=393818418 instance=ExtResource("14_63cjw")]
+position = Vector2(1032, -856.00006)
+rotation = -1.118756
+
+[node name="StaticBody2D6" parent="Ice section" unique_id=1943310545 instance=ExtResource("14_63cjw")]
+position = Vector2(832, -743.99994)
+rotation = -0.49741888
+
+[node name="StaticBody2D7" parent="Ice section" unique_id=620716756 instance=ExtResource("14_63cjw")]
+position = Vector2(16, 48)
+rotation = -0.2617994
+scale = Vector2(3.4314842, 5)
+
+[node name="StaticBody2D3" parent="Ice section" unique_id=1013026318 instance=ExtResource("14_63cjw")]
+position = Vector2(-918.99994, 57.000004)
+scale = Vector2(22.720001, 5)
+
+[node name="Cloud block" parent="Ice section" unique_id=112324799 instance=ExtResource("6_swabi")]
+position = Vector2(792, -640)
+scale = Vector2(2.5910778, 2.591078)
+
+[node name="half-pipe" type="Node2D" parent="Ice section" unique_id=1301434563]
+
+[node name="StaticBody2D12" parent="Ice section/half-pipe" unique_id=287933294 instance=ExtResource("14_63cjw")]
+position = Vector2(-1092, -1177.0001)
+rotation = 2.0943952
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="Ice section/half-pipe" unique_id=1986444259 instance=ExtResource("14_63cjw")]
+position = Vector2(-943.9999, -1264.9999)
+rotation = 2.6179938
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D14" parent="Ice section/half-pipe" unique_id=456253673 instance=ExtResource("14_63cjw")]
+position = Vector2(-763.00006, -1319)
+rotation = 2.8797934
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D15" parent="Ice section/half-pipe" unique_id=294508404 instance=ExtResource("14_63cjw")]
+position = Vector2(-568, -1321.0001)
+rotation = -3.1415925
+scale = Vector2(5.239565, 5.239565)
+
+[node name="half-pipe2" type="Node2D" parent="Ice section" unique_id=1323402308]
+position = Vector2(-1173.0002, -277)
+rotation = -1.5132004
+
+[node name="StaticBody2D15" parent="Ice section/half-pipe2" unique_id=1108448406 instance=ExtResource("14_63cjw")]
+position = Vector2(-293.62143, 414.58978)
+rotation = 1.5707964
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D12" parent="Ice section/half-pipe2" unique_id=225991666 instance=ExtResource("14_63cjw")]
+position = Vector2(-270.4242, 260.99976)
+rotation = 1.8325958
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="Ice section/half-pipe2" unique_id=1496030878 instance=ExtResource("14_63cjw")]
+position = Vector2(-158.91243, 110.33087)
+rotation = 2.3561945
+scale = Vector2(5.5971236, 5.239565)
+
+[node name="Blue_block3" parent="Ice section" unique_id=987674849 instance=ExtResource("15_eqv6n")]
+position = Vector2(760, -1064)
+scale = Vector2(0.9723535, 0.82164687)
+
+[node name="Blue_block7" parent="Ice section" unique_id=1833003134 instance=ExtResource("15_eqv6n")]
+position = Vector2(-344, -656)
+scale = Vector2(0.63516, 0.6)
+
+[node name="Blue_block5" parent="Ice section" unique_id=1255953679 instance=ExtResource("15_eqv6n")]
+position = Vector2(-648, -416)
+scale = Vector2(0.63516, 0.6)
+
+[node name="StaticBody2D8" parent="Ice section" unique_id=842362986 instance=ExtResource("14_63cjw")]
+position = Vector2(-472, -480.00006)
+rotation = -1.118756
+
+[node name="StaticBody2D9" parent="Ice section" unique_id=703454718 instance=ExtResource("14_63cjw")]
+position = Vector2(-632, -415.99997)
+rotation = -0.49741888
+
+[node name="Cloud block2" parent="Ice section" unique_id=1248728589 instance=ExtResource("6_swabi")]
+position = Vector2(-807.9999, -1248)
+scale = Vector2(2.5910778, 2.591078)
+
+[node name="StaticBody2D11" parent="Ice section" unique_id=1491433978 instance=ExtResource("14_63cjw")]
+position = Vector2(456, -1151.9999)
+rotation = 0.5235988
+
+[node name="StaticBody2D12" parent="Ice section" unique_id=1000248301 instance=ExtResource("14_63cjw")]
+position = Vector2(344.00003, -1304.0001)
+rotation = 1.0471976
+
+[node name="Blue_block8" parent="Ice section" unique_id=188590214 instance=ExtResource("15_eqv6n")]
+position = Vector2(1208, -1016)
+
+[node name="Blue_block9" parent="Ice section" unique_id=920217395 instance=ExtResource("15_eqv6n")]
+position = Vector2(-160, -1400)
+scale = Vector2(1.2800019, 1)
+
+[node name="SnowmanDecor" type="Sprite2D" parent="Ice section" unique_id=111155730]
+position = Vector2(1028, -166)
+scale = Vector2(0.31100717, 0.31100717)
+texture = ExtResource("16_dqwkk")
+
+[node name="DeadTreeDecor" type="Sprite2D" parent="Ice section" unique_id=411538147]
+position = Vector2(791, -348)
+scale = Vector2(0.56779695, 0.56779695)
+texture = ExtResource("17_ri2gq")
+
+[node name="SnowFlakesDecor" type="Sprite2D" parent="Ice section" unique_id=191138478]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-874, -1078)
+scale = Vector2(0.15832794, 0.15832794)
+texture = ExtResource("18_s05jb")
+
+[node name="SnowFlakesDecor2" type="Sprite2D" parent="Ice section" unique_id=1999572992]
+position = Vector2(-716.7898, -1129.9878)
+rotation = -1.528827
+scale = Vector2(0.17977612, 0.17977612)
+texture = ExtResource("18_s05jb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ice section/SnowFlakesDecor2" unique_id=2062900438]
+libraries/ = SubResource("AnimationLibrary_47uv7")
+autoplay = &"snow flakes"
+
+[node name="SnowmanDecor2" type="Sprite2D" parent="Ice section" unique_id=903794273]
+position = Vector2(-1032.0001, -1444)
+rotation = -0.2044917
+scale = Vector2(0.13114315, 0.13114315)
+texture = ExtResource("16_dqwkk")
