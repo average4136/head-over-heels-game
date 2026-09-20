@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://n4abg1xio0vj" path="res://Scenes/Cutscenes/cutscene_player.tscn" id="1_3j5s0"]
 [ext_resource type="Script" uid="uid://dq5hva5g2rdbq" path="res://Scripts/ending_cutscene.gd" id="2_3j5s0"]
+[ext_resource type="AudioStream" uid="uid://d2lkyypxcwggd" path="res://Assets/Music/ConfessingBlues.mp3" id="3_vjpk5"]
 
 [node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_3j5s0")]
 script = ExtResource("2_3j5s0")
@@ -13,12 +14,16 @@ anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -38.0
-offset_right = 3.0
-offset_bottom = 7.0
+offset_left = 1.0
+offset_top = -93.0
+offset_right = 1.0
+offset_bottom = -48.0
 grow_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/outline_size = 8
+
+[node name="OST" parent="." index="5" unique_id=667630324]
+stream = ExtResource("3_vjpk5")
+volume_db = -5.404
