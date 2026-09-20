@@ -71,10 +71,20 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerName" type="LineEdit" parent="Camera2D/Panel" unique_id=2115220908]
-layout_mode = 0
-offset_right = 68.5
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.9270003
+anchor_right = -2.24
+anchor_bottom = 1.4590001
+offset_left = -0.008911133
+offset_top = -4.0
+offset_right = -0.08001709
+offset_bottom = 0.0009918213
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
 placeholder_text = "Enter your name:"
+keep_editing_on_text_submit = true
 
 [node name="TestGround" type="StaticBody2D" parent="." unique_id=220009935]
 
@@ -103,4 +113,5 @@ grow_vertical = 2
 text = "end
 "
 
+[connection signal="text_submitted" from="Camera2D/Panel/PlayerName" to="Camera2D/Panel" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="test for leaderboard/Button" to="Camera2D/Panel" method="_on_button_pressed"]
