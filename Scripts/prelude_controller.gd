@@ -18,15 +18,6 @@ const NARR_P5 = preload("res://Assets/downbad_voicelines/prelude_narrator_5_0009
 func _ready() -> void:
 	_setup_prelude_camera()
 	_setup_drooping_head()
-
-	if eye_fade:
-		eye_fade.modulate.a = 1.0
-		eye_fade.visible = true
-		var tween = create_tween()
-		tween.tween_property(eye_fade, "modulate:a", 0.0, 1.8)
-		await tween.finished
-		eye_fade.visible = false
-	
 	_play_prelude()
 
 func _setup_drooping_head() -> void:

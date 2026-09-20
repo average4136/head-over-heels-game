@@ -12,15 +12,18 @@ extends CanvasLayer
 
 var slides: Array[Dictionary] = []
 var current_idx: int = -1
+@export var bgm_start_offset: float = 0.0
 
 func _ready() -> void:
 	skip_button.pressed.connect(_end_cutscene)
 	timer.timeout.connect(_next_slide)
-	
+
 	if bgm_stream:
 		ost.stream = bgm_stream
-		ost.play()
-		
+		ost.play(bgm_start_offset)
+	elif ost.stream:
+		ost.play(bgm_start_offset)
+
 	_setup_slides()
 	_next_slide()
 
