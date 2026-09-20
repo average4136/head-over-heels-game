@@ -1,3 +1,46 @@
 [gd_scene format=3 uid="uid://bo6c58ha16686"]
 
+[ext_resource type="PackedScene" uid="uid://dh3th1iwygrwr" path="res://Scenes/Objects/blue_block.tscn" id="1_i0ptw"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
+[ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
+[ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oskd4"]
+
 [node name="Ice_section" type="Node2D" unique_id=1675132565]
+
+[node name="left wall" type="StaticBody2D" parent="." unique_id=1804272182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left wall" unique_id=2132245393]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_k0s5y")
+
+[node name="right wall" type="StaticBody2D" parent="." unique_id=99011564]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=588323181]
+shape = SubResource("WorldBoundaryShape2D_oskd4")
+
+[node name="Blue_block" parent="." unique_id=602105709 instance=ExtResource("1_i0ptw")]
+position = Vector2(-504, 56)
+scale = Vector2(4.960001, 1)
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("2_7d2j5")]
+position = Vector2(920, -16)
+
+[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("3_7d2j5")]
+position = Vector2(791.99994, -640)
+scale = Vector2(2.5910778, 2.5910778)
+
+[node name="StaticBody2D" parent="." unique_id=1447629716 instance=ExtResource("4_k0s5y")]
+position = Vector2(479.99997, 15.999993)
+rotation = 0.2617994
+scale = Vector2(3.4314842, 5)
+
+[node name="StaticBody2D2" parent="." unique_id=181318515 instance=ExtResource("4_k0s5y")]
+position = Vector2(704, 48.000004)
+scale = Vector2(11.240002, 5.12)

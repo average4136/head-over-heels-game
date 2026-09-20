@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ysms78opj7fm"]
+
+[ext_resource type="Script" uid="uid://dex3835o6f6x0" path="res://Scenes/Objects/launch_pad.gd" id="1_dfcjj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fa70v"]
+radius = 8.0
+height = 32.0
+
+[node name="Launch booster" type="Node2D" unique_id=1384817862]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=80789037]
+script = ExtResource("1_dfcjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1212694998]
+shape = SubResource("CapsuleShape2D_fa70v")
