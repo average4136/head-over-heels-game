@@ -6,7 +6,7 @@
 
 [node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_bt1fc")]
 script = ExtResource("2_418q2")
-next_scene_path = "res://Scenes/prelude.tscn"
+next_scene_path = "res://Scenes/level-prelude.tscn"
 
 [node name="CardText" parent="." index="2" unique_id=1812275407]
 anchors_preset = 12
