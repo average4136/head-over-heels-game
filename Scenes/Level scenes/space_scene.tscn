@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_ad6b8"]
 [ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="7_1k4pw"]
 [ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_dauer"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="9_8wo2k"]
 
 [sub_resource type="Animation" id="Animation_124nk"]
 length = 0.001
@@ -230,3 +231,6 @@ texture = ExtResource("8_dauer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AlienDecor" unique_id=1828851517]
 libraries/ = SubResource("AnimationLibrary_6es0x")
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("9_8wo2k")]
+position = Vector2(72, 424)
