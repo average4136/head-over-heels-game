@@ -20,11 +20,18 @@ func _process(delta) -> void:
 	$seconds.text = "%02d:" % seconds
 	$minutes.text = "%02d:" % minutes
 
-
 func _on_button_pressed() -> void:
-	add_score("Test Player", 25.42)
+	var player_name = $PlayerName.text.strip_edges()
 
-	print("Score saved!")
+	# Don't allow the score to be submitted without a name
+	if player_name == "":
+		print("Please enter your name!")
+		$PlayerName.grab_focus()
+		return
+
+	add_score(player_name, time)
+
+	print("Score saved: ", player_name, " - ", time)
 
 	get_tree().change_scene_to_file(
 		"res://Scenes/leaderboard_container.tscn"
