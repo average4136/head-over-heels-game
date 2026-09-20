@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4avgu7faru1m"]
+
+[ext_resource type="Texture2D" uid="uid://b6sok7l3jbp6i" path="res://Assets/Hannah's Drawn Assets/leaf.png" id="1_rejsp"]
+
+[node name="leaves" type="StaticBody2D" unique_id=1172998058]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=942178175]
+texture = ExtResource("1_rejsp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=806366959]
+position = Vector2(-30, 0)
+polygon = PackedVector2Array(6, -60, 88, -29, 235, -7, 382, -36, 515, -122, 631, -259, 722, -410, 703, -434, 596, -402, 456, -397, 335, -409, 239, -406, 149, -399, 115, -387, 46, -317, -1, -217, -14, -87)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1960847928]
+position = Vector2(-116, 199)
+polygon = PackedVector2Array(-51, -32, -127, -56, -230, -72, -325, -71, -460, -96, -556, -124, -616, -136, -634, -119, -611, -88, -571, 2, -516, 82, -435, 155, -340, 210, -248, 247, -144, 274, -27, 273, 50, 251, 64, 238, 6, 1)

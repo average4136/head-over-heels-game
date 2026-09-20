@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://g4e517gsamh7"]
 
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_8pgfb"]
+[ext_resource type="PackedScene" uid="uid://b4avgu7faru1m" path="res://Scenes/leaves.tscn" id="2_xyj3b"]
 
-[node name="Node2D" type="Node2D" unique_id=1443856287]
+[node name="testlvl" type="Node2D" unique_id=1443856287]
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_8pgfb")]
-position = Vector2(117, -49)
+position = Vector2(119, -44)
+
+[node name="StaticBody2D" parent="." unique_id=1172998058 instance=ExtResource("2_xyj3b")]
+position = Vector2(559, -47)

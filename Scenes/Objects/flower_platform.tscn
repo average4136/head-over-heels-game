@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://j04lyk05824u"]
+
+[ext_resource type="Texture2D" uid="uid://bittqe7wlf0o" path="res://Assets/Hannah's Drawn Assets/flower.png" id="1_bbfn4"]
+
+[node name="flower platform" type="StaticBody2D" unique_id=847648505]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1702032389]
+texture = ExtResource("1_bbfn4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1536680388]
+position = Vector2(-256, -60)
+polygon = PackedVector2Array(53, 4, 124, 8, 247, 9, 385, 9, 495, 6, 503, 18, 505, 54, 496, 75, 473, 89, 440, 93, 408, 97, 379, 90, 367, 83, 347, 109, 326, 121, 272, 140, 239, 140, 206, 127, 184, 103, 173, 92, 121, 103, 77, 104, 38, 99, 16, 84, 11, 57, 17, 38, 24, 27, -9, 1, 0, 0)

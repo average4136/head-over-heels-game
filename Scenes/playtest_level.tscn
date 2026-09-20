@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="2_iabvn"]
 [ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="3_h3lg6"]
 [ext_resource type="Texture2D" uid="uid://cphuuhqlegouj" path="res://Assets/Hannah's Drawn Assets/cloud.png" id="4_82pr1"]
+[ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="5_kptn1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fa70v"]
 
@@ -44,36 +45,119 @@ texture = ExtResource("2_iabvn")
 position = Vector2(232, 173)
 texture = ExtResource("2_iabvn")
 
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
-position = Vector2(6, -3)
-
 [node name="Start area" type="Node2D" parent="." unique_id=1905083718]
 
-[node name="Stone platform2" parent="Start area" unique_id=859276587 instance=ExtResource("3_h3lg6")]
-position = Vector2(240, -87)
+[node name="StaticBody2D2" parent="Start area" unique_id=730536775 instance=ExtResource("5_kptn1")]
+position = Vector2(999.99994, -264.00006)
+rotation = -1.118756
+
+[node name="Stone platform4" parent="Start area" unique_id=462037937 instance=ExtResource("3_h3lg6")]
+position = Vector2(1048, -472)
 scale = Vector2(0.5, 0.5)
 
-[node name="Stone platform" parent="Start area" unique_id=2081943453 instance=ExtResource("3_h3lg6")]
-position = Vector2(466, -88)
+[node name="Stone platform6" parent="Start area" unique_id=824417129 instance=ExtResource("3_h3lg6")]
+position = Vector2(512, -488)
 scale = Vector2(0.5, 0.5)
 
-[node name="Cloud" type="Sprite2D" parent="." unique_id=354234418]
+[node name="Stone platform7" parent="Start area" unique_id=34280070 instance=ExtResource("3_h3lg6")]
+position = Vector2(344, -488)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform8" parent="Start area" unique_id=720166333 instance=ExtResource("3_h3lg6")]
+position = Vector2(-32, -512)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform9" parent="Start area" unique_id=1985402125 instance=ExtResource("3_h3lg6")]
+position = Vector2(-264, -512)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform3" parent="Start area" unique_id=107939614 instance=ExtResource("3_h3lg6")]
+position = Vector2(504, -175)
+scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform5" parent="Start area" unique_id=793650110 instance=ExtResource("3_h3lg6")]
+position = Vector2(504, -87)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cloud" type="Sprite2D" parent="Start area" unique_id=354234418]
 position = Vector2(-651, -788)
 scale = Vector2(0.670205, 0.6756624)
 texture = ExtResource("4_82pr1")
 
-[node name="Stone platform2" parent="." unique_id=107939614 instance=ExtResource("3_h3lg6")]
-position = Vector2(696, -175)
+[node name="Stone platform2" parent="Start area" unique_id=859276587 instance=ExtResource("3_h3lg6")]
+position = Vector2(48, -87)
 scale = Vector2(0.5, 0.5)
 
-[node name="Stone platform" parent="." unique_id=1020643056 instance=ExtResource("3_h3lg6")]
-position = Vector2(922, -176)
+[node name="Stone platform" parent="Start area" unique_id=2081943453 instance=ExtResource("3_h3lg6")]
+position = Vector2(274, -88)
 scale = Vector2(0.5, 0.5)
 
-[node name="Stone platform3" parent="." unique_id=793650110 instance=ExtResource("3_h3lg6")]
-position = Vector2(696, -87)
+[node name="StaticBody2D" parent="Start area" unique_id=1447629716 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D" parent="Start area/StaticBody2D" unique_id=616558851 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="Stone platform11" parent="Start area" unique_id=2099971156 instance=ExtResource("3_h3lg6")]
+position = Vector2(-496, -512)
 scale = Vector2(0.5, 0.5)
 
-[node name="Stone platform4" parent="." unique_id=1248862601 instance=ExtResource("3_h3lg6")]
-position = Vector2(922, -88)
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
+position = Vector2(6, -3)
+
+[node name="Stone platform9" parent="." unique_id=951645800 instance=ExtResource("3_h3lg6")]
+position = Vector2(-376, -800)
 scale = Vector2(0.5, 0.5)
+
+[node name="Stone platform11" parent="." unique_id=396343480 instance=ExtResource("3_h3lg6")]
+position = Vector2(-608, -800)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" parent="." unique_id=981093684 instance=ExtResource("5_kptn1")]
+position = Vector2(-704, -464)
+
+[node name="StaticBody2D" parent="StaticBody2D" unique_id=1340290292 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D2" parent="." unique_id=1845799887 instance=ExtResource("5_kptn1")]
+position = Vector2(-1015.99994, -487.99997)
+rotation = 1.3089969
+
+[node name="StaticBody2D" parent="StaticBody2D2" unique_id=736037312 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D2" parent="StaticBody2D2" unique_id=41753447 instance=ExtResource("5_kptn1")]
+position = Vector2(-1048, -528)
+rotation = 1.3089969
+
+[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D2" unique_id=441051708 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D3" parent="StaticBody2D2" unique_id=375681684 instance=ExtResource("5_kptn1")]
+position = Vector2(-1015.99994, -487.99997)
+rotation = 1.3089969
+
+[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D3" unique_id=490907715 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D2" parent="StaticBody2D2/StaticBody2D3" unique_id=333722743 instance=ExtResource("5_kptn1")]
+position = Vector2(-1048, -528)
+rotation = 1.3089969
+
+[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2" unique_id=755148654 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
+
+[node name="StaticBody2D3" parent="." unique_id=265079889 instance=ExtResource("5_kptn1")]
+position = Vector2(-928, -272)
+rotation = 0.5235988
+
+[node name="StaticBody2D" parent="StaticBody2D3" unique_id=1868234778 instance=ExtResource("5_kptn1")]
+position = Vector2(800, -152.00002)
+rotation = -0.49741885
