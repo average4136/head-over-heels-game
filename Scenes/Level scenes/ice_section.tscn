@@ -4,10 +4,219 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
+[ext_resource type="Texture2D" uid="uid://4kjsfp1wquao" path="res://Assets/Decorations/snowman decor.png" id="5_cagp2"]
+[ext_resource type="Texture2D" uid="uid://blc5jar0yjodd" path="res://Assets/Decorations/dead tree decor.png" id="6_syarr"]
+[ext_resource type="Texture2D" uid="uid://esb74ncp4fey" path="res://Assets/Decorations/snow flakes decor.png" id="7_3v7f5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oskd4"]
+
+[sub_resource type="Animation" id="Animation_qgp8j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SnowFlakesDecor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-874, -1078)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-716.7898, -1129.9878)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SnowFlakesDecor:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.528827]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SnowFlakesDecor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.15832794, 0.15832794)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.17977612, 0.17977612)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../SnowFlakesDecor:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_as0jg"]
+resource_name = "snow flakes"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SnowFlakesDecor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-874, -1078), Vector2(-960.99994, -920), Vector2(-841.00006, -767.00006), Vector2(-948.00006, -643), Vector2(-928.00006, -461.00006), Vector2(-924, -137.00012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-716.7898, -1129.9878), Vector2(-659.00006, -968.00006), Vector2(-742, -790.9999), Vector2(-678.00006, -680.00006), Vector2(-733, -472.99988), Vector2(-733, -472.99988)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SnowFlakesDecor:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.23325504, 0.45925373, -0.28628817, 0.46947002, 0.305868]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.528827, -1.8225012, -0.9574488, -1.8871491, -1.0028851, -1.0028851]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SnowFlakesDecor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.22, 1.66, 2.16, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.15832794, 0.15832794), Vector2(0.12730174, 0.12730174), Vector2(0.13258082, 0.13258082), Vector2(0.10498144, 0.10498144), Vector2(0.12863466, 0.12863466), Vector2(0.15832794, 0.15832794)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.65999997, 1.22, 1.6700001, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.17977612, 0.17977612), Vector2(0.2084075, 0.2084075), Vector2(0.10596736, 0.10596736), Vector2(0.13970774, 0.13970774), Vector2(0.110211596, 0.110211596), Vector2(0.110211596, 0.110211596)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../SnowFlakesDecor:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.2666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4jgc"]
+_data = {
+&"RESET": SubResource("Animation_qgp8j"),
+&"snow flakes": SubResource("Animation_as0jg")
+}
 
 [node name="Ice_section" type="Node2D" unique_id=1675132565]
 
@@ -163,3 +372,35 @@ position = Vector2(1208, -1016)
 [node name="Blue_block9" parent="." unique_id=1151197475 instance=ExtResource("1_i0ptw")]
 position = Vector2(-160, -1400)
 scale = Vector2(1.2800019, 1)
+
+[node name="SnowmanDecor" type="Sprite2D" parent="." unique_id=882507948]
+position = Vector2(1028, -166)
+scale = Vector2(0.31100717, 0.31100717)
+texture = ExtResource("5_cagp2")
+
+[node name="DeadTreeDecor" type="Sprite2D" parent="." unique_id=654789989]
+position = Vector2(791, -348)
+scale = Vector2(0.56779695, 0.56779695)
+texture = ExtResource("6_syarr")
+
+[node name="SnowFlakesDecor" type="Sprite2D" parent="." unique_id=719525693]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-874, -1078)
+scale = Vector2(0.15832794, 0.15832794)
+texture = ExtResource("7_3v7f5")
+
+[node name="SnowFlakesDecor2" type="Sprite2D" parent="." unique_id=267027403]
+position = Vector2(-716.7898, -1129.9878)
+rotation = -1.528827
+scale = Vector2(0.17977612, 0.17977612)
+texture = ExtResource("7_3v7f5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SnowFlakesDecor2" unique_id=1318720633]
+libraries/ = SubResource("AnimationLibrary_e4jgc")
+autoplay = &"snow flakes"
+
+[node name="SnowmanDecor2" type="Sprite2D" parent="." unique_id=780068557]
+position = Vector2(-1032.0001, -1444)
+rotation = -0.2044917
+scale = Vector2(0.13114315, 0.13114315)
+texture = ExtResource("5_cagp2")
