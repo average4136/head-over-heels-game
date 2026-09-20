@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bojp3x15s10ef"]
+
+[ext_resource type="Texture2D" uid="uid://dhiflrhc2p2mn" path="res://Assets/Platform Images/flower platform.png" id="1_uaxrx"]
+
+[node name="Node2D" type="Node2D" unique_id=869359985]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1603588711]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=818120618]
+position = Vector2(128, -48)
+polygon = PackedVector2Array(0, 0, -128, 0, -248, 0, -256, 24, -256, 48, -144, 48, -64, 48, -16, 48, 0, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionPolygon2D" unique_id=605662171]
+position = Vector2(-128.62704, 49.187508)
+scale = Vector2(0.24205364, 0.27613348)
+texture = ExtResource("1_uaxrx")

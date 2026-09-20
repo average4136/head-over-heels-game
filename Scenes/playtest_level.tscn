@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="1_h3lg6"]
 [ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="2_iabvn"]
 [ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="3_h3lg6"]
-[ext_resource type="Texture2D" uid="uid://cphuuhqlegouj" path="res://Assets/Hannah's Drawn Assets/cloud.png" id="4_82pr1"]
+[ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="5_fhco1"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="5_kptn1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fa70v"]
@@ -79,11 +79,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(504, -87)
 scale = Vector2(0.5, 0.5)
 
-[node name="Cloud" type="Sprite2D" parent="Start area" unique_id=354234418]
-position = Vector2(-651, -788)
-scale = Vector2(0.670205, 0.6756624)
-texture = ExtResource("4_82pr1")
-
 [node name="Stone platform2" parent="Start area" unique_id=859276587 instance=ExtResource("3_h3lg6")]
 position = Vector2(48, -87)
 scale = Vector2(0.5, 0.5)
@@ -96,16 +91,12 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(800, -152.00002)
 rotation = -0.49741885
 
-[node name="StaticBody2D" parent="Start area/StaticBody2D" unique_id=616558851 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
-
 [node name="Stone platform11" parent="Start area" unique_id=2099971156 instance=ExtResource("3_h3lg6")]
 position = Vector2(-496, -512)
 scale = Vector2(0.5, 0.5)
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
-position = Vector2(6, -3)
+position = Vector2(-1032, -1032)
 
 [node name="Stone platform9" parent="." unique_id=951645800 instance=ExtResource("3_h3lg6")]
 position = Vector2(-376, -800)
@@ -118,46 +109,14 @@ scale = Vector2(0.5, 0.5)
 [node name="StaticBody2D" parent="." unique_id=981093684 instance=ExtResource("5_kptn1")]
 position = Vector2(-704, -464)
 
-[node name="StaticBody2D" parent="StaticBody2D" unique_id=1340290292 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
-
 [node name="StaticBody2D2" parent="." unique_id=1845799887 instance=ExtResource("5_kptn1")]
 position = Vector2(-1015.99994, -487.99997)
 rotation = 1.3089969
-
-[node name="StaticBody2D" parent="StaticBody2D2" unique_id=736037312 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
-
-[node name="StaticBody2D2" parent="StaticBody2D2" unique_id=41753447 instance=ExtResource("5_kptn1")]
-position = Vector2(-1048, -528)
-rotation = 1.3089969
-
-[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D2" unique_id=441051708 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
-
-[node name="StaticBody2D3" parent="StaticBody2D2" unique_id=375681684 instance=ExtResource("5_kptn1")]
-position = Vector2(-1015.99994, -487.99997)
-rotation = 1.3089969
-
-[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D3" unique_id=490907715 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
-
-[node name="StaticBody2D2" parent="StaticBody2D2/StaticBody2D3" unique_id=333722743 instance=ExtResource("5_kptn1")]
-position = Vector2(-1048, -528)
-rotation = 1.3089969
-
-[node name="StaticBody2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2" unique_id=755148654 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
 
 [node name="StaticBody2D3" parent="." unique_id=265079889 instance=ExtResource("5_kptn1")]
 position = Vector2(-928, -272)
 rotation = 0.5235988
 
-[node name="StaticBody2D" parent="StaticBody2D3" unique_id=1868234778 instance=ExtResource("5_kptn1")]
-position = Vector2(800, -152.00002)
-rotation = -0.49741885
+[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("5_fhco1")]
+position = Vector2(-1016, -824)
+scale = Vector2(1.8864782, 1.8864782)
