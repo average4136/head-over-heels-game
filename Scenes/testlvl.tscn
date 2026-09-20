@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://g4e517gsamh7"]
 
-[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_8pgfb"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/RIGHT-Guy.tscn" id="1_8pgfb"]
 [ext_resource type="PackedScene" uid="uid://b4avgu7faru1m" path="res://Scenes/leaves.tscn" id="2_xyj3b"]
 
 [node name="testlvl" type="Node2D" unique_id=1443856287]
