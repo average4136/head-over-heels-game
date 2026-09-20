@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bn47xsq7f44kx"]
+
+[ext_resource type="Script" uid="uid://civ48k6mgiqya" path="res://Scripts/name_entry.gd" id="1_0cmnf"]
+
+[node name="NameEntry" type="Control" unique_id=664499029]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0cmnf")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1059857351]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1657010596]
+custom_minimum_size = Vector2(340, 220)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1376869093]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=78287376]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=759103863]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Enter your name for the leaderboard:"
+horizontal_alignment = 1
+
+[node name="PlayerName" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1922377183]
+layout_mode = 2
+placeholder_text = "Your Name..."
+alignment = 1
+expand_to_text_length = true
+
+[node name="SubmitButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=807148283]
+layout_mode = 2
+text = "Submit Run"

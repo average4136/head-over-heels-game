@@ -36,6 +36,7 @@
 [ext_resource type="Script" uid="uid://d2s4w4236iei4" path="res://Scenes/Level scenes/gravity_changer.gd" id="29_xwawq"]
 [ext_resource type="PackedScene" uid="uid://dgtc6gb710wj4" path="res://Scenes/Objects/win_portal.tscn" id="31_c3nyq"]
 [ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="32_1kn2x"]
+[ext_resource type="Script" uid="uid://c7teuwgciumwy" path="res://Scripts/level_narration.gd" id="37_3dbdo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
 
@@ -1220,7 +1221,7 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(-714.208, 1563.7065)
+position = Vector2(-347, -3394)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
 position = Vector2(1040, -3048)
@@ -1264,3 +1265,6 @@ offset_top = 8.84
 offset_right = 132.20001
 offset_bottom = 31.84
 text = "00"
+
+[node name="LevelNarration" type="Node" parent="." unique_id=225916827]
+script = ExtResource("37_3dbdo")
