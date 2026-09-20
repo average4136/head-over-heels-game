@@ -386,6 +386,7 @@ _data = {
 }
 
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
+position = Vector2(109, 15)
 
 [node name="GradientBg" type="Sprite2D" parent="." unique_id=1264902900]
 position = Vector2(-23.000004, 3950.0002)
@@ -414,10 +415,6 @@ scale = Vector2(0.36703715, 0.9467006)
 [node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_8wo2k")]
 position = Vector2(850, 133)
 
-[node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_8wo2k")]
-position = Vector2(73, 461)
-scale = Vector2(0.7300851, 0.2657136)
-
 [node name="Node2D7" parent="." unique_id=955187897 instance=ExtResource("2_8wo2k")]
 position = Vector2(-505, 30)
 
@@ -443,7 +440,7 @@ position = Vector2(-237, -101)
 position = Vector2(-859, -280)
 
 [node name="star platform2" parent="." unique_id=1071983857 instance=ExtResource("6_ad6b8")]
-position = Vector2(706, -408.99997)
+position = Vector2(897.92993, -374.80807)
 rotation = -0.82849085
 
 [node name="yellow block4" parent="." unique_id=1287986369 instance=ExtResource("5_bc4y4")]
@@ -451,12 +448,12 @@ position = Vector2(-1232.0001, -242)
 scale = Vector2(0.48800763, 1.850894)
 
 [node name="yellow block5" parent="." unique_id=1930980042 instance=ExtResource("5_bc4y4")]
-position = Vector2(258, -641.00006)
+position = Vector2(449.92993, -606.80817)
 rotation = 0.196726
 scale = Vector2(1.3071389, 0.55597335)
 
 [node name="StarDecor" type="Sprite2D" parent="." unique_id=377873062]
-position = Vector2(-200, -143)
+position = Vector2(-8.070068, -108.808105)
 scale = Vector2(0.17638484, 0.17638484)
 texture = ExtResource("7_1k4pw")
 
@@ -471,7 +468,7 @@ texture = ExtResource("4_xynxa")
 libraries/ = SubResource("AnimationLibrary_2anaj")
 
 [node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_fjhv3")]
-position = Vector2(-241.00003, -742)
+position = Vector2(-49.0701, -707.8081)
 scale = Vector2(1.5276088, 1.6838567)
 
 [node name="AlienDecor" type="Sprite2D" parent="." unique_id=1104665968]
@@ -484,13 +481,14 @@ texture = ExtResource("8_dauer")
 libraries/ = SubResource("AnimationLibrary_6es0x")
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("9_8wo2k")]
-position = Vector2(66, 416)
+position = Vector2(-580, 410)
 
 [node name="star platform3" parent="." unique_id=112477691 instance=ExtResource("6_ad6b8")]
-position = Vector2(-1419, -915.00006)
+position = Vector2(-1227.0701, -880.80817)
 scale = Vector2(3.64, 3.64)
 
 [node name="PORTAL" type="Node2D" parent="." unique_id=1580670030]
+position = Vector2(191.92993, 34.191895)
 
 [node name="Portal1" type="Sprite2D" parent="PORTAL" unique_id=1940111192]
 position = Vector2(-932.51746, -976.1034)
