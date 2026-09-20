@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://btkss35dirufr"]
+
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_vfb10"]
+[ext_resource type="PackedScene" uid="uid://d3eu5ubs45wai" path="res://Scenes/Objects/Grey_block.tscn" id="2_spkxt"]
+[ext_resource type="PackedScene" uid="uid://cbp0wqs0t0y8s" path="res://Scenes/Objects/moon_platform.tscn" id="3_vqv81"]
+
+[node name="Space Scene" type="Node2D" unique_id=1614508694]
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_vfb10")]
+position = Vector2(-36, 425)
+
+[node name="Node2D" parent="." unique_id=1185949341 instance=ExtResource("2_spkxt")]
+position = Vector2(-563.00006, 511)
+scale = Vector2(2.5316777, 1.6942071)
+
+[node name="Moon Platform" parent="." unique_id=1750695849 instance=ExtResource("3_vqv81")]
+position = Vector2(-873, 157.00002)
+scale = Vector2(1.0313267, 1.0351115)
+
+[node name="Node2D2" parent="." unique_id=1431751909 instance=ExtResource("2_spkxt")]
+position = Vector2(385, 295)
+
+[node name="Node2D3" parent="." unique_id=578760428 instance=ExtResource("2_spkxt")]
+position = Vector2(-1092, 258.99997)
+rotation = 0.98937374
+
+[node name="Node2D4" parent="." unique_id=1882188515 instance=ExtResource("2_spkxt")]
+position = Vector2(580, 512)
+
+[node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_spkxt")]
+position = Vector2(898, 339)
+
+[node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_spkxt")]
+position = Vector2(73, 461)
+scale = Vector2(1.3300844, 0.2657136)
+
+[node name="Node2D7" parent="." unique_id=955187897 instance=ExtResource("2_spkxt")]
+position = Vector2(-226, -7)
+
+[node name="Moon Platform2" parent="." unique_id=1554874488 instance=ExtResource("3_vqv81")]
+position = Vector2(327, 29)
+scale = Vector2(0.6416152, 0.69061464)
