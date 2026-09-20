@@ -1,7 +1,7 @@
 extends Node
 
 # ==============================================================================
-# PRELOADED BOY LINES (1 - 14)
+# PRELOAD BOY AUDIO (1 - 14)
 # ==============================================================================
 const BOY_1  = preload("res://Assets/downbad_voicelines/gameplay_boy_1_00086962.mp3")
 const BOY_2  = preload("res://Assets/downbad_voicelines/gameplay_boy_2_00087211.mp3")
@@ -19,7 +19,7 @@ const BOY_13 = preload("res://Assets/downbad_voicelines/gameplay_boy_13_00090938
 const BOY_14 = preload("res://Assets/downbad_voicelines/gameplay_boy_14_00091179.mp3")
 
 # ==============================================================================
-# PRELOADED NARRATOR LINES (1 - 40)
+# PRELOAD NARRATOR AUDIO (1 - 40)
 # ==============================================================================
 const NARR_1  = preload("res://Assets/downbad_voicelines/gameplay_narrator_1_00091836.mp3")
 const NARR_2  = preload("res://Assets/downbad_voicelines/gameplay_narrator_2_00092094.mp3")
@@ -51,6 +51,8 @@ const NARR_27 = preload("res://Assets/downbad_voicelines/gameplay_narrator_27_00
 const NARR_28 = preload("res://Assets/downbad_voicelines/gameplay_narrator_28_00098129.mp3")
 const NARR_29 = preload("res://Assets/downbad_voicelines/gameplay_narrator_29_00098280.mp3")
 const NARR_30 = preload("res://Assets/downbad_voicelines/gameplay_narrator_30_00098435.mp3")
+
+# Portal ending audio lines
 const NARR_31 = preload("res://Assets/downbad_voicelines/gameplay_narrator_31_00098748.mp3")
 const NARR_32 = preload("res://Assets/downbad_voicelines/gameplay_narrator_32_00099085.mp3")
 const NARR_33 = preload("res://Assets/downbad_voicelines/gameplay_narrator_33_00099617.mp3")
@@ -62,45 +64,79 @@ const NARR_38 = preload("res://Assets/downbad_voicelines/gameplay_narrator_38_00
 const NARR_39 = preload("res://Assets/downbad_voicelines/gameplay_narrator_39_00101179.mp3")
 const NARR_40 = preload("res://Assets/downbad_voicelines/gameplay_narrator_40_00101225.mp3")
 
-# ==============================================================================
-# EXTRA CLIPS (Optional / Easter Eggs)
-# ==============================================================================
-const SND_ALMOST_DONE = preload("res://Assets/downbad_voicelines/almost_done00102767.mp3")
-
-# ==============================================================================
-# PLAYLIST SEQUENCES
-# ==============================================================================
-# The intro climbing lines played back-to-back until the narrator wraps up:
-var intro_lines: Array[Dictionary] = [
-	{"speaker": "narrator", "audio": NARR_1, "text": "Alright boy, look up there."},
-	{"speaker": "narrator", "audio": NARR_2, "text": "She's waiting at the very top."},
-	{"speaker": "boy",      "audio": BOY_1,  "text": "How am I supposed to climb like this?"},
-	{"speaker": "narrator", "audio": NARR_3, "text": "Use your body. Swing your weight."},
-	{"speaker": "narrator", "audio": NARR_4, "text": "Good luck, boy."}
-]
-
-# Lines played when the win portal is reached:
-var ending_lines: Array[Dictionary] = [
-	{"speaker": "narrator", "audio": NARR_5, "text": "Well would you look at that. You made it."},
-	{"speaker": "boy",      "audio": BOY_2,  "text": "I... I actually reached the top!"},
-	{"speaker": "girl",     "audio": SND_ALMOST_DONE, "text": "Hey... what happened to your neck?"}
-]
-
 var portal_triggered: bool = false
 
 func _ready() -> void:
 	_hook_win_portal()
-	# Slight pause after loading before dialogue starts
-	await get_tree().create_timer(0.8).timeout
-	_play_sequence(intro_lines)
+	await get_tree().create_timer(1.0).timeout
+	_play_gameplay_intro()
 
-func _play_sequence(lines: Array[Dictionary]) -> void:
-	for line in lines:
-		# Passing 0.0 allows DialogueManager to use the audio's exact length
-		DialogueManager.queue_line(line["speaker"], line["text"], line["audio"], 0.0)
+func _play_gameplay_intro() -> void:
+	# 1. Gameplay start up to "Good luck, boy."
+	DialogueManager.queue_line("boy", "Where the hell did you take me?", BOY_1)
+	DialogueManager.queue_line("narrator", "A super secret path that will take you to that girl instantly.", NARR_1)
+	DialogueManager.queue_line("narrator", "ONCE you reach that portal.", NARR_2)
+	DialogueManager.queue_line("narrator", "But there's only one catch.", NARR_3)
+	DialogueManager.queue_line("narrator", "You have to get up there first.", NARR_4)
+	DialogueManager.queue_line("boy", "What? In this condition?", BOY_2)
+	DialogueManager.queue_line("narrator", "But of course. Nothing worth doing is easy.", NARR_5)
+	DialogueManager.queue_line("boy", "This is gonna take forever.", BOY_3)
+	DialogueManager.queue_line("narrator", "But of course.", NARR_6)
+	DialogueManager.queue_line("narrator", "Good things take time.", NARR_7)
+	DialogueManager.queue_line("boy", "You know what? You piss me off. Did you do this to me?", BOY_4)
+	DialogueManager.queue_line("boy", "Who are you?", BOY_5)
+	DialogueManager.queue_line("narrator", "I'm but a charming, omniscient, humble being,", NARR_8)
+	DialogueManager.queue_line("narrator", "gracing you with my presence. And you ask too many questions, boy.", NARR_9)
+	DialogueManager.queue_line("narrator", "You think too much,", NARR_10)
+	DialogueManager.queue_line("narrator", "which is precisely why", NARR_11)
+	DialogueManager.queue_line("narrator", "you have developed this syndrome.", NARR_12)
+	DialogueManager.queue_line("boy", "And you know that how?", BOY_6)
+	DialogueManager.queue_line("narrator", "Well,", NARR_13)
+	DialogueManager.queue_line("narrator", "because I'm a charming, omniscient, humble being.", NARR_14)
+	DialogueManager.queue_line("boy", "So you DID do this.", BOY_7)
+	DialogueManager.queue_line("narrator", "Oh take some responsibility, boy. She loves responsible men.", NARR_15)
+	DialogueManager.queue_line("boy", "Don't talk like you know her.", BOY_8)
+	DialogueManager.queue_line("narrator", "Haha, do I need to remind you who I am again?", NARR_16)
+	DialogueManager.queue_line("boy", "Please, no.", BOY_9)
+	DialogueManager.queue_line("narrator", "I guess you wouldn't believe me then if I said that", NARR_17)
+	DialogueManager.queue_line("narrator", "if you had just been out of your own head earlier", NARR_18)
+	DialogueManager.queue_line("narrator", "and actually went and asked her out,", NARR_19)
+	DialogueManager.queue_line("narrator", "it WOULD have worked out.", NARR_20)
+	DialogueManager.queue_line("boy", "What, REALLY?", BOY_10)
+	DialogueManager.queue_line("narrator", "Oh what? Now you want to believe me?", NARR_21)
+	DialogueManager.queue_line("narrator", "I was just kidding, anyways.", NARR_22)
+	
+	# Silence beat: no audio file, display [...] for 2.0s
+	DialogueManager.queue_line("boy", "[...]", null, 2.0)
+	
+	DialogueManager.queue_line("narrator", "Ouu, silent treatment.", NARR_23)
+	DialogueManager.queue_line("narrator", "Not a good look.", NARR_24)
+	DialogueManager.queue_line("narrator", "Look boy,", NARR_25)
+	DialogueManager.queue_line("narrator", "I know you are head over heels for her.", NARR_26)
+	DialogueManager.queue_line("narrator", "I mean", NARR_27)
+	DialogueManager.queue_line("narrator", "how down bad can you be to ACTUALLY agree to going on this treacherous journey", NARR_28)
+	DialogueManager.queue_line("narrator", "for a single girl.", NARR_29)
+	DialogueManager.queue_line("boy", "Shut it.", BOY_11)
+	DialogueManager.queue_line("narrator", "Fine, I will.", NARR_30)
+	# (NARR_31 is the "Good luck, boy." wrap-up before silence)
+	DialogueManager.queue_line("narrator", "Good luck, boy.", NARR_31)
+
+func _play_portal_ending() -> void:
+	DialogueManager.stop_dialogue()
+	
+	DialogueManager.queue_line("narrator", "Wow, you made it boy!", NARR_32)
+	DialogueManager.queue_line("boy", "Yeah, yeah, will you cure me now?", BOY_12)
+	DialogueManager.queue_line("narrator", "Hmm, you've gotten really good with that head, though. I feel like you should keep it.", NARR_33)
+	DialogueManager.queue_line("boy", "*sigh*", BOY_13)
+	DialogueManager.queue_line("narrator", "You are no fun. You know that, right?", NARR_34)
+	DialogueManager.queue_line("narrator", "Fine.", NARR_35)
+	DialogueManager.queue_line("narrator", "Walk through that portal.", NARR_36)
+	DialogueManager.queue_line("narrator", "But listen to me.", NARR_37)
+	DialogueManager.queue_line("narrator", "I cannot guarantee your syndrome to be fixed.", NARR_38)
+	DialogueManager.queue_line("narrator", "That is the truth. It's all up to you.", NARR_39)
+	DialogueManager.queue_line("boy", "Wait, what?", BOY_14)
 
 func _hook_win_portal() -> void:
-	# Automatically connects to your win portal Area2D in game.tscn
 	var portal = get_tree().root.find_child("*portal*", true, false)
 	if portal and portal.has_signal("body_entered"):
 		portal.body_entered.connect(_on_portal_reached)
@@ -108,7 +144,6 @@ func _hook_win_portal() -> void:
 func _on_portal_reached(body: Node) -> void:
 	if portal_triggered:
 		return
-
 	if "Guy" in body.name or body.is_in_group("player"):
 		portal_triggered = true
-		_play_sequence(ending_lines)
+		_play_portal_ending()
