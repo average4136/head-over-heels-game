@@ -68,3 +68,5 @@ color = Color(0, 0, 0, 1)
 position = Vector2(1850.9998, 364)
 scale = Vector2(0.4016333, 0.4935424)
 texture = ExtResource("4_etii7")
+
+[node name="OST" type="AudioStreamPlayer" parent="." unique_id=253812726]
