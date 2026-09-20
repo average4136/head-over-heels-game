@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cbofc7inc14gw"]
+
+[ext_resource type="Script" uid="uid://d07x5gpbf5lgt" path="res://Scripts/settings.gd" id="1_gryuy"]
+[ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_ccovl"]
+
+[node name="Settings" type="Control" unique_id=45946157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gryuy")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1642201258]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 546.0
+offset_right = 687.0
+offset_bottom = 613.0
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=727804088]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ccovl")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1808376750]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 3.0
+offset_right = 874.0
+offset_bottom = 83.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 60
+text = "CREDITS"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=991927583]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 82.0
+offset_right = 862.0
+offset_bottom = 162.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 40
+text = "PROGRAMMING"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=35362083]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 177.0
+offset_right = 897.0
+offset_bottom = 257.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 40
+text = "ARTISTS"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=255789024]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 298.0
+offset_right = 911.0
+offset_bottom = 378.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 40
+text = "MUSIC"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="." unique_id=1450927180]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 410.0
+offset_right = 901.0
+offset_bottom = 490.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 40
+text = "WRITING"
+
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_back_button_pressed"]

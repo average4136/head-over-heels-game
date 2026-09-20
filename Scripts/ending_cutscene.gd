@@ -4,6 +4,7 @@ extends "res://Scripts/cutscene_player.gd"
 
 func _ready() -> void:
 	bgm_start_offset = 50.0
+	MenuTheme.playTheme = true # get menu theme ready
 	super._ready()
 
 func _setup_slides() -> void:
