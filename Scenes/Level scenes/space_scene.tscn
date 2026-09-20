@@ -233,4 +233,4 @@ texture = ExtResource("8_dauer")
 libraries/ = SubResource("AnimationLibrary_6es0x")
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("9_8wo2k")]
-position = Vector2(72, 424)
+position = Vector2(66, 416)
