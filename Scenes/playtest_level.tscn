@@ -95,8 +95,8 @@ rotation = -0.49741885
 position = Vector2(-496, -512)
 scale = Vector2(0.5, 0.5)
 
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
-position = Vector2(-1032, -1032)
+[node name="Oldtexturesguy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
+position = Vector2(-960, -984)
 
 [node name="Stone platform9" parent="." unique_id=951645800 instance=ExtResource("3_h3lg6")]
 position = Vector2(-376, -800)

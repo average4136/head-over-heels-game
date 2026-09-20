@@ -46,7 +46,7 @@ shape = SubResource("CapsuleShape2D_bl7gc")
 
 [node name="GroundRay" type="RayCast2D" parent="Character physics (node2d)/Body" unique_id=157841590]
 position = Vector2(0, -9)
-target_position = Vector2(0, 19)
+target_position = Vector2(0, 19.03)
 
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
