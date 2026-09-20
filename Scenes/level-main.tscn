@@ -77,11 +77,11 @@ drag_horizontal_enabled = true
 script = ExtResource("5_mumxs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PLAYER" unique_id=137842750]
-position = Vector2(-4851, -5614)
+position = Vector2(-1191, -5396)
 shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PLAYER" unique_id=1217231400]
-position = Vector2(10628, -5685)
+position = Vector2(2835, -5391)
 shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="Hitboxes" type="Sprite2D" parent="." unique_id=1306339180]
