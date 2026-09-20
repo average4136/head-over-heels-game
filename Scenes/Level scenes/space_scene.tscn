@@ -9,6 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="7_1k4pw"]
 [ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_dauer"]
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="9_8wo2k"]
+[ext_resource type="Texture2D" uid="uid://cq3boocoejkj1" path="res://Assets/Hannah's Drawn Assets/Portal1.png" id="10_cweg8"]
+[ext_resource type="Texture2D" uid="uid://bo28jj51ed5ii" path="res://Assets/Hannah's Drawn Assets/Portal3.png" id="11_3o7co"]
+[ext_resource type="Texture2D" uid="uid://da5ge62upwq0w" path="res://Assets/Hannah's Drawn Assets/Portal2.png" id="12_2pk2q"]
+[ext_resource type="Texture2D" uid="uid://bfp03h81lmmg6" path="res://Assets/Hannah's Drawn Assets/lady-head.png" id="13_2aw87"]
+[ext_resource type="Texture2D" uid="uid://inww8umfl4ch" path="res://Assets/Hannah's Drawn Assets/lady-body.png" id="14_a2lne"]
+[ext_resource type="Texture2D" uid="uid://nbte2ioy7hcd" path="res://Assets/Hannah's Drawn Assets/lady-arm2.png" id="15_v0am3"]
+[ext_resource type="Texture2D" uid="uid://tubmywu6v52o" path="res://Assets/Hannah's Drawn Assets/lady-arm1.png" id="16_xa165"]
 
 [sub_resource type="Animation" id="Animation_124nk"]
 length = 0.001
@@ -134,7 +141,252 @@ _data = {
 &"alien_jump": SubResource("Animation_1p8fg")
 }
 
+[sub_resource type="Animation" id="Animation_n0hyk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Portal2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_a22m3"]
+resource_name = "portal spinning"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Portal2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5vsg"]
+_data = {
+&"RESET": SubResource("Animation_n0hyk"),
+&"portal spinning": SubResource("Animation_a22m3")
+}
+
+[sub_resource type="Animation" id="Animation_kvnk3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LadyHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(264, 529)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LadyBody:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(269, 667)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LadyArm2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(328, 644)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LadyArm1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(201, 647)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LadyHead:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LadyBody:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LadyArm2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LadyArm1:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_653pj"]
+resource_name = "lady"
+length = 0.6666667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LadyHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(264, 529), Vector2(264, 524)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LadyBody:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(269, 667)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LadyArm2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.66666675),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(395, 599), Vector2(344, 513)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LadyArm1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(201, 647)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LadyHead:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LadyBody:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LadyArm2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.66666675),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.24876893, -2.0043721]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LadyArm1:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_muy2g"]
+_data = {
+&"RESET": SubResource("Animation_kvnk3"),
+&"lady": SubResource("Animation_653pj")
+}
+
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
+position = Vector2(109, 15)
 
 [node name="GradientBg" type="Sprite2D" parent="." unique_id=1264902900]
 position = Vector2(-23.000004, 3950.0002)
@@ -163,10 +415,6 @@ scale = Vector2(0.36703715, 0.9467006)
 [node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_8wo2k")]
 position = Vector2(850, 133)
 
-[node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_8wo2k")]
-position = Vector2(73, 461)
-scale = Vector2(0.7300851, 0.2657136)
-
 [node name="Node2D7" parent="." unique_id=955187897 instance=ExtResource("2_8wo2k")]
 position = Vector2(-505, 30)
 
@@ -192,7 +440,7 @@ position = Vector2(-237, -101)
 position = Vector2(-859, -280)
 
 [node name="star platform2" parent="." unique_id=1071983857 instance=ExtResource("6_ad6b8")]
-position = Vector2(706, -408.99997)
+position = Vector2(897.92993, -374.80807)
 rotation = -0.82849085
 
 [node name="yellow block4" parent="." unique_id=1287986369 instance=ExtResource("5_bc4y4")]
@@ -200,12 +448,12 @@ position = Vector2(-1232.0001, -242)
 scale = Vector2(0.48800763, 1.850894)
 
 [node name="yellow block5" parent="." unique_id=1930980042 instance=ExtResource("5_bc4y4")]
-position = Vector2(258, -641.00006)
+position = Vector2(449.92993, -606.80817)
 rotation = 0.196726
 scale = Vector2(1.3071389, 0.55597335)
 
 [node name="StarDecor" type="Sprite2D" parent="." unique_id=377873062]
-position = Vector2(-200, -143)
+position = Vector2(-8.070068, -108.808105)
 scale = Vector2(0.17638484, 0.17638484)
 texture = ExtResource("7_1k4pw")
 
@@ -220,7 +468,7 @@ texture = ExtResource("4_xynxa")
 libraries/ = SubResource("AnimationLibrary_2anaj")
 
 [node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_fjhv3")]
-position = Vector2(-241.00003, -742)
+position = Vector2(-49.0701, -707.8081)
 scale = Vector2(1.5276088, 1.6838567)
 
 [node name="AlienDecor" type="Sprite2D" parent="." unique_id=1104665968]
@@ -233,4 +481,61 @@ texture = ExtResource("8_dauer")
 libraries/ = SubResource("AnimationLibrary_6es0x")
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("9_8wo2k")]
-position = Vector2(66, 416)
+position = Vector2(-580, 410)
+
+[node name="star platform3" parent="." unique_id=112477691 instance=ExtResource("6_ad6b8")]
+position = Vector2(-1227.0701, -880.80817)
+scale = Vector2(3.64, 3.64)
+
+[node name="PORTAL" type="Node2D" parent="." unique_id=1580670030]
+position = Vector2(191.92993, 34.191895)
+
+[node name="Portal1" type="Sprite2D" parent="PORTAL" unique_id=1940111192]
+position = Vector2(-932.51746, -976.1034)
+scale = Vector2(0.33873284, 0.23101169)
+texture = ExtResource("10_cweg8")
+
+[node name="Portal3" type="Sprite2D" parent="PORTAL" unique_id=1825240360]
+position = Vector2(-944, -1050)
+scale = Vector2(0.3584, 0.3584)
+texture = ExtResource("11_3o7co")
+
+[node name="Portal2" type="Sprite2D" parent="PORTAL" unique_id=1257868772]
+self_modulate = Color(1, 1, 1, 0.4745098)
+position = Vector2(-967.00006, -1214.0001)
+scale = Vector2(0.4928, 0.56)
+texture = ExtResource("12_2pk2q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PORTAL" unique_id=832313302]
+libraries/ = SubResource("AnimationLibrary_v5vsg")
+autoplay = &"portal spinning"
+
+[node name="LADY" type="Node2D" parent="PORTAL" unique_id=140785727]
+position = Vector2(-1239, -1826)
+
+[node name="LadyHead" type="Sprite2D" parent="PORTAL/LADY" unique_id=1611963292]
+self_modulate = Color(1, 1, 1, 0.72156864)
+position = Vector2(264, 529)
+scale = Vector2(0.24294761, 0.24294761)
+texture = ExtResource("13_2aw87")
+
+[node name="LadyBody" type="Sprite2D" parent="PORTAL/LADY" unique_id=1385719366]
+self_modulate = Color(1, 1, 1, 0.72156864)
+position = Vector2(269, 667)
+scale = Vector2(0.24294761, 0.24294761)
+texture = ExtResource("14_a2lne")
+
+[node name="LadyArm2" type="Sprite2D" parent="PORTAL/LADY" unique_id=672265425]
+self_modulate = Color(1, 1, 1, 0.72156864)
+position = Vector2(328, 644)
+scale = Vector2(0.24294761, 0.24294761)
+texture = ExtResource("15_v0am3")
+
+[node name="LadyArm1" type="Sprite2D" parent="PORTAL/LADY" unique_id=1647598669]
+self_modulate = Color(1, 1, 1, 0.72156864)
+position = Vector2(201, 647)
+scale = Vector2(0.24294761, 0.24294761)
+texture = ExtResource("16_xa165")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PORTAL/LADY" unique_id=1090601294]
+libraries/ = SubResource("AnimationLibrary_muy2g")
