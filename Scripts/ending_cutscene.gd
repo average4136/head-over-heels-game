@@ -117,3 +117,8 @@ func _on_cutscene_finished() -> void:
 		ost.stop()
 	if ResourceLoader.exists(next_scene):
 		get_tree().change_scene_to_file(next_scene)
+		
+func _process(_delta: float) -> void:
+	print()
+	if (ost.volume_db <= -5):
+		ost.volume_db += _delta * 2 # change this var for fade speed

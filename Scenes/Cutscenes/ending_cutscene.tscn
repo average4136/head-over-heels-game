@@ -27,4 +27,4 @@ theme_override_constants/outline_size = 8
 
 [node name="OST" parent="." index="5" unique_id=667630324]
 stream = ExtResource("3_vjpk5")
-volume_db = -5.404
+volume_db = -30.0
