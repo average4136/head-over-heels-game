@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bw56kucj0pkeb" path="res://Scenes/MusicManager.gd" id="1_7l5xd"]
 [ext_resource type="AudioStream" uid="uid://daiweei2go48f" path="res://Assets/Music/InYourHead.mp3" id="2_v3gbg"]
+[ext_resource type="AudioStream" uid="uid://bfbpttxfsdih0" path="res://Assets/Music/HeelOver.mp3" id="3_n50d6"]
 
 [node name="MenuTheme" type="Node" unique_id=2098853317]
 script = ExtResource("1_7l5xd")
 
 [node name="TheSong" type="AudioStreamPlayer" parent="." unique_id=1385278084]
 stream = ExtResource("2_v3gbg")
+
+[node name="LevelSong" type="AudioStreamPlayer" parent="." unique_id=1705612597]
+stream = ExtResource("3_n50d6")
+volume_db = -2.5

@@ -2,11 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cd3pru6evhcjs" path="res://Scenes/game.gd" id="1_3dryh"]
 [ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="2_3dryh"]
-[ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://ccqn5filf72l6" path="res://Scenes/test_for_leaderboard.gd" id="3_wrm1d"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5r6hy"]
-distance = -10.0
 
 [node name="Game" type="Node2D" unique_id=186248331]
 script = ExtResource("1_3dryh")
@@ -83,19 +79,8 @@ offset_bottom = 1.5009918
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-placeholder_text = "Enter your name:"
 keep_editing_on_text_submit = true
 flat = true
-
-[node name="TestGround" type="StaticBody2D" parent="." unique_id=220009935]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestGround" unique_id=1842546149]
-shape = SubResource("WorldBoundaryShape2D_5r6hy")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestGround" unique_id=490349659]
-position = Vector2(-402.00003, 83)
-scale = Vector2(6.263672, 0.546875)
-texture = ExtResource("2_qxrlw")
 
 [node name="test for leaderboard" type="Panel" parent="." unique_id=238612829]
 offset_left = 426.0
