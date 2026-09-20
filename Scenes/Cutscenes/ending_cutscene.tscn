@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://djkystwvnwqrq"]
+
+[ext_resource type="PackedScene" uid="uid://n4abg1xio0vj" path="res://Scenes/Cutscenes/cutscene_player.tscn" id="1_3j5s0"]
+[ext_resource type="Script" uid="uid://dq5hva5g2rdbq" path="res://Scripts/ending_cutscene.gd" id="2_3j5s0"]
+
+[node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_3j5s0")]
+script = ExtResource("2_3j5s0")
