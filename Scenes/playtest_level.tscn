@@ -95,9 +95,6 @@ rotation = -0.49741885
 position = Vector2(-496, -512)
 scale = Vector2(0.5, 0.5)
 
-[node name="Oldtexturesguy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
-position = Vector2(-960, -984)
-
 [node name="Stone platform9" parent="." unique_id=951645800 instance=ExtResource("3_h3lg6")]
 position = Vector2(-376, -800)
 scale = Vector2(0.5, 0.5)
@@ -120,3 +117,6 @@ rotation = 0.5235988
 [node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("5_fhco1")]
 position = Vector2(-1016, -824)
 scale = Vector2(1.8864782, 1.8864782)
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
+position = Vector2(-1040, -1048)

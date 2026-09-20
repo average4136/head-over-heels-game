@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bxxdsh4xifwoa"]
 
 [ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_owm7s"]
-[ext_resource type="Texture2D" uid="uid://bipehp1n866uq" path="res://Assets/head.png" id="2_nytcm"]
-[ext_resource type="Texture2D" uid="uid://datq44f17y2pu" path="res://Assets/body.png" id="3_ejsiy"]
+[ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_vknx4"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
+[ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="4_vknx4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
 
@@ -35,10 +35,10 @@ linear_damp = 2.0
 angular_damp = 5.0
 script = ExtResource("1_owm7s")
 
-[node name="Sprite2D" type="Sprite2D" parent="Character physics (node2d)/Body" unique_id=1146294933]
-position = Vector2(5, -54)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ejsiy")
+[node name="NewBody" type="Sprite2D" parent="Character physics (node2d)/Body" unique_id=2036346560]
+position = Vector2(-2.2888184e-05, -47.999996)
+scale = Vector2(0.18322203, 0.18322204)
+texture = ExtResource("2_vknx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Body" unique_id=375401037]
 position = Vector2(0, -31)
@@ -64,10 +64,10 @@ linear_damp = 0.2
 angular_damp = 0.2
 script = ExtResource("3_nytcm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Character physics (node2d)/Head" unique_id=152879513]
-position = Vector2(-2, -92)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_nytcm")
+[node name="NewHead" type="Sprite2D" parent="Character physics (node2d)/Head" unique_id=803519001]
+position = Vector2(0.9501467, -103.671875)
+scale = Vector2(0.24717988, 0.24717987)
+texture = ExtResource("4_vknx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Head" unique_id=1748685107]
 position = Vector2(-4, -98)
