@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cbp0wqs0t0y8s"]
+
+[ext_resource type="Texture2D" uid="uid://7cpwf72thrc0" path="res://Assets/Platform Images/moon platform.png" id="1_k31cj"]
+
+[node name="Moon Platform" type="Node2D" unique_id=1750695849]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=221500006]
+position = Vector2(126, 18)
+scale = Vector2(0.36000115, 0.36000115)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2051443850]
+texture = ExtResource("1_k31cj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=407461684]
+position = Vector2(-342, 2)
+polygon = PackedVector2Array(-1, -15, -1, -59, 6, -91, 19, -130, 40, -167, 65, -203, 102, -240, 140, -268, 193, -295, 262, -314, 316, -321, 345, -320, 392, -316, 453, -301, 498, -284, 533, -263, 570, -239, 607, -205, 638, -166, 661, -132, 678, -93, 689, -58, 695, -21, 696, 1, 694, 40, 685, 83, 673, 120, 651, 160, 627, 194, 604, 218, 569, 247, 527, 273, 489, 289, 441, 303, 393, 309, 349, 311, 318, 308, 268, 299, 220, 285, 177, 266, 123, 232, 89, 200, 57, 163, 27, 115, 9, 68, -3, 25, -6, -1, -4, -19)
