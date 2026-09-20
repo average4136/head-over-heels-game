@@ -19,7 +19,7 @@ size = Vector2(513, 11604)
 [node name="Node2D" type="Node2D" unique_id=334051840]
 
 [node name="BACKGROUND" type="Parallax2D" parent="." unique_id=1725807803]
-scroll_scale = Vector2(0.01, 0.5)
+scroll_scale = Vector2(0.01, 1)
 scroll_offset = Vector2(38, -3216)
 
 [node name="Sprite2D2" type="Sprite2D" parent="BACKGROUND" unique_id=799623932]
