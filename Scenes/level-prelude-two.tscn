@@ -118,18 +118,57 @@ bus = &"Music"
 
 [node name="PreludeTwoController" type="Node" parent="." unique_id=929955952]
 script = ExtResource("10_lxnbv")
+main_level_scene = "uid://y7vsm3emcvhy"
 
 [node name="MapPreviewContainer" type="Node2D" parent="." unique_id=859687322]
+position = Vector2(-50000, -1.32)
+
+[node name="BACKGROUND" type="Parallax2D" parent="MapPreviewContainer" unique_id=373225641]
+scroll_scale = Vector2(0.01, 1)
+scroll_offset = Vector2(38, -3216)
+
+[node name="Sprite2D2" type="Sprite2D" parent="MapPreviewContainer/BACKGROUND" unique_id=742048588]
+position = Vector2(751.174, -1750)
+scale = Vector2(1.548057, 1.5480568)
+texture = ExtResource("1_h5v02")
+
+[node name="MOUNTAINS" type="Parallax2D" parent="MapPreviewContainer" unique_id=895042724]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(38, -3916)
+
+[node name="Sprite2D2" type="Sprite2D" parent="MapPreviewContainer/MOUNTAINS" unique_id=968043878]
+position = Vector2(752, -1150)
+scale = Vector2(1.5656927, 1.5656923)
+texture = ExtResource("2_r5df2")
+
+[node name="MIDDLE" type="Parallax2D" parent="MapPreviewContainer" unique_id=1193310658]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(3840, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="MapPreviewContainer/MIDDLE" unique_id=145212839]
+position = Vector2(784, -4841)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_8rm77")
+
+[node name="BASE" type="Parallax2D" parent="MapPreviewContainer" unique_id=1177665471]
+scale = Vector2(1.5472223, 1.5472223)
+repeat_size = Vector2(2560, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="MapPreviewContainer/BASE" unique_id=199019183]
+position = Vector2(501.54398, 7.109515)
+texture = ExtResource("4_c75t1")
 
 [node name="Main_level" parent="MapPreviewContainer" unique_id=1377921325 instance=ExtResource("11_r5df2")]
 process_mode = 4
-position = Vector2(1314, -1285)
+position = Vector2(765, -1321.68)
 
 [node name="PanCamera" type="Camera2D" parent="." unique_id=1507373600]
 enabled = false
 
 [node name="PortalPos" type="Marker2D" parent="." unique_id=1146250900]
-position = Vector2(548, -2802)
+position = Vector2(-49938, -4982)
 
 [node name="SpawnPos" type="Marker2D" parent="." unique_id=27275919]
-position = Vector2(693, 158)
+position = Vector2(-49924, 327)
