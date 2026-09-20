@@ -1,97 +1,149 @@
 extends Node
 
-@export var invisible_wall: CollisionShape2D # Block right until camera pan finishes
-@export var player_camera: Camera2D
-@export var map_overview_camera: Camera2D # Or use a Tween on player_camera
-@export var stopwatch_ui: Control
+# ==============================================================================
+# PRELOAD BOY AUDIO (1 - 14)
+# ==============================================================================
+const BOY_1  = preload("res://Assets/downbad_voicelines/gameplay_boy_1_00086962.mp3")
+const BOY_2  = preload("res://Assets/downbad_voicelines/gameplay_boy_2_00087211.mp3")
+const BOY_3  = preload("res://Assets/downbad_voicelines/gameplay_boy_3_00087413.mp3")
+const BOY_4  = preload("res://Assets/downbad_voicelines/gameplay_boy_4_00087944.mp3")
+const BOY_5  = preload("res://Assets/downbad_voicelines/gameplay_boy_5_00088030.mp3")
+const BOY_6  = preload("res://Assets/downbad_voicelines/gameplay_boy_6_00088124.mp3")
+const BOY_7  = preload("res://Assets/downbad_voicelines/gameplay_boy_7_00088218.mp3")
+const BOY_8  = preload("res://Assets/downbad_voicelines/gameplay_boy_8_00088698.mp3")
+const BOY_9  = preload("res://Assets/downbad_voicelines/gameplay_boy_9_00088873.mp3")
+const BOY_10 = preload("res://Assets/downbad_voicelines/gameplay_boy_10_00089036.mp3")
+const BOY_11 = preload("res://Assets/downbad_voicelines/gameplay_boy_11_00089618.mp3")
+const BOY_12 = preload("res://Assets/downbad_voicelines/gameplay_boy_12_00090597.mp3")
+const BOY_13 = preload("res://Assets/downbad_voicelines/gameplay_boy_13_00090938.mp3")
+const BOY_14 = preload("res://Assets/downbad_voicelines/gameplay_boy_14_00091179.mp3")
 
-var can_trigger_fail_lines: bool = false
-var failure_lines = [
-	"oof.",
-	"you should've just asked her out in the first place boy",
-	"ya ever played mario kart and fallen off the track? well im sorry because this isnt mario kart",
-	"fall 7 times, get up 8",
-	"im amazed at your tenacity. how down bad can you be to keep going",
-	"if you wanna give up, i can teleport you to the ocean, lots of other fish there",
-	"hey at least you don't take fall damage"
-]
+# ==============================================================================
+# PRELOAD NARRATOR AUDIO (1 - 40)
+# ==============================================================================
+const NARR_1  = preload("res://Assets/downbad_voicelines/gameplay_narrator_1_00091836.mp3")
+const NARR_2  = preload("res://Assets/downbad_voicelines/gameplay_narrator_2_00092094.mp3")
+const NARR_3  = preload("res://Assets/downbad_voicelines/gameplay_narrator_3_00092161.mp3")
+const NARR_4  = preload("res://Assets/downbad_voicelines/gameplay_narrator_4_00092253.mp3")
+const NARR_5  = preload("res://Assets/downbad_voicelines/gameplay_narrator_5_00092587.mp3")
+const NARR_6  = preload("res://Assets/downbad_voicelines/gameplay_narrator_6_00092701.mp3")
+const NARR_7  = preload("res://Assets/downbad_voicelines/gameplay_narrator_7_00092738.mp3")
+const NARR_8  = preload("res://Assets/downbad_voicelines/gameplay_narrator_8_00092843.mp3")
+const NARR_9  = preload("res://Assets/downbad_voicelines/gameplay_narrator_9_00092976.mp3")
+const NARR_10 = preload("res://Assets/downbad_voicelines/gameplay_narrator_10_00093069.mp3")
+const NARR_11 = preload("res://Assets/downbad_voicelines/gameplay_narrator_11_00093102.mp3")
+const NARR_12 = preload("res://Assets/downbad_voicelines/gameplay_narrator_12_00093151.mp3")
+const NARR_13 = preload("res://Assets/downbad_voicelines/gameplay_narrator_13_00093253.mp3")
+const NARR_14 = preload("res://Assets/downbad_voicelines/gameplay_narrator_14_00093269.mp3")
+const NARR_15 = preload("res://Assets/downbad_voicelines/gameplay_narrator_15_00093381.mp3")
+const NARR_16 = preload("res://Assets/downbad_voicelines/gameplay_narrator_16_00093928.mp3")
+const NARR_17 = preload("res://Assets/downbad_voicelines/gameplay_narrator_17_00095657.mp3")
+const NARR_18 = preload("res://Assets/downbad_voicelines/gameplay_narrator_18_00095738.mp3")
+const NARR_19 = preload("res://Assets/downbad_voicelines/gameplay_narrator_19_00095812.mp3")
+const NARR_20 = preload("res://Assets/downbad_voicelines/gameplay_narrator_20_00095867.mp3")
+const NARR_21 = preload("res://Assets/downbad_voicelines/gameplay_narrator_21_00095951.mp3")
+const NARR_22 = preload("res://Assets/downbad_voicelines/gameplay_narrator_22_00096018.mp3")
+const NARR_23 = preload("res://Assets/downbad_voicelines/gameplay_narrator_23_00096314.mp3")
+const NARR_24 = preload("res://Assets/downbad_voicelines/gameplay_narrator_24_00096373.mp3")
+const NARR_25 = preload("res://Assets/downbad_voicelines/gameplay_narrator_25_00097249.mp3")
+const NARR_26 = preload("res://Assets/downbad_voicelines/gameplay_narrator_26_00097278.mp3")
+const NARR_27 = preload("res://Assets/downbad_voicelines/gameplay_narrator_27_00098104.mp3")
+const NARR_28 = preload("res://Assets/downbad_voicelines/gameplay_narrator_28_00098129.mp3")
+const NARR_29 = preload("res://Assets/downbad_voicelines/gameplay_narrator_29_00098280.mp3")
+const NARR_30 = preload("res://Assets/downbad_voicelines/gameplay_narrator_30_00098435.mp3")
+
+# Portal ending audio lines
+const NARR_31 = preload("res://Assets/downbad_voicelines/gameplay_narrator_31_00098748.mp3")
+const NARR_32 = preload("res://Assets/downbad_voicelines/gameplay_narrator_32_00099085.mp3")
+const NARR_33 = preload("res://Assets/downbad_voicelines/gameplay_narrator_33_00099617.mp3")
+const NARR_34 = preload("res://Assets/downbad_voicelines/gameplay_narrator_34_00100523.mp3")
+const NARR_35 = preload("res://Assets/downbad_voicelines/gameplay_narrator_35_00100610.mp3")
+const NARR_36 = preload("res://Assets/downbad_voicelines/gameplay_narrator_36_00100634.mp3")
+const NARR_37 = preload("res://Assets/downbad_voicelines/gameplay_narrator_37_00101051.mp3")
+const NARR_38 = preload("res://Assets/downbad_voicelines/gameplay_narrator_38_00101089.mp3")
+const NARR_39 = preload("res://Assets/downbad_voicelines/gameplay_narrator_39_00101179.mp3")
+const NARR_40 = preload("res://Assets/downbad_voicelines/gameplay_narrator_40_00101225.mp3")
+
+var portal_triggered: bool = false
 
 func _ready() -> void:
-	can_trigger_fail_lines = false
-	if invisible_wall:
-		invisible_wall.set_deferred("disabled", false)
-	_run_tutorial_sequence()
+	_hook_win_portal()
+	await get_tree().create_timer(1.0).timeout
+	_play_gameplay_intro()
 
-func _run_tutorial_sequence() -> void:
-	DialogueManager.queue_line("boy", "where the hell did you take me", null, 2.5)
-	DialogueManager.queue_line("narrator", "a super secret path that will take you to that girl instantly", null, 3.5)
-	DialogueManager.queue_line("narrator", "once you reach the portal", null, 2.5)
-	DialogueManager.queue_line("narrator", "theres only one catch", null, 2.0)
+func _play_gameplay_intro() -> void:
+	# 1. Gameplay start up to "Good luck, boy."
+	DialogueManager.queue_line("boy", "Where the hell did you take me?", BOY_1)
+	DialogueManager.queue_line("narrator", "A super secret path that will take you to that girl instantly.", NARR_1)
+	DialogueManager.queue_line("narrator", "ONCE you reach that portal.", NARR_2)
+	DialogueManager.queue_line("narrator", "But there's only one catch.", NARR_3)
+	DialogueManager.queue_line("narrator", "You have to get up there first.", NARR_4)
+	DialogueManager.queue_line("boy", "What? In this condition?", BOY_2)
+	DialogueManager.queue_line("narrator", "But of course. Nothing worth doing is easy.", NARR_5)
+	DialogueManager.queue_line("boy", "This is gonna take forever.", BOY_3)
+	DialogueManager.queue_line("narrator", "But of course.", NARR_6)
+	DialogueManager.queue_line("narrator", "Good things take time.", NARR_7)
+	DialogueManager.queue_line("boy", "You know what? You piss me off. Did you do this to me?", BOY_4)
+	DialogueManager.queue_line("boy", "Who are you?", BOY_5)
+	DialogueManager.queue_line("narrator", "I'm but a charming, omniscient, humble being,", NARR_8)
+	DialogueManager.queue_line("narrator", "gracing you with my presence. And you ask too many questions, boy.", NARR_9)
+	DialogueManager.queue_line("narrator", "You think too much,", NARR_10)
+	DialogueManager.queue_line("narrator", "which is precisely why", NARR_11)
+	DialogueManager.queue_line("narrator", "you have developed this syndrome.", NARR_12)
+	DialogueManager.queue_line("boy", "And you know that how?", BOY_6)
+	DialogueManager.queue_line("narrator", "Well,", NARR_13)
+	DialogueManager.queue_line("narrator", "because I'm a charming, omniscient, humble being.", NARR_14)
+	DialogueManager.queue_line("boy", "So you DID do this.", BOY_7)
+	DialogueManager.queue_line("narrator", "Oh take some responsibility, boy. She loves responsible men.", NARR_15)
+	DialogueManager.queue_line("boy", "Don't talk like you know her.", BOY_8)
+	DialogueManager.queue_line("narrator", "Haha, do I need to remind you who I am again?", NARR_16)
+	DialogueManager.queue_line("boy", "Please, no.", BOY_9)
+	DialogueManager.queue_line("narrator", "I guess you wouldn't believe me then if I said that", NARR_17)
+	DialogueManager.queue_line("narrator", "if you had just been out of your own head earlier", NARR_18)
+	DialogueManager.queue_line("narrator", "and actually went and asked her out,", NARR_19)
+	DialogueManager.queue_line("narrator", "it WOULD have worked out.", NARR_20)
+	DialogueManager.queue_line("boy", "What, REALLY?", BOY_10)
+	DialogueManager.queue_line("narrator", "Oh what? Now you want to believe me?", NARR_21)
+	DialogueManager.queue_line("narrator", "I was just kidding, anyways.", NARR_22)
 	
-	# Wait for "theres only one catch" to finish
-	await DialogueManager.all_dialogue_finished
+	# Silence beat: no audio file, display [...] for 2.0s
+	DialogueManager.queue_line("boy", "[...]", null, 2.0)
 	
-	# 1. PAN TO MAP & PORTAL
-	await _pan_camera_top_to_bottom()
-	
-	# 2. DELIVER PUNCHLINE
-	DialogueManager.queue_line("narrator", "you have to get up there first", null, 2.5)
-	await DialogueManager.all_dialogue_finished
-	
-	# 3. LOWER INVISIBLE WALL & START STOPWATCH
-	if invisible_wall:
-		invisible_wall.set_deferred("disabled", true)
-	if stopwatch_ui and stopwatch_ui.has_method("start_stopwatch"):
-		stopwatch_ui.start_stopwatch()
-		
-	# 4. REMAINING BANTER RUNS DURING CLIMB
-	_run_ascent_banter()
+	DialogueManager.queue_line("narrator", "Ouu, silent treatment.", NARR_23)
+	DialogueManager.queue_line("narrator", "Not a good look.", NARR_24)
+	DialogueManager.queue_line("narrator", "Look boy,", NARR_25)
+	DialogueManager.queue_line("narrator", "I know you are head over heels for her.", NARR_26)
+	DialogueManager.queue_line("narrator", "I mean", NARR_27)
+	DialogueManager.queue_line("narrator", "how down bad can you be to ACTUALLY agree to going on this treacherous journey", NARR_28)
+	DialogueManager.queue_line("narrator", "for a single girl.", NARR_29)
+	DialogueManager.queue_line("boy", "Shut it.", BOY_11)
+	DialogueManager.queue_line("narrator", "Fine, I will.", NARR_30)
+	# (NARR_31 is the "Good luck, boy." wrap-up before silence)
+	DialogueManager.queue_line("narrator", "Good luck, boy.", NARR_31)
 
-func _pan_camera_top_to_bottom() -> void:
-	# Lock player inputs here if needed
-	# Tween camera from top portal back down to boy
-	var tween = create_tween()
-	# Example: smoothly interpolate camera position or switch active camera
-	# tween.tween_property(camera, "position", target_pos, 4.0)
-	await get_tree().create_timer(3.0).timeout # Replace with tween.finished
-
-func _run_ascent_banter() -> void:
-	DialogueManager.queue_line("boy", "WHAT? in this condition??", null, 2.5)
-	DialogueManager.queue_line("narrator", "but of course, nothing worth doing is easyy", null, 3.0)
-	DialogueManager.queue_line("boy", "this is going to take forever", null, 2.5)
-	DialogueManager.queue_line("narrator", "but of course, good things take time", null, 3.0)
-	DialogueManager.queue_line("boy", "you piss me off, did you do this to me? who are you?", null, 3.5)
-	DialogueManager.queue_line("narrator", "im but a charming omniscient humble being gracing you with my presence", null, 4.0)
-	DialogueManager.queue_line("narrator", "and you ask too many questions boy, you think too much", null, 3.5)
-	DialogueManager.queue_line("narrator", "which is precisely why you have developed this syndrome", null, 3.5)
-	DialogueManager.queue_line("boy", "and you know that how?", null, 2.0)
-	DialogueManager.queue_line("narrator", "im a charming omniscient humble being", null, 3.0)
-	DialogueManager.queue_line("boy", "so you did do this", null, 2.0)
-	DialogueManager.queue_line("narrator", "oh take some responsibility, boy", null, 2.5)
-	DialogueManager.queue_line("narrator", "she loves responsible men", null, 2.5)
-	DialogueManager.queue_line("boy", "shut up. don't talk like you know her", null, 2.5)
-	DialogueManager.queue_line("narrator", "hahaha, do I need to remind you who I am again?", null, 3.0)
-	DialogueManager.queue_line("boy", "please no.", null, 1.5)
-	DialogueManager.queue_line("narrator", "i guess you wouldn't believe me if I said if you had just stopped being in your head", null, 4.0)
-	DialogueManager.queue_line("narrator", "and went and asked her out, it would've worked out", null, 3.5)
-	DialogueManager.queue_line("boy", "WHAT? REALLY?", null, 2.0)
-	DialogueManager.queue_line("narrator", "Oh what, now you want to believe me?", null, 2.5)
-	DialogueManager.queue_line("narrator", "I was just kidding anyways.", null, 2.5)
-	DialogueManager.queue_line("boy", "...", null, 2.0)
-	DialogueManager.queue_line("narrator", "oou silent treatment", null, 2.0)
-	DialogueManager.queue_line("narrator", "not a good look", null, 2.0)
-	DialogueManager.queue_line("narrator", "look boy, I know you are head over heels for her", null, 3.0)
-	DialogueManager.queue_line("narrator", "i mean how down bad could you be to actually agree to going on this treacherous journey for a girl", null, 4.5)
-	DialogueManager.queue_line("boy", "shut it.", null, 1.5)
-	DialogueManager.queue_line("narrator", "look at our little tsundere over here", null, 2.5)
-	DialogueManager.queue_line("narrator", "fine, I will, unless I can't help it", null, 3.0)
-	DialogueManager.queue_line("narrator", "good luck boy.", null, 2.5)
+func _play_portal_ending() -> void:
+	DialogueManager.stop_dialogue()
 	
-	await DialogueManager.all_dialogue_finished
-	# NOW AND ONLY NOW CAN FAILURES TRIGGER ROASTS
-	can_trigger_fail_lines = true
+	DialogueManager.queue_line("narrator", "Wow, you made it boy!", NARR_32)
+	DialogueManager.queue_line("boy", "Yeah, yeah, will you cure me now?", BOY_12)
+	DialogueManager.queue_line("narrator", "Hmm, you've gotten really good with that head, though. I feel like you should keep it.", NARR_33)
+	DialogueManager.queue_line("boy", "*sigh*", BOY_13)
+	DialogueManager.queue_line("narrator", "You are no fun. You know that, right?", NARR_34)
+	DialogueManager.queue_line("narrator", "Fine.", NARR_35)
+	DialogueManager.queue_line("narrator", "Walk through that portal.", NARR_36)
+	DialogueManager.queue_line("narrator", "But listen to me.", NARR_37)
+	DialogueManager.queue_line("narrator", "I cannot guarantee your syndrome to be fixed.", NARR_38)
+	DialogueManager.queue_line("narrator", "That is the truth. It's all up to you.", NARR_39)
+	DialogueManager.queue_line("boy", "Wait, what?", BOY_14)
 
-# Called whenever player suffers a big drop
-func on_player_hard_fall() -> void:
-	if can_trigger_fail_lines and not DialogueManager.is_playing:
-		DialogueManager.queue_line("narrator", failure_lines.pick_random(), null, 3.0)
+func _hook_win_portal() -> void:
+	var portal = get_tree().root.find_child("*portal*", true, false)
+	if portal and portal.has_signal("body_entered"):
+		portal.body_entered.connect(_on_portal_reached)
+
+func _on_portal_reached(body: Node) -> void:
+	if portal_triggered:
+		return
+	if "Guy" in body.name or body.is_in_group("player"):
+		portal_triggered = true
+		_play_portal_ending()

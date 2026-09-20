@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://wovadvlseaw3"]
 
+[ext_resource type="Script" uid="uid://cd3pru6evhcjs" path="res://Scenes/game.gd" id="1_3dryh"]
 [ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://ccqn5filf72l6" path="res://Scenes/test_for_leaderboard.gd" id="3_wrm1d"]
@@ -8,6 +9,7 @@
 distance = -10.0
 
 [node name="Game" type="Node2D" unique_id=186248331]
+script = ExtResource("1_3dryh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=121040221]
 position = Vector2(9, -131)
