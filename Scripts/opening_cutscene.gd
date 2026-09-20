@@ -1,9 +1,8 @@
 extends "res://Scripts/cutscene_player.gd"
 
 func _ready() -> void:
-	super._ready() # Calls cutscene_player.gd's ready setup first
-	if ost:
-		ost.play(30.0) 
+	bgm_start_offset = 30.0
+	super._ready()
 
 func _setup_slides() -> void:
 	slides = [
