@@ -7,6 +7,131 @@
 [ext_resource type="PackedScene" uid="uid://v5o01rr38e1d" path="res://Scenes/Objects/yellow_block.tscn" id="5_jq4nj"]
 [ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="6_124nk"]
 [ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_dxw6d"]
+[ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_124nk"]
+
+[sub_resource type="Animation" id="Animation_124nk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(532.99994, -979.99994)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.2117052]
+}
+
+[sub_resource type="Animation" id="Animation_6es0x"]
+resource_name = "spaceship movement"
+length = 6.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.57, 1.07, 1.45, 1.93, 2.4666667, 6.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(532.99994, -979.99994), Vector2(244.00009, -1045), Vector2(-587, -1016.00024), Vector2(-1259, -914.99994), Vector2(-1259, -914.99994), Vector2(-1949, -1029), Vector2(-1949, -1029)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.57, 1.07, 1.45, 1.93, 2.45, 6.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.2117052, -1.3782909, -2.1295042, -1.573313, -1.403462, -1.403462, -1.403462]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2anaj"]
+_data = {
+&"RESET": SubResource("Animation_124nk"),
+&"spaceship movement": SubResource("Animation_6es0x")
+}
+
+[sub_resource type="Animation" id="Animation_hu4ar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44.000004, -979)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.2617994]
+}
+
+[sub_resource type="Animation" id="Animation_1p8fg"]
+resource_name = "alien_jump"
+length = 0.56666666
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-44.000004, -979), Vector2(-47, -1056)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.2617994, 0.2617994]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6es0x"]
+_data = {
+&"RESET": SubResource("Animation_hu4ar"),
+&"alien_jump": SubResource("Animation_1p8fg")
+}
 
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
 
@@ -84,7 +209,24 @@ scale = Vector2(0.17638484, 0.17638484)
 texture = ExtResource("6_124nk")
 
 [node name="RocketDecor2" type="Sprite2D" parent="." unique_id=1351557]
+self_modulate = Color(0.24612969, 0.24190512, 0.3474766, 0.77254903)
 position = Vector2(532.99994, -979.99994)
 rotation = -1.2117052
 scale = Vector2(0.59129065, 0.5912907)
 texture = ExtResource("4_spkxt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RocketDecor2" unique_id=312437958]
+libraries/ = SubResource("AnimationLibrary_2anaj")
+
+[node name="Moon Platform3" parent="." unique_id=1937656728 instance=ExtResource("3_vqv81")]
+position = Vector2(-241.00003, -742)
+scale = Vector2(1.5276088, 1.6838567)
+
+[node name="AlienDecor" type="Sprite2D" parent="." unique_id=1104665968]
+position = Vector2(-44.000004, -979)
+rotation = -0.2617994
+scale = Vector2(0.27999818, 0.27999818)
+texture = ExtResource("8_124nk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AlienDecor" unique_id=1828851517]
+libraries/ = SubResource("AnimationLibrary_6es0x")
