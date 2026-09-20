@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c2jx6j1b67800"]
+
+[ext_resource type="Texture2D" uid="uid://dt0uoxps4dlv0" path="res://Assets/Stages/fields/skybox.png" id="1_gy23m"]
+[ext_resource type="Texture2D" uid="uid://tjt0sjw4u7au" path="res://Assets/Stages/fields/mountains.png" id="2_8bkry"]
+[ext_resource type="Texture2D" uid="uid://bpsvs1cw38n0d" path="res://Assets/Stages/fields/base.png" id="2_vu001"]
+[ext_resource type="Texture2D" uid="uid://528gwsgvogbw" path="res://Assets/Stages/fields/bushesFront.png" id="3_8bkry"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="4_mumxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m74fc"]
+size = Vector2(4019, 105)
+
+[node name="Node2D" type="Node2D" unique_id=334051840]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=799623932]
+position = Vector2(751.1739, -444.601)
+scale = Vector2(1.548057, 1.5480568)
+texture = ExtResource("1_gy23m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2" unique_id=2093714270]
+position = Vector2(0.5336647, 13.953636)
+scale = Vector2(1.0113921, 1.011392)
+texture = ExtResource("2_8bkry")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1444445960]
+position = Vector2(736, -405)
+scale = Vector2(1.5472223, 1.5472223)
+texture = ExtResource("2_vu001")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1624569120]
+position = Vector2(17.456263, -5.6584415)
+scale = Vector2(1.0100944, 1.0100944)
+texture = ExtResource("3_8bkry")
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("4_mumxs")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1612453333]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1991705216]
+position = Vector2(775.5, 52.5)
+shape = SubResource("RectangleShape2D_m74fc")
+
+[node name="StoneBlock" type="Sprite2D" parent="." unique_id=1306339180]
+position = Vector2(786.00006, 51)
+scale = Vector2(4.150244, 0.30522564)
+
+[node name="PreludeCam" type="Camera2D" parent="StoneBlock" unique_id=1172104479]
+position = Vector2(-61.924088, -1444.8328)
+scale = Vector2(0.24094968, 3.276265)
+zoom = Vector2(0.5, 0.5)
+limit_enabled = false
