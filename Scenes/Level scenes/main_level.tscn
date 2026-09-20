@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://y7vsm3emcvhy"]
 
+[ext_resource type="Texture2D" uid="uid://dt0uoxps4dlv0" path="res://Assets/Stages/fields/skybox.png" id="1_inik3"]
+[ext_resource type="Texture2D" uid="uid://tjt0sjw4u7au" path="res://Assets/Stages/fields/mountains.png" id="2_3dbdo"]
+[ext_resource type="Texture2D" uid="uid://s7duadkei2bb" path="res://Assets/Stages/fields/baseBG.png" id="3_qulw3"]
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="3_rpe6i"]
+[ext_resource type="Texture2D" uid="uid://bpsvs1cw38n0d" path="res://Assets/Stages/fields/base.png" id="4_fphub"]
 [ext_resource type="PackedScene" uid="uid://j04lyk05824u" path="res://Scenes/Objects/flower_platform.tscn" id="5_icq10"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="6_swabi"]
 [ext_resource type="PackedScene" uid="uid://cwbv4iwydbj34" path="res://Scenes/Objects/Leaf_block.tscn" id="7_4dcjm"]
@@ -658,6 +662,46 @@ _data = {
 
 [node name="Main_level" type="Node2D" unique_id=1377921325]
 
+[node name="bg" type="Node2D" parent="." unique_id=511344625]
+position = Vector2(-694.51, 1300)
+
+[node name="BACKGROUND" type="Parallax2D" parent="bg" unique_id=1802821938]
+scroll_scale = Vector2(0.01, 1)
+scroll_offset = Vector2(38, -3216)
+
+[node name="Sprite2D2" type="Sprite2D" parent="bg/BACKGROUND" unique_id=1091041764]
+position = Vector2(751.174, -1750)
+scale = Vector2(1.548057, 1.5480568)
+texture = ExtResource("1_inik3")
+
+[node name="MOUNTAINS" type="Parallax2D" parent="bg" unique_id=393253178]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(38, -3916)
+
+[node name="Sprite2D2" type="Sprite2D" parent="bg/MOUNTAINS" unique_id=1823408897]
+position = Vector2(752, -1150)
+scale = Vector2(1.5656927, 1.5656923)
+texture = ExtResource("2_3dbdo")
+
+[node name="MIDDLE" type="Parallax2D" parent="bg" unique_id=873775636]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(3840, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="bg/MIDDLE" unique_id=318316946]
+position = Vector2(784, -4841)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_qulw3")
+
+[node name="BASE" type="Parallax2D" parent="bg" unique_id=350793938]
+scale = Vector2(1.5472223, 1.5472223)
+repeat_size = Vector2(2560, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="bg/BASE" unique_id=1819188426]
+position = Vector2(501.54398, 7.109515)
+texture = ExtResource("4_fphub")
+
 [node name="Grass section" type="Node2D" parent="." unique_id=1854164821]
 position = Vector2(0, 1480)
 
@@ -1176,7 +1220,6 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-
 position = Vector2(-714.208, 1563.7065)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]

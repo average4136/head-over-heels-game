@@ -4,7 +4,6 @@
 [ext_resource type="AudioStream" uid="uid://5ftn1qe7l63v" path="res://Assets/SFX/step.mp3" id="2_gcrjn"]
 [ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_vknx4"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nytcm"]
-[ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="4_dmspf"]
 [ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="4_vknx4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
@@ -62,78 +61,6 @@ limit_right = 0
 drag_vertical_enabled = true
 drag_vertical_offset = -1.0
 
-[node name="Panel" type="Panel" parent="Character physics (node2d)/Body/Camera2D" unique_id=465433187]
-offset_left = 1059.0
-offset_top = -667.0
-offset_right = 1059.0
-offset_bottom = -667.0
-script = ExtResource("4_dmspf")
-metadata/_edit_use_anchors_ = true
-
-[node name="seconds" type="Label" parent="Character physics (node2d)/Body/Camera2D/Panel" unique_id=1046018648]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.34800002
-anchor_right = 0.652
-anchor_bottom = 1.0
-offset_left = -6.0840073
-offset_top = -4.0
-offset_right = 0.083999634
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "00:"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="mseconds" type="Label" parent="Character physics (node2d)/Body/Camera2D/Panel" unique_id=2123459264]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.66400003
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.015991211
-offset_top = -4.0
-offset_bottom = 4.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "000"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="minutes" type="Label" parent="Character physics (node2d)/Body/Camera2D/Panel" unique_id=253656785]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.305
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -4.0
-offset_right = 4.935013
-offset_bottom = 4.0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "00:"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerName" type="LineEdit" parent="Character physics (node2d)/Body/Camera2D/Panel" unique_id=1343203]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -3.9270003
-anchor_right = -2.24
-anchor_bottom = 1.4590001
-offset_left = -0.008911133
-offset_top = -5.5
-offset_right = 169.91998
-offset_bottom = 1.5009918
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 64
-keep_editing_on_text_submit = true
-flat = true
-
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
 mass = 3.0
@@ -150,5 +77,3 @@ texture = ExtResource("4_vknx4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Head" unique_id=1748685107]
 position = Vector2(-4, -98)
 shape = SubResource("CircleShape2D_53v2a")
-
-[connection signal="text_submitted" from="Character physics (node2d)/Body/Camera2D/Panel/PlayerName" to="Character physics (node2d)/Body/Camera2D/Panel" method="_on_line_edit_text_submitted"]
