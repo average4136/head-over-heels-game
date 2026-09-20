@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_h30in"]
 [ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nwmqh"]
 [ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="4_dyc8q"]
+[ext_resource type="AudioStream" uid="uid://5ftn1qe7l63v" path="res://Assets/SFX/step.mp3" id="5_h30in"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
 
@@ -58,6 +59,10 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_vertical_offset = -1.0
+
+[node name="step" type="AudioStreamPlayer" parent="Character physics (node2d)/Body" unique_id=1273587389]
+unique_name_in_owner = true
+stream = ExtResource("5_h30in")
 
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
