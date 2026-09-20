@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://8vg5q24vuvkp" path="res://Assets/Cutscenes/Ending_Cutscene.png" id="1_1ehe0"]
 [ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_48xlc"]
 [ext_resource type="Texture2D" uid="uid://cdwckcet2rg5j" path="res://Assets/DownBad_Logo_V0.5.png" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://ba5m6iukkbsdj" path="res://Assets/settings.png" id="4_n45e2"]
+[ext_resource type="Texture2D" uid="uid://faotn6rhd2av" path="res://Assets/start.png" id="4_opfnp"]
+[ext_resource type="Texture2D" uid="uid://bnrequoxvuipw" path="res://Assets/leaderboard.png" id="6_opfnp"]
 
 [sub_resource type="GDScript" id="GDScript_n45e2"]
 script/source = "extends Control
@@ -13,9 +16,6 @@ func _on_button_pressed() -> void:
 func _on_check_button_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://Scenes/settings.tscn\")
 
-
-func _on_button_exit_pressed() -> void:
-	get_tree().quit()
 
 
 func _ready():
@@ -41,6 +41,10 @@ func update_leaderboard():
 			]
 		else:
 			label.text = \"%d. ---\" % (i + 1)
+
+
+func _on_settings_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/leaderboard_container.tscn\")
 "
 
 [node name="Main_Menu" type="Control" unique_id=435935605]
@@ -57,11 +61,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1ehe0")
 expand_mode = 1
 stretch_mode = 6
+metadata/_edit_lock_ = true
 
 [node name="MenuButtons" type="VBoxContainer" parent="." unique_id=1665469877]
 layout_mode = 1
@@ -70,33 +79,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -717.55707
-offset_top = -233.0
+offset_left = -718.0
+offset_top = -238.0
+offset_right = -0.4428711
+offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
-
-[node name="Startbutton" type="Button" parent="MenuButtons" unique_id=1122144363]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_48xlc")
-theme_override_font_sizes/font_size = 50
-action_mode = 0
-button_mask = 5
-text = "Start Game "
-
-[node name="Settings button" type="CheckButton" parent="MenuButtons" unique_id=1857087957]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_48xlc")
-theme_override_font_sizes/font_size = 50
-text = " Settings "
-alignment = 1
-
-[node name="ExitButton" type="Button" parent="MenuButtons" unique_id=993245516]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_48xlc")
-theme_override_font_sizes/font_size = 50
-button_mask = 5
-text = "Exit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=90277366]
 
@@ -106,6 +94,56 @@ rotation = -0.29147
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("4_ce3w2")
 
-[connection signal="pressed" from="MenuButtons/Startbutton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MenuButtons/Settings button" to="." method="_on_check_button_pressed"]
-[connection signal="pressed" from="MenuButtons/ExitButton" to="." method="_on_button_exit_pressed"]
+[node name="Startbutton" type="Button" parent="." unique_id=1122144363]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 431.0
+offset_right = 622.0
+offset_bottom = 620.0
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+button_mask = 5
+flat = true
+
+[node name="Start" type="Sprite2D" parent="Startbutton" unique_id=1680684949]
+position = Vector2(294, 108)
+scale = Vector2(0.5323599, 0.540625)
+texture = ExtResource("4_opfnp")
+
+[node name="Settings button" type="CheckButton" parent="." unique_id=1857087957]
+layout_mode = 0
+offset_left = 1007.0
+offset_top = 342.0
+offset_right = 1154.0
+offset_bottom = 476.0
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 50
+alignment = 1
+
+[node name="Settings" type="Sprite2D" parent="Settings button" unique_id=51740853]
+position = Vector2(60.999977, 65)
+scale = Vector2(0.5332163, 0.5995455)
+texture = ExtResource("4_n45e2")
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=920543323]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85200006
+anchor_top = 0.26200002
+anchor_right = 0.99700004
+anchor_bottom = 0.483
+offset_left = -0.50408936
+offset_top = 0.22398376
+offset_right = 0.45593262
+offset_bottom = 0.015991211
+
+[node name="Leaderboard" type="Sprite2D" parent="CheckButton" unique_id=1413498083]
+position = Vector2(81.15625, 74.71875)
+scale = Vector2(0.66047955, 0.48568562)
+texture = ExtResource("6_opfnp")
+
+[connection signal="pressed" from="Startbutton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_settings_button_pressed"]
