@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://n4abg1xio0vj" path="res://Scenes/Cutscenes/cutscene_player.tscn" id="1_bt1fc"]
 [ext_resource type="Script" uid="uid://eom0ds3s881v" path="res://Scripts/opening_cutscene.gd" id="2_418q2"]
-[ext_resource type="AudioStream" uid="uid://dj35yu66scmtb" path="res://Assets/Music/OpeningOST.mp3" id="3_m6bms"]
+[ext_resource type="AudioStream" uid="uid://crsndwos5lbe7" path="res://Assets/Music/Fuzzled.mp3" id="3_m6bms"]
 
 [node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_bt1fc")]
 script = ExtResource("2_418q2")
@@ -14,10 +14,10 @@ anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -78.0
-offset_right = 3.0
-offset_bottom = -33.0
+offset_left = 1.0
+offset_top = -96.0
+offset_right = 1.0
+offset_bottom = -51.0
 grow_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -26,5 +26,5 @@ theme_override_constants/outline_size = 8
 
 [node name="OST" parent="." index="5" unique_id=667630324]
 stream = ExtResource("3_m6bms")
-autoplay = true
+volume_db = -6.386
 bus = &"Music"

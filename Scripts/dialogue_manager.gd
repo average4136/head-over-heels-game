@@ -46,6 +46,8 @@ func _ready() -> void:
 	
 	subtitle_label.visible = false
 	add_child(subtitle_label)
+	
+	
 
 func queue_line(speaker: String, text: String, audio: AudioStream = null, duration: float = 0.0) -> void:
 	line_queue.append({
