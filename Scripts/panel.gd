@@ -13,6 +13,7 @@ func reset_leaderboard() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
 		DirAccess.remove_absolute(ProjectSettings.globalize_path(SAVE_PATH))
 		print("Leaderboard reset!")
+		
 func _process(delta) -> void:
 	# Stop the timer if the game has ended
 	if timer_stopped:
@@ -98,3 +99,6 @@ func add_score(player_name: String, score_time: float) -> void:
 		print("Saved scores: ", scores)
 	else:
 		print("ERROR: Could not save leaderboard!")
+func _ready():
+	reset_leaderboard()
+	
