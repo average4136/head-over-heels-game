@@ -1176,7 +1176,6 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-
 position = Vector2(-714.208, 1563.7065)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
