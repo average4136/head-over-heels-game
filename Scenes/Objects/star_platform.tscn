@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cspyc620ry3bq"]
+
+[ext_resource type="Texture2D" uid="uid://b7e56qdamgxoh" path="res://Assets/Platform Images/star platform.png" id="1_lr1is"]
+
+[node name="star platform" type="Node2D" unique_id=1685131188]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1678453096]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=522925894]
+position = Vector2(125.96153, 29.5)
+scale = Vector2(0.21794868, 0.21794872)
+texture = ExtResource("1_lr1is")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=859402248]
+polygon = PackedVector2Array(10, -4, -14, 30, -12, 33, -2, 34, 39, 32, 52, 32, 45, 54, 49, 58, 59, 56, 104, 41, 116, 59, 119, 61, 122, 60, 139, 46, 145, 39, 179, 61, 190, 69, 194, 69, 197, 66, 202, 53, 209, 34, 223, 39, 266, 53, 270, 51, 268, 44, 245, 6, 240, 4)
