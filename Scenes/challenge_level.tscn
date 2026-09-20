@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://qprqcwh18cls"]
+
+[ext_resource type="Texture2D" uid="uid://dt0uoxps4dlv0" path="res://Assets/Stages/fields/skybox.png" id="1_gy23m"]
+[ext_resource type="Texture2D" uid="uid://tjt0sjw4u7au" path="res://Assets/Stages/fields/mountains.png" id="2_8bkry"]
+[ext_resource type="Texture2D" uid="uid://bpsvs1cw38n0d" path="res://Assets/Stages/fields/base.png" id="2_vu001"]
+[ext_resource type="Texture2D" uid="uid://528gwsgvogbw" path="res://Assets/Stages/fields/bushesFront.png" id="3_8bkry"]
+[ext_resource type="Script" uid="uid://pugukmrvm58r" path="res://Scenes/bounds.gd" id="5_mumxs"]
+[ext_resource type="PackedScene" uid="uid://bjr2pk7rk0ktn" path="res://Scenes/Entities/Guy-Custom.tscn" id="5_vu001"]
+[ext_resource type="AudioStream" uid="uid://bfbpttxfsdih0" path="res://Assets/Music/HeelOver.mp3" id="6_8bkry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m74fc"]
+size = Vector2(43583, 546)
+
+[node name="Node2D" type="Node2D" unique_id=334051840]
+
+[node name="BACKGROUND" type="Parallax2D" parent="." unique_id=1725807803]
+scroll_scale = Vector2(0.01, 0.5)
+scroll_offset = Vector2(0, 700)
+
+[node name="Sprite2D2" type="Sprite2D" parent="BACKGROUND" unique_id=799623932]
+position = Vector2(751.1739, -444.601)
+scale = Vector2(1.548057, 1.5480568)
+texture = ExtResource("1_gy23m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BACKGROUND/Sprite2D2" unique_id=2093714270]
+position = Vector2(0.5336647, 13.953636)
+scale = Vector2(1.0113921, 1.011392)
+texture = ExtResource("2_8bkry")
+
+[node name="BASE" type="Parallax2D" parent="." unique_id=1194922355]
+scale = Vector2(1.5472223, 1.5472223)
+repeat_size = Vector2(2560, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="BASE" unique_id=1444445960]
+texture = ExtResource("2_vu001")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1612453333]
+position = Vector2(-85, 354)
+
+[node name="PlayerMovebox" type="CollisionShape2D" parent="StaticBody2D" unique_id=1991705216]
+unique_name_in_owner = true
+position = Vector2(60, 356)
+shape = SubResource("RectangleShape2D_m74fc")
+
+[node name="Guy" parent="StaticBody2D" unique_id=1796156875 instance=ExtResource("5_vu001")]
+unique_name_in_owner = true
+position = Vector2(792, 17)
+
+[node name="TheCam" type="Camera2D" parent="StaticBody2D" unique_id=940705612]
+unique_name_in_owner = true
+position = Vector2(754, -435)
+zoom = Vector2(0.3, 0.3)
+limit_enabled = false
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+script = ExtResource("5_mumxs")
+
+[node name="Hitboxes" type="Sprite2D" parent="." unique_id=1306339180]
+position = Vector2(786, 51.000004)
+scale = Vector2(4.150244, 0.30522564)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1442591032]
+scale = Vector2(1.5628406, 1.5628407)
+repeat_size = Vector2(2560, 0)
+repeat_times = 10
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" unique_id=1624569120]
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("3_8bkry")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1355507055]
+stream = ExtResource("6_8bkry")
+autoplay = true

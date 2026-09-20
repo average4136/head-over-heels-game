@@ -5,3 +5,20 @@
 
 [node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_3j5s0")]
 script = ExtResource("2_3j5s0")
+next_scene = "res://Scenes/Main_Menu.tscn"
+
+[node name="CardText" parent="." index="2" unique_id=1812275407]
+anchors_preset = 12
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -78.0
+offset_right = 3.0
+offset_bottom = -33.0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/outline_size = 8
