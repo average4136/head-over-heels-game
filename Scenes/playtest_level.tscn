@@ -67,10 +67,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(-32, -512)
 scale = Vector2(0.5, 0.5)
 
-[node name="Stone platform9" parent="Start area" unique_id=1985402125 instance=ExtResource("3_h3lg6")]
-position = Vector2(-264, -512)
-scale = Vector2(0.5, 0.5)
-
 [node name="Stone platform3" parent="Start area" unique_id=107939614 instance=ExtResource("3_h3lg6")]
 position = Vector2(504, -175)
 scale = Vector2(0.5, 0.5)
@@ -91,16 +87,12 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(800, -152.00002)
 rotation = -0.49741885
 
-[node name="Stone platform11" parent="Start area" unique_id=2099971156 instance=ExtResource("3_h3lg6")]
-position = Vector2(-496, -512)
-scale = Vector2(0.5, 0.5)
-
 [node name="Stone platform9" parent="." unique_id=951645800 instance=ExtResource("3_h3lg6")]
-position = Vector2(-376, -800)
+position = Vector2(-464, -768)
 scale = Vector2(0.5, 0.5)
 
 [node name="Stone platform11" parent="." unique_id=396343480 instance=ExtResource("3_h3lg6")]
-position = Vector2(-608, -800)
+position = Vector2(-720, -864)
 scale = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D" parent="." unique_id=981093684 instance=ExtResource("5_kptn1")]
@@ -120,3 +112,13 @@ scale = Vector2(1.8864782, 1.8864782)
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_h3lg6")]
 position = Vector2(-1040, -1048)
+
+[node name="Stone platform12" parent="." unique_id=541474597 instance=ExtResource("3_h3lg6")]
+position = Vector2(-200, -720)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D4" parent="." unique_id=69288585 instance=ExtResource("5_kptn1")]
+position = Vector2(-448, -464)
+
+[node name="StaticBody2D5" parent="." unique_id=1268497885 instance=ExtResource("5_kptn1")]
+position = Vector2(-199.99998, -464)
