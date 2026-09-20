@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqvy7jbhvbvnl"]
 
-[ext_resource type="Script" uid="uid://d07x5gpbf5lgt" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://c3cxorfob7afk" path="res://Scripts/settings.gd" id="1_x2hje"]
 [ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_i44u3"]
 
 [node name="Settings" type="Control" unique_id=45946157]

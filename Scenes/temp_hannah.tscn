@@ -1,61 +1,56 @@
 [gd_scene format=3 uid="uid://qni30skgklgv"]
 
 [ext_resource type="Texture2D" uid="uid://cxy7f5wwf50rr" path="res://Assets/Hannah's Drawn Assets/temp bg.png" id="1_5ad7v"]
+[ext_resource type="Texture2D" uid="uid://e5nqa7fviolx" path="res://Assets/Platform Images/green block.png" id="2_er11t"]
 [ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="2_ohw5t"]
 [ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="3_er11t"]
-[ext_resource type="Texture2D" uid="uid://bvhsuxpp5ta4c" path="res://Assets/Hannah's Drawn Assets/grass block.png" id="4_r7v20"]
-[ext_resource type="Texture2D" uid="uid://cjv8cierj1i4s" path="res://Assets/Hannah's Drawn Assets/ice block.png" id="5_j2i3t"]
-[ext_resource type="Texture2D" uid="uid://bittqe7wlf0o" path="res://Assets/Hannah's Drawn Assets/flower.png" id="6_fgrko"]
+[ext_resource type="Texture2D" uid="uid://bvqnfi7ife36w" path="res://Assets/Decorations/bush decor.png" id="3_r7v20"]
+[ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="4_j2i3t"]
+[ext_resource type="Texture2D" uid="uid://bljw3sjkh0m3n" path="res://Assets/Decorations/tree decor.png" id="5_fgrko"]
+[ext_resource type="Texture2D" uid="uid://bgm8ebfl1wpqt" path="res://Assets/Decorations/flower decor.png" id="8_x275x"]
 
-[node name="TempBg" type="Sprite2D" unique_id=2059343350]
-position = Vector2(-1150.172, -1288)
-scale = Vector2(2.2578125, 2.2578125)
+[node name="Node2D" type="Node2D" unique_id=1934742427]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1746276556]
+position = Vector2(237, -400)
+scale = Vector2(0.3723423, 0.3723423)
+zoom = Vector2(0.45, 0.45)
+
+[node name="TempBg" type="Sprite2D" parent="." unique_id=1461493170]
+position = Vector2(170, -568)
 texture = ExtResource("1_5ad7v")
 
-[node name="TempBg" type="Sprite2D" parent="." unique_id=172712956]
-position = Vector2(647.60565, -781.7301)
-scale = Vector2(4.132977, 3.3755407)
-texture = ExtResource("1_5ad7v")
+[node name="GreenBlock" type="Sprite2D" parent="." unique_id=1758654313]
+position = Vector2(288, 296)
+scale = Vector2(2.48, 1.2800007)
+texture = ExtResource("2_er11t")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1646305626]
-position = Vector2(-548, -23)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="BushDecor" type="Sprite2D" parent="." unique_id=1919462869]
+position = Vector2(603.00006, -82.000015)
+scale = Vector2(0.22849406, 0.22849406)
+texture = ExtResource("3_r7v20")
 
-[node name="NewHead" type="Sprite2D" parent="Node2D" unique_id=1848783051]
-scale = Vector2(1.0000001, 1.0000001)
+[node name="AlienDecor" type="Sprite2D" parent="." unique_id=537957008]
+position = Vector2(-247, -104)
+scale = Vector2(0.3723423, 0.3723423)
+texture = ExtResource("4_j2i3t")
+
+[node name="TreeDecor" type="Sprite2D" parent="." unique_id=1732733903]
+position = Vector2(-141, -383)
+scale = Vector2(0.3999986, 0.3999986)
+texture = ExtResource("5_fgrko")
+
+[node name="NewHead" type="Sprite2D" parent="." unique_id=421483560]
+position = Vector2(227, -329)
+scale = Vector2(0.39999753, 0.39999753)
 texture = ExtResource("2_ohw5t")
 
-[node name="NewBody" type="Sprite2D" parent="Node2D" unique_id=847861546]
-position = Vector2(-20, 457.00006)
-scale = Vector2(1.0000001, 1.0000001)
+[node name="NewBody" type="Sprite2D" parent="." unique_id=2045665079]
+position = Vector2(223.00002, -124)
+scale = Vector2(0.3999982, 0.3999982)
 texture = ExtResource("3_er11t")
 
-[node name="GrassBlock" type="Sprite2D" parent="Node2D" unique_id=1708382387]
-position = Vector2(16, 967.0001)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("4_r7v20")
-
-[node name="GrassBlock2" type="Sprite2D" parent="Node2D" unique_id=79232452]
-position = Vector2(1002.00006, 955.0001)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("4_r7v20")
-
-[node name="IceBlock" type="Sprite2D" parent="Node2D" unique_id=1962937865]
-position = Vector2(2193.0002, 461.00006)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("5_j2i3t")
-
-[node name="IceBlock2" type="Sprite2D" parent="Node2D" unique_id=814135943]
-position = Vector2(3254.0005, -22)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("5_j2i3t")
-
-[node name="Flower" type="Sprite2D" parent="Node2D" unique_id=926302368]
-position = Vector2(-1658.7694, 703.0001)
-scale = Vector2(1.9230771, 1.9230771)
-texture = ExtResource("6_fgrko")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=307743506]
-position = Vector2(-352.47748, -97.882355)
-scale = Vector2(-35803.02, 748.25464)
-zoom = Vector2(0.1, 0.1)
+[node name="FlowerDecor" type="Sprite2D" parent="." unique_id=2032668310]
+position = Vector2(208, -68.00003)
+scale = Vector2(0.27999818, 0.27999818)
+texture = ExtResource("8_x275x")

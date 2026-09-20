@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://crukrtjrpamiy"]
 
-[ext_resource type="PackedScene" uid="uid://cyajayqvahtgv" path="res://Scenes/Guy.tscn" id="1_ufcnh"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_ufcnh"]
 [ext_resource type="Script" uid="uid://c3ts47ctfbeet" path="res://Scripts/prelude_controller.gd" id="2_wsnjc"]
 [ext_resource type="Texture2D" uid="uid://18fofanlpi3m" path="res://Assets/Hannah's Drawn Assets/stone block.png" id="3_wsnjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tx7xv"]
-size = Vector2(2514, 105)
+size = Vector2(4019, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ksg"]
 size = Vector2(79.125, 830)
@@ -17,7 +17,7 @@ size = Vector2(79.125, 830)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=424600753]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1280620807]
-position = Vector2(23, 52.5)
+position = Vector2(775.5, 52.5)
 shape = SubResource("RectangleShape2D_tx7xv")
 
 [node name="PreludeController" type="Node" parent="." unique_id=256461134]
@@ -25,8 +25,8 @@ script = ExtResource("2_wsnjc")
 main_climb_scene = "uid://wovadvlseaw3"
 
 [node name="StoneBlock" type="Sprite2D" parent="." unique_id=967663064]
-position = Vector2(-8.499977, 51)
-scale = Vector2(2.6, 0.30522564)
+position = Vector2(786.00006, 51)
+scale = Vector2(4.150244, 0.30522564)
 texture = ExtResource("3_wsnjc")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1827039312]
@@ -36,6 +36,7 @@ position = Vector2(-1194.4375, -310)
 shape = SubResource("RectangleShape2D_72ksg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1422921539]
+visible = false
 
 [node name="EyeFade" type="ColorRect" parent="CanvasLayer" unique_id=861508296]
 anchors_preset = -1

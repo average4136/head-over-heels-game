@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://jq4gk47xm8di"]
+
+[ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="1_fdgmg"]
+
+[sub_resource type="GDScript" id="GDScript_opfnp"]
+script/source = "extends Node
+
+
+const SAVE_PATH := \"user://leaderboard.json\"
+const MAX_ENTRIES := 5
+
+var scores: Array = []
+
+
+func _ready():
+	load_scores()
+
+
+func add_score(player_name: String, time: float):
+	var entry = {
+		\"name\": player_name,
+		\"time\": time
+	}
+
+	scores.append(entry)
+
+	scores.sort_custom(func(a, b):
+		return a[\"time\"] < b[\"time\"]
+	)
+
+	if scores.size() > MAX_ENTRIES:
+		scores.resize(MAX_ENTRIES)
+
+	save_scores()
+
+
+func save_scores():
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+
+	if file:
+		file.store_string(JSON.stringify(scores))
+
+
+func load_scores():
+	if not FileAccess.file_exists(SAVE_PATH):
+		scores = []
+		return
+
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var data = JSON.parse_string(file.get_as_text())
+
+	if data is Array:
+		scores = data
+	else:
+		scores = []
+"
+
+[sub_resource type="GDScript" id="GDScript_ce3w2"]
+
+[node name="LeaderboardContainer" type="PanelContainer" unique_id=1965850263]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -174.0
+offset_top = -1.0
+offset_right = 174.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = SubResource("GDScript_opfnp")
+
+[node name="NamesContainer" type="VBoxContainer" parent="." unique_id=1484897702]
+custom_minimum_size = Vector2(800, 650)
+layout_mode = 2
+size_flags_horizontal = 0
+script = SubResource("GDScript_ce3w2")
+
+[node name="Leaderboard" type="Panel" parent="NamesContainer" unique_id=855384382]
+custom_minimum_size = Vector2(1500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.28
+
+[node name="Label" type="Label" parent="NamesContainer/Leaderboard" unique_id=1564787814]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.5
+offset_right = 80.5
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_fdgmg")
+theme_override_font_sizes/font_size = 40
+text = "Leaderboard"
+
+[node name="First" type="Panel" parent="NamesContainer" unique_id=259034037]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Label" type="Label" parent="NamesContainer/First" unique_id=879518900]
+layout_mode = 1
+offset_right = 12.0
+offset_bottom = 23.0
+
+[node name="Second" type="Panel" parent="NamesContainer" unique_id=1416139987]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+tooltip_text = "
+"
+
+[node name="Label" type="Label" parent="NamesContainer/Second" unique_id=560316870]
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Third" type="Panel" parent="NamesContainer" unique_id=1780515740]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Label" type="Label" parent="NamesContainer/Third" unique_id=1042420015]
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Fourth" type="Panel" parent="NamesContainer" unique_id=1653578982]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Label" type="Label" parent="NamesContainer/Fourth" unique_id=2033304261]
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Fifth" type="Panel" parent="NamesContainer" unique_id=624252269]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Label" type="Label" parent="NamesContainer/Fifth" unique_id=1501196673]
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
