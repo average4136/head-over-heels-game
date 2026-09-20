@@ -13,13 +13,9 @@ func _process(delta) -> void:
 	$mseconds.text = "%02d:" % mseconds
 	$seconds.text = "%02d:" % seconds
 	$minutes.text = "%02d:" % minutes
-	
-		
-	
-		
-	
-	
 
+func _on_button_pressed() -> void:
+	Leaderboard.add_score("Test Player", 25.42)
 
-func _pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(
+		"res://Scenes/leaderboard_container.tscn")

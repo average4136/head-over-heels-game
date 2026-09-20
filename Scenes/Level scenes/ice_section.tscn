@@ -1,3 +1,163 @@
 [gd_scene format=3 uid="uid://bo6c58ha16686"]
 
+[ext_resource type="PackedScene" uid="uid://dh3th1iwygrwr" path="res://Scenes/Objects/blue_block.tscn" id="1_i0ptw"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
+[ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
+[ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
+[ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="4_oskd4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oskd4"]
+
 [node name="Ice_section" type="Node2D" unique_id=1675132565]
+
+[node name="left wall" type="StaticBody2D" parent="." unique_id=1804272182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left wall" unique_id=2132245393]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_k0s5y")
+
+[node name="right wall" type="StaticBody2D" parent="." unique_id=99011564]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=588323181]
+shape = SubResource("WorldBoundaryShape2D_oskd4")
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("2_7d2j5")]
+position = Vector2(880, -16)
+
+[node name="StaticBody2D" parent="." unique_id=1447629716 instance=ExtResource("4_k0s5y")]
+position = Vector2(479.99997, 15.999993)
+rotation = 0.2617994
+scale = Vector2(3.4314842, 5)
+
+[node name="StaticBody2D2" parent="." unique_id=181318515 instance=ExtResource("4_k0s5y")]
+position = Vector2(704, 48.000004)
+scale = Vector2(11.240002, 5.12)
+
+[node name="Blue_block2" parent="." unique_id=1246383732 instance=ExtResource("1_i0ptw")]
+position = Vector2(-808, -416.00003)
+scale = Vector2(0.63516, 0.6)
+
+[node name="Blue_block4" parent="." unique_id=23454002 instance=ExtResource("1_i0ptw")]
+position = Vector2(-128, -648)
+
+[node name="Blue_block6" parent="." unique_id=1384170651 instance=ExtResource("1_i0ptw")]
+position = Vector2(376, -704)
+scale = Vector2(0.68634856, 0.8976628)
+
+[node name="StaticBody2D4" parent="." unique_id=1767213189 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D10" parent="." unique_id=2127219765 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1190, -825)
+rotation = 1.5707964
+scale = Vector2(22.720001, 5)
+
+[node name="StaticBody2D15" parent="." unique_id=2142455854 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1176, -431.99997)
+rotation = 1.3089969
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D5" parent="." unique_id=1982382064 instance=ExtResource("4_k0s5y")]
+position = Vector2(1032, -856.00006)
+rotation = -1.118756
+
+[node name="Stone platform4" parent="." unique_id=107939614 instance=ExtResource("4_oskd4")]
+position = Vector2(1080, -1064)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D6" parent="." unique_id=100221925 instance=ExtResource("4_k0s5y")]
+position = Vector2(832, -743.99994)
+rotation = -0.49741888
+
+[node name="StaticBody2D7" parent="." unique_id=1275948232 instance=ExtResource("4_k0s5y")]
+position = Vector2(16, 48)
+rotation = -0.2617994
+scale = Vector2(3.4314842, 5)
+
+[node name="StaticBody2D3" parent="." unique_id=1413809715 instance=ExtResource("4_k0s5y")]
+position = Vector2(-918.99994, 57.000004)
+scale = Vector2(22.720001, 5)
+
+[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("3_7d2j5")]
+position = Vector2(792, -640)
+scale = Vector2(2.5910778, 2.591078)
+
+[node name="half-pipe" type="Node2D" parent="." unique_id=195263425]
+
+[node name="StaticBody2D12" parent="half-pipe" unique_id=128638646 instance=ExtResource("4_k0s5y")]
+position = Vector2(-1092, -1177.0001)
+rotation = 2.0943952
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="half-pipe" unique_id=1748724303 instance=ExtResource("4_k0s5y")]
+position = Vector2(-943.9999, -1264.9999)
+rotation = 2.6179938
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D14" parent="half-pipe" unique_id=1807697188 instance=ExtResource("4_k0s5y")]
+position = Vector2(-763.00006, -1319)
+rotation = 2.8797934
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D15" parent="half-pipe" unique_id=1404031372 instance=ExtResource("4_k0s5y")]
+position = Vector2(-568, -1321.0001)
+rotation = -3.1415925
+scale = Vector2(5.239565, 5.239565)
+
+[node name="half-pipe2" type="Node2D" parent="." unique_id=1292036042]
+position = Vector2(-1173.0002, -277)
+rotation = -1.5132004
+
+[node name="StaticBody2D15" parent="half-pipe2" unique_id=1932960133 instance=ExtResource("4_k0s5y")]
+position = Vector2(-293.62143, 414.58978)
+rotation = 1.5707964
+scale = Vector2(8.68077, 5.239567)
+
+[node name="StaticBody2D12" parent="half-pipe2" unique_id=823438843 instance=ExtResource("4_k0s5y")]
+position = Vector2(-270.4242, 260.99976)
+rotation = 1.8325958
+scale = Vector2(5.239565, 5.239565)
+
+[node name="StaticBody2D13" parent="half-pipe2" unique_id=182698041 instance=ExtResource("4_k0s5y")]
+position = Vector2(-158.91243, 110.33087)
+rotation = 2.3561945
+scale = Vector2(5.5971236, 5.239565)
+
+[node name="Blue_block3" parent="." unique_id=602105709 instance=ExtResource("1_i0ptw")]
+position = Vector2(760, -1064)
+scale = Vector2(0.9723535, 0.82164687)
+
+[node name="Blue_block7" parent="." unique_id=87445004 instance=ExtResource("1_i0ptw")]
+position = Vector2(-344, -656)
+scale = Vector2(0.63516, 0.6)
+
+[node name="Blue_block5" parent="." unique_id=905687958 instance=ExtResource("1_i0ptw")]
+position = Vector2(-648, -416)
+scale = Vector2(0.63516, 0.6)
+
+[node name="StaticBody2D8" parent="." unique_id=812497632 instance=ExtResource("4_k0s5y")]
+position = Vector2(-472, -480.00006)
+rotation = -1.118756
+
+[node name="StaticBody2D9" parent="." unique_id=267509723 instance=ExtResource("4_k0s5y")]
+position = Vector2(-632, -415.99997)
+rotation = -0.49741888
+
+[node name="Cloud block2" parent="." unique_id=1296471014 instance=ExtResource("3_7d2j5")]
+position = Vector2(-807.9999, -1248)
+scale = Vector2(2.5910778, 2.591078)
+
+[node name="StaticBody2D11" parent="." unique_id=1285361007 instance=ExtResource("4_k0s5y")]
+position = Vector2(456, -1151.9999)
+rotation = 0.5235988
+
+[node name="StaticBody2D12" parent="." unique_id=728208068 instance=ExtResource("4_k0s5y")]
+position = Vector2(344.00003, -1304.0001)
+rotation = 1.0471976

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ysms78opj7fm"]
+
+[ext_resource type="Script" uid="uid://dex3835o6f6x0" path="res://Scripts/launch_pad.gd" id="1_dfcjj"]
+[ext_resource type="Texture2D" uid="uid://cm210lvxy15sp" path="res://Assets/Boost Sprites/jumppad-basic.png" id="2_1j5go"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fa70v"]
+radius = 11.599999
+height = 30.5
+
+[node name="Launch booster" type="Node2D" unique_id=1384817862]
+scale = Vector2(8, 8)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=80789037]
+script = ExtResource("1_dfcjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1212694998]
+shape = SubResource("CapsuleShape2D_fa70v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=1940680656]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(0.017730502, 0.017730497)
+texture = ExtResource("2_1j5go")
