@@ -53,6 +53,10 @@ func load_scores():
 		scores = data
 	else:
 		scores = []
+
+
+func _on_back_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/main_menu.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_ce3w2"]
@@ -61,7 +65,7 @@ func load_scores():
 custom_minimum_size = Vector2(500, 400)
 custom_maximum_size = Vector2(1150, -1)
 anchors_preset = -1
-anchor_right = 0.4340278
+anchor_right = 0.9982639
 anchor_bottom = 1.0030864
 size_flags_horizontal = 0
 accessibility_region = true
@@ -92,6 +96,21 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_fdgmg")
 theme_override_font_sizes/font_size = 40
 text = "Leaderboard"
+
+[node name="Button" type="Button" parent="NamesContainer/Leaderboard" unique_id=218003543]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78200006
+anchor_right = 1.0
+anchor_bottom = 1.1520001
+offset_left = 0.14990234
+offset_top = 2.0
+offset_bottom = 2.0079956
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_fdgmg")
+theme_override_font_sizes/font_size = 34
+text = "Back"
+flat = true
 
 [node name="First" type="Panel" parent="NamesContainer" unique_id=259034037]
 layout_mode = 2
@@ -144,3 +163,5 @@ size_flags_stretch_ratio = 0.7
 layout_mode = 1
 offset_right = 1.0
 offset_bottom = 23.0
+
+[connection signal="pressed" from="NamesContainer/Leaderboard/Button" to="." method="_on_back_button_pressed"]

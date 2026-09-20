@@ -13,10 +13,8 @@ script/source = "extends Control
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://Scenes/Cutscenes/opening_cutscene.tscn\")
 
-func _on_check_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/settings.tscn\")
-
-
+func _on_Leaderboard_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/leaderboard_container.tscn\")
 
 func _ready():
 	update_leaderboard()
@@ -44,7 +42,7 @@ func update_leaderboard():
 
 
 func _on_settings_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/leaderboard_container.tscn\")
+	get_tree().change_scene_to_file(\"res://Scenes/settings.tscn\")
 "
 
 [node name="Main_Menu" type="Control" unique_id=435935605]
@@ -146,4 +144,4 @@ texture = ExtResource("6_opfnp")
 
 [connection signal="pressed" from="Startbutton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="CheckButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_Leaderboard_button_pressed"]
