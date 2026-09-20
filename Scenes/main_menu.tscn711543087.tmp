@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://7diueh3w2dp1" path="res://Scenes/startbutton.gd" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://bnrequoxvuipw" path="res://Assets/leaderboard.png" id="6_opfnp"]
 [ext_resource type="AudioStream" uid="uid://dj6ftu1km4myn" path="res://Assets/SFX/select.mp3" id="6_trj04"]
-[ext_resource type="AudioStream" uid="uid://daiweei2go48f" path="res://Assets/Music/InYourHead.mp3" id="10_16hvj"]
 
 [sub_resource type="GDScript" id="GDScript_n45e2"]
 script/source = "extends Control
@@ -17,21 +16,16 @@ script/source = "extends Control
 func _on_button_pressed() -> void:
 	$select.play()
 	await $select.finished 
-	MenuTheme.playTheme = false;
-	MenuTheme.stop_music()
 	get_tree().change_scene_to_file(\"res://Scenes/Cutscenes/opening_cutscene.tscn\")
 
 func _on_Leaderboard_button_pressed() -> void:
 	$select.play()
-	await $select.finished
-	MenuTheme.playTheme = false;
+	await $select.finished 
 	get_tree().change_scene_to_file(\"res://Scenes/leaderboard_container.tscn\")
 
-@export var menu_music: AudioStream 
-	
 func _ready():
-	MenuTheme.play_music(menu_music) # check if we need to play it
 	update_leaderboard()
+
 
 func update_leaderboard():
 	if not has_node(\"NamesContainer\"):
@@ -56,8 +50,7 @@ func update_leaderboard():
 
 func _on_settings_button_pressed() -> void:
 	$select.play()
-	await $select.finished
-	MenuTheme.playTheme = false;
+	await $select.finished 
 	get_tree().change_scene_to_file(\"res://Scenes/settings.tscn\")
 "
 
@@ -74,6 +67,8 @@ script = SubResource("GDScript_n45e2")
 unique_name_in_owner = true
 stream = ExtResource("6_trj04")
 volume_db = -5.0
+
+[node name="Node" parent="." unique_id=2098853317 instance=ExtResource("2_trj04")]
 
 [node name="Background" type="TextureRect" parent="." unique_id=1015862042]
 layout_mode = 1
@@ -163,13 +158,6 @@ offset_bottom = 0.015991211
 position = Vector2(62.799988, 58)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_opfnp")
-
-[node name="MusicManager" parent="." unique_id=2098853317 instance=ExtResource("2_trj04")]
-unique_name_in_owner = true
-
-[node name="MenuSong" type="AudioStreamPlayer" parent="." unique_id=1290426969]
-unique_name_in_owner = true
-stream = ExtResource("10_16hvj")
 
 [connection signal="pressed" from="Startbutton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]
