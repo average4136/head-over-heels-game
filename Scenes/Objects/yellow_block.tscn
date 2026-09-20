@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://v5o01rr38e1d"]
+
+[ext_resource type="Texture2D" uid="uid://cn5xxuf51plrb" path="res://Assets/Platform Images/yellow block.png" id="1_k82y5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53v2a"]
+size = Vector2(243, 64)
+
+[node name="yellow block" type="Node2D" unique_id=605724736]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=597318901]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2001279720]
+position = Vector2(121.643036, 30.812504)
+scale = Vector2(0.132167, 0.13216697)
+texture = ExtResource("1_k82y5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1855106265]
+position = Vector2(122.5, 33)
+shape = SubResource("RectangleShape2D_53v2a")
