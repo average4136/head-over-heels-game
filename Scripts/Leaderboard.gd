@@ -5,7 +5,8 @@ const MAX_ENTRIES := 5
 
 
 func _ready():
-	update_leaderboard()
+	if has_node("NamesContainer"):
+		update_leaderboard()
 
 
 func update_leaderboard():
