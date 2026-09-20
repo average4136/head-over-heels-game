@@ -3,14 +3,104 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="1_xtvdm"]
 [ext_resource type="PackedScene" uid="uid://cdimgs0cna7jf" path="res://Scenes/Objects/Green_block.tscn" id="2_ayo57"]
 [ext_resource type="PackedScene" uid="uid://j04lyk05824u" path="res://Scenes/Objects/flower_platform.tscn" id="3_j4y42"]
+[ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="4_jm2at"]
+[ext_resource type="PackedScene" uid="uid://cwbv4iwydbj34" path="res://Scenes/Objects/Leaf_block.tscn" id="5_xmgho"]
+[ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="7_j1d2w"]
+[ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="7_xmgho"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jm2at"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xmgho"]
 
 [node name="Grass scene" type="Node2D" unique_id=610116829]
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_xtvdm")]
-position = Vector2(0, -72)
-
-[node name="Node2D" parent="." unique_id=1923038160 instance=ExtResource("2_ayo57")]
-position = Vector2(-728, 136)
+position = Vector2(-792, 200)
 
 [node name="flower platform" parent="." unique_id=847648505 instance=ExtResource("3_j4y42")]
-position = Vector2(-520, -128)
+position = Vector2(448.00003, 40.000008)
+rotation = -0.2617994
+scale = Vector2(0.8618077, 0.8618077)
+
+[node name="Cloud block" parent="." unique_id=532234708 instance=ExtResource("4_jm2at")]
+position = Vector2(1016, -432)
+
+[node name="Node2D2" parent="." unique_id=292330263 instance=ExtResource("5_xmgho")]
+position = Vector2(768, -64)
+
+[node name="left wall" type="StaticBody2D" parent="." unique_id=813675887]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left wall" unique_id=1475355164]
+position = Vector2(-1153, -163)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_jm2at")
+
+[node name="right wall" type="StaticBody2D" parent="." unique_id=2122914647]
+position = Vector2(1150, -103)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=887593471]
+shape = SubResource("WorldBoundaryShape2D_xmgho")
+
+[node name="Launch booster" parent="." unique_id=1384817862 instance=ExtResource("7_xmgho")]
+position = Vector2(776, -208)
+
+[node name="Stone platform" parent="." unique_id=107939614 instance=ExtResource("7_j1d2w")]
+position = Vector2(-384.00003, 152.00002)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform2" parent="." unique_id=1797029163 instance=ExtResource("7_j1d2w")]
+position = Vector2(16.000065, 128)
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform3" parent="." unique_id=2120053613 instance=ExtResource("7_j1d2w")]
+position = Vector2(15.999999, 48)
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Cloud block2" parent="." unique_id=1585520235 instance=ExtResource("4_jm2at")]
+position = Vector2(1104, -88)
+rotation = -3.1415927
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Node2D3" parent="." unique_id=1647847814 instance=ExtResource("2_ayo57")]
+position = Vector2(504, -392)
+
+[node name="Node2D4" parent="." unique_id=1255679672 instance=ExtResource("2_ayo57")]
+position = Vector2(128, -400)
+
+[node name="Node2D5" parent="." unique_id=180104357 instance=ExtResource("2_ayo57")]
+position = Vector2(-136, -400)
+
+[node name="Node2D6" parent="." unique_id=1339811913 instance=ExtResource("2_ayo57")]
+position = Vector2(-776, -400)
+
+[node name="Node2D7" parent="." unique_id=1209957917 instance=ExtResource("2_ayo57")]
+position = Vector2(-1016, -400)
+
+[node name="Stone platform4" parent="." unique_id=2029120643 instance=ExtResource("7_j1d2w")]
+position = Vector2(-184.00002, 96.000015)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="Stone platform5" parent="." unique_id=176434917 instance=ExtResource("7_j1d2w")]
+position = Vector2(-584, 208.00003)
+rotation = -0.2617994
+scale = Vector2(0.4538097, 0.4538097)
+
+[node name="GROUND" parent="." unique_id=1923038160 instance=ExtResource("2_ayo57")]
+position = Vector2(-24, 256)
+scale = Vector2(9.919999, 1)
+
+[node name="Cloud block3" parent="." unique_id=1683960287 instance=ExtResource("4_jm2at")]
+position = Vector2(960, -824)
+rotation = -2.8797934
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Cloud block4" parent="." unique_id=59795333 instance=ExtResource("4_jm2at")]
+position = Vector2(616, -880)
+rotation = -3.1415927
+scale = Vector2(1.7194263, 1.7194263)
+
+[node name="Launch booster2" parent="." unique_id=1769609741 instance=ExtResource("7_xmgho")]
+position = Vector2(-1024, -592)
