@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqvy7jbhvbvnl"]
 
-[ext_resource type="Script" uid="uid://c3cxorfob7afk" path="res://Scripts/settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://d07x5gpbf5lgt" path="res://Scripts/settings.gd" id="1_x2hje"]
 [ext_resource type="FontFile" uid="uid://d4gh6b7fwfnwd" path="res://Assets/Font/Comic_White_Rabbit_.otf" id="2_i44u3"]
 
 [node name="Settings" type="Control" unique_id=45946157]
@@ -26,6 +26,10 @@ layout_mode = 2
 
 [node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=564382509]
 layout_mode = 2
+min_value = -100.0
+max_value = 5.0
+step = 0.01
+value = 1.0
 
 [node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=636734395]
 layout_mode = 2
