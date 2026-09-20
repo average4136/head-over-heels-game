@@ -6,10 +6,22 @@ extends Node
 var portal_reached: bool = false
 
 func _ready() -> void:
+	# If this node is nested inside a preview container or run within a prelude scene, abort completely
+	var curr = get_tree().current_scene
+	if curr and "prelude" in curr.scene_file_path.to_lower():
+		print(">>> LevelNarration: Detected prelude scene, disabling climb narration.")
+		queue_free()
+		return
+
+	if get_parent() and "preview" in get_parent().name.to_lower():
+		print(">>> LevelNarration: Nested in preview container, disabling.")
+		queue_free()
+		return
+
 	if win_portal:
 		win_portal.body_entered.connect(_on_portal_reached)
 
-	# Start climbing banter shortly after entering the level
+	# Start climbing banter shortly after entering the real level
 	await get_tree().create_timer(1.2).timeout
 	_play_climb_dialogue()
 
@@ -93,7 +105,7 @@ func _find_voiceline(base_filename: String) -> AudioStream:
 	if ResourceLoader.exists(exact_path):
 		return load(exact_path)
 
-	# Scan folder if files have exported hash numbers appended
+	# Scan directory in case files have exported DAW hashes appended
 	var dir = DirAccess.open(base_path)
 	if dir:
 		dir.list_dir_begin()
