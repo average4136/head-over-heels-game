@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bjsmp7ejadmmf" path="res://Scripts/win_portal.gd" id="1_ajdx0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tx7xv"]
+radius = 204.1568
 
 [node name="WinPortal" type="Area2D" unique_id=139379164]
 script = ExtResource("1_ajdx0")

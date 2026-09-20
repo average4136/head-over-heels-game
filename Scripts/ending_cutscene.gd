@@ -1,6 +1,6 @@
 extends "res://Scripts/cutscene_player.gd"
 
-@export_file("*.tscn") var next_scene: String = "res://Scenes/Main_Menu.tscn"
+@export_file("*.tscn") var next_scene: String = "res://Scenes/main_menu.tscn"
 
 func _ready() -> void:
 	bgm_start_offset = 50.0

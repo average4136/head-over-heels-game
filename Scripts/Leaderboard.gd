@@ -2,7 +2,7 @@ extends PanelContainer
 
 const SAVE_PATH := "user://leaderboard.json"
 const MAX_ENTRIES := 5
-
+var final_run_time: float = 0.0
 
 func _ready():
 	if has_node("NamesContainer"):

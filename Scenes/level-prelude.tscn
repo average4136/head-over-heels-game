@@ -150,5 +150,5 @@ texture = ExtResource("11_oi2v5")
 
 [node name="OST" type="AudioStreamPlayer" parent="." unique_id=253812726]
 stream = ExtResource("12_beo1t")
-volume_db = -20.0
+volume_db = -3.579
 autoplay = true

@@ -8,12 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_ad6b8"]
 [ext_resource type="Texture2D" uid="uid://cqi81ed8fxvv3" path="res://Assets/Decorations/star decor.png" id="7_1k4pw"]
 [ext_resource type="Texture2D" uid="uid://b87adnjv1774n" path="res://Assets/Decorations/alien decor.png" id="8_dauer"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="9_8wo2k"]
 [ext_resource type="Texture2D" uid="uid://cq3boocoejkj1" path="res://Assets/Hannah's Drawn Assets/Portal1.png" id="10_cweg8"]
 [ext_resource type="Texture2D" uid="uid://bo28jj51ed5ii" path="res://Assets/Hannah's Drawn Assets/Portal3.png" id="11_3o7co"]
 [ext_resource type="Texture2D" uid="uid://da5ge62upwq0w" path="res://Assets/Hannah's Drawn Assets/Portal2.png" id="12_2pk2q"]
 [ext_resource type="Texture2D" uid="uid://bfp03h81lmmg6" path="res://Assets/Hannah's Drawn Assets/lady-head.png" id="13_2aw87"]
 [ext_resource type="Texture2D" uid="uid://inww8umfl4ch" path="res://Assets/Hannah's Drawn Assets/lady-body.png" id="14_a2lne"]
 [ext_resource type="Texture2D" uid="uid://nbte2ioy7hcd" path="res://Assets/Hannah's Drawn Assets/lady-arm2.png" id="15_v0am3"]
+[ext_resource type="PackedScene" uid="uid://dgtc6gb710wj4" path="res://Scenes/Objects/win_portal.tscn" id="16_3o7co"]
 [ext_resource type="Texture2D" uid="uid://tubmywu6v52o" path="res://Assets/Hannah's Drawn Assets/lady-arm1.png" id="16_xa165"]
 
 [sub_resource type="Animation" id="Animation_124nk"]
@@ -387,7 +389,7 @@ _data = {
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
 
 [node name="GradientBg" type="Sprite2D" parent="." unique_id=1264902900]
-position = Vector2(40, 3952.0002)
+position = Vector2(162, 3737.0002)
 scale = Vector2(3.2093222, 4.4489923)
 texture = ExtResource("1_huob2")
 
@@ -534,3 +536,9 @@ texture = ExtResource("16_xa165")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PORTAL/LADY" unique_id=1090601294]
 libraries/ = SubResource("AnimationLibrary_muy2g")
+
+[node name="WinPortal" parent="." unique_id=139379164 instance=ExtResource("16_3o7co")]
+position = Vector2(-714, -1180)
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("9_8wo2k")]
+position = Vector2(-362, -945)
