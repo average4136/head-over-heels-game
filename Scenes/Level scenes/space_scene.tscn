@@ -389,7 +389,7 @@ _data = {
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
 
 [node name="GradientBg" type="Sprite2D" parent="." unique_id=1264902900]
-position = Vector2(40, 3952.0002)
+position = Vector2(162, 3737.0002)
 scale = Vector2(3.2093222, 4.4489923)
 texture = ExtResource("1_huob2")
 
