@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjv8cierj1i4s" path="res://Assets/Hannah's Drawn Assets/ice block.png" id="1_cukdt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_00yqa"]
-friction = 0.3
+friction = 0.1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa70v"]
 size = Vector2(51, 20)

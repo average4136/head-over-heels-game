@@ -55,7 +55,6 @@ limit_left = 0
 limit_right = 0
 drag_vertical_enabled = true
 drag_vertical_offset = -1.0
-drag_bottom_margin = 0.41
 
 [node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
 position = Vector2(4, -59)
