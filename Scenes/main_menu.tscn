@@ -89,7 +89,7 @@ grow_vertical = 0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=90277366]
 
 [node name="DownBadLogoV0_5" type="Sprite2D" parent="." unique_id=285365223]
-position = Vector2(300.99997, 235)
+position = Vector2(301.99997, 239.00003)
 rotation = -0.29147
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("4_ce3w2")
@@ -107,8 +107,8 @@ button_mask = 5
 flat = true
 
 [node name="Start" type="Sprite2D" parent="Startbutton" unique_id=1680684949]
-position = Vector2(294, 108)
-scale = Vector2(0.5323599, 0.540625)
+position = Vector2(278, 104)
+scale = Vector2(0.41388673, 0.42031246)
 texture = ExtResource("4_opfnp")
 
 [node name="Settings button" type="CheckButton" parent="." unique_id=1857087957]
@@ -123,7 +123,7 @@ theme_override_font_sizes/font_size = 50
 alignment = 1
 
 [node name="Settings" type="Sprite2D" parent="Settings button" unique_id=51740853]
-position = Vector2(60.999977, 65)
+position = Vector2(46.999977, 71)
 scale = Vector2(0.5332163, 0.5995455)
 texture = ExtResource("4_n45e2")
 
@@ -140,8 +140,8 @@ offset_right = 0.45593262
 offset_bottom = 0.015991211
 
 [node name="Leaderboard" type="Sprite2D" parent="CheckButton" unique_id=1413498083]
-position = Vector2(81.15625, 74.71875)
-scale = Vector2(0.66047955, 0.48568562)
+position = Vector2(74, 59)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_opfnp")
 
 [connection signal="pressed" from="Startbutton" to="." method="_on_button_pressed"]
