@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dtbf2fua3gog" path="res://Assets/Stages/fields/sun glow.png" id="8_uyqby"]
 [ext_resource type="AudioStream" uid="uid://bfbpttxfsdih0" path="res://Assets/Music/HeelOver.mp3" id="9_kuops"]
 [ext_resource type="Script" uid="uid://xewtuvtwjsc8" path="res://Scenes/prelude_two_controller.gd" id="10_lxnbv"]
+[ext_resource type="PackedScene" uid="uid://y7vsm3emcvhy" path="res://Scenes/Level scenes/main_level.tscn" id="11_r5df2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m74fc"]
 size = Vector2(15960, 913)
@@ -117,3 +118,18 @@ bus = &"Music"
 
 [node name="PreludeTwoController" type="Node" parent="." unique_id=929955952]
 script = ExtResource("10_lxnbv")
+
+[node name="MapPreviewContainer" type="Node2D" parent="." unique_id=859687322]
+
+[node name="Main_level" parent="MapPreviewContainer" unique_id=1377921325 instance=ExtResource("11_r5df2")]
+process_mode = 4
+position = Vector2(1314, -1285)
+
+[node name="PanCamera" type="Camera2D" parent="." unique_id=1507373600]
+enabled = false
+
+[node name="PortalPos" type="Marker2D" parent="." unique_id=1146250900]
+position = Vector2(548, -2802)
+
+[node name="SpawnPos" type="Marker2D" parent="." unique_id=27275919]
+position = Vector2(693, 158)
