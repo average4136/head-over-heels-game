@@ -3,9 +3,8 @@ extends "res://Scripts/cutscene_player.gd"
 @export_file("*.tscn") var next_scene: String = "res://Scenes/Main_Menu.tscn"
 
 func _ready() -> void:
+	bgm_start_offset = 50.0
 	super._ready()
-	if ost:
-		ost.play()
 
 func _setup_slides() -> void:
 	slides = [
