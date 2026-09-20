@@ -5,6 +5,7 @@ extends Area2D
 var triggered: bool = false
 
 func _ready() -> void:
+	MenuTheme.stop_music_level() # disable song level
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
