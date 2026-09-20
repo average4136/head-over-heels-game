@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crukrtjrpamiy"]
 
-[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Guy.tscn" id="1_ufcnh"]
+[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="1_wsnjc"]
 [ext_resource type="Script" uid="uid://c3ts47ctfbeet" path="res://Scripts/prelude_controller.gd" id="2_wsnjc"]
 [ext_resource type="Texture2D" uid="uid://18fofanlpi3m" path="res://Assets/Hannah's Drawn Assets/stone block.png" id="3_wsnjc"]
 
@@ -12,7 +12,9 @@ size = Vector2(79.125, 830)
 
 [node name="Prelude" type="Node2D" unique_id=1402624357]
 
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_ufcnh")]
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_wsnjc")]
+
+[node name="PreludeCam" type="Camera2D" parent="Guy" unique_id=500311069]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=424600753]
 

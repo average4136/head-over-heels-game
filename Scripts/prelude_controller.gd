@@ -3,8 +3,19 @@ extends Node
 @export_file("*.tscn") var main_climb_scene: String = "res://Scenes/game.tscn"
 
 @onready var eye_fade: ColorRect = $"../CanvasLayer/EyeFade"
+@onready var guy_cam: Camera2D = $"../Guy/Body/GuyCam"
+@onready var prelude_cam: Camera2D = $"../Guy/Body/PreludeCam"
 
 func _ready() -> void:
+	# Shut off the main game camera so it doesn't take over
+	if guy_cam:
+		guy_cam.enabled = false
+	
+	# Force the custom prelude camera active
+	if prelude_cam:
+		prelude_cam.enabled = true
+		prelude_cam.make_current()
+
 	# Start with black screen, then fade into the world
 	if eye_fade:
 		eye_fade.modulate.a = 1.0
@@ -31,7 +42,6 @@ func _play_prelude() -> void:
 	# When dialogue completes, warp to the climb map
 	await DialogueManager.all_dialogue_finished
 	teleport_to_climb()
-
 
 func teleport_to_climb() -> void:
 	DialogueManager.stop_dialogue()
