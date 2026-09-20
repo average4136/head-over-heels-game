@@ -5,11 +5,20 @@ var minutes: int = 0
 var seconds: int = 0
 var mseconds: int = 0
 
+var timer_stopped: bool = false
+
 const SAVE_PATH := "user://leaderboard.json"
 const MAX_ENTRIES := 5
-
-
+func reset_leaderboard() -> void:
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(SAVE_PATH))
+		print("Leaderboard reset!")
+		
 func _process(delta) -> void:
+	# Stop the timer if the game has ended
+	if timer_stopped:
+		return
+
 	time += delta
 
 	mseconds = fmod(time, 1) * 100
@@ -18,21 +27,37 @@ func _process(delta) -> void:
 
 	$mseconds.text = "%02d:" % mseconds
 	$seconds.text = "%02d:" % seconds
-	$minutes.text = "%02d:" % minutes
+	$minutes.text = "%02d" % minutes
+
 
 func _on_button_pressed() -> void:
-	var player_name = $PlayerName.text.strip_edges()
+	# Stop the timer
+	timer_stopped = true
 
-	# Don't allow the score to be submitted without a name
+	print("Timer stopped at: ", time)
+
+	# Put the cursor into the name box
+	$PlayerName.grab_focus()
+
+	# Tell the player what to do
+	print("Enter your name and press Enter.")
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+	var player_name = new_text.strip_edges()
+
+	# Don't allow an empty name
 	if player_name == "":
 		print("Please enter your name!")
 		$PlayerName.grab_focus()
 		return
 
+	# Save the score
 	add_score(player_name, time)
 
 	print("Score saved: ", player_name, " - ", time)
 
+	# Go to leaderboard
 	get_tree().change_scene_to_file(
 		"res://Scenes/leaderboard_container.tscn"
 	)
@@ -74,3 +99,6 @@ func add_score(player_name: String, score_time: float) -> void:
 		print("Saved scores: ", scores)
 	else:
 		print("ERROR: Could not save leaderboard!")
+func _ready():
+	reset_leaderboard()
+	
