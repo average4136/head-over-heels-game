@@ -171,4 +171,4 @@ enabled = false
 position = Vector2(-49938, -4982)
 
 [node name="SpawnPos" type="Marker2D" parent="." unique_id=27275919]
-position = Vector2(-49924, 327)
+position = Vector2(-49405, 16)
