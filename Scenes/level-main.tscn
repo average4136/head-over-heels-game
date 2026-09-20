@@ -104,7 +104,7 @@ scale = Vector2(1.0000001, 1)
 scroll_scale = Vector2(0.01, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=476689418]
-position = Vector2(317.99994, -6968)
+position = Vector2(335.99994, -7000)
 scale = Vector2(2.1984372, 2.198437)
 texture = ExtResource("8_y40x4")
 
