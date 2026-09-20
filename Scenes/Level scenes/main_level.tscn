@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://nbte2ioy7hcd" path="res://Assets/Hannah's Drawn Assets/lady-arm2.png" id="28_hoyt8"]
 [ext_resource type="Texture2D" uid="uid://tubmywu6v52o" path="res://Assets/Hannah's Drawn Assets/lady-arm1.png" id="29_64l46"]
 [ext_resource type="Script" uid="uid://d2s4w4236iei4" path="res://Scenes/Level scenes/gravity_changer.gd" id="29_xwawq"]
+[ext_resource type="PackedScene" uid="uid://dgtc6gb710wj4" path="res://Scenes/Objects/win_portal.tscn" id="31_c3nyq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
 
@@ -1178,3 +1179,6 @@ position = Vector2(400, -2864)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
 position = Vector2(1040, -3048)
+
+[node name="WinPortal" parent="." unique_id=139379164 instance=ExtResource("31_c3nyq")]
+position = Vector2(-713, -3682)
