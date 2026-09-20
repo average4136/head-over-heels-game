@@ -11,7 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dtbf2fua3gog" path="res://Assets/Stages/fields/sun glow.png" id="8_y40x4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m74fc"]
-size = Vector2(4004, 777)
+size = Vector2(15960, 913)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(513, 11604)
 
 [node name="Node2D" type="Node2D" unique_id=334051840]
 
@@ -25,7 +28,7 @@ scale = Vector2(1.548057, 1.5480568)
 texture = ExtResource("1_gy23m")
 
 [node name="MOUNTAINS" type="Parallax2D" parent="." unique_id=1191318501]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0.05, 1)
 scroll_offset = Vector2(38, -3916)
 
 [node name="Sprite2D2" type="Sprite2D" parent="MOUNTAINS" unique_id=2093714270]
@@ -33,16 +36,20 @@ position = Vector2(752, -1150)
 scale = Vector2(1.5656927, 1.5656923)
 texture = ExtResource("2_8bkry")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1595760320]
+[node name="MIDDLE" type="Parallax2D" parent="." unique_id=1595760320]
 scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(3840, 0)
+repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=583810624]
+[node name="Sprite2D" type="Sprite2D" parent="MIDDLE" unique_id=583810624]
 position = Vector2(784, -4841)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_5fboe")
 
 [node name="BASE" type="Parallax2D" parent="." unique_id=1194922355]
 scale = Vector2(1.5472223, 1.5472223)
+repeat_size = Vector2(2560, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="BASE" unique_id=1444445960]
 position = Vector2(501.54398, 7.109515)
@@ -53,7 +60,7 @@ position = Vector2(-85, 354)
 
 [node name="PlayerMovebox" type="CollisionShape2D" parent="PLAYER" unique_id=1991705216]
 unique_name_in_owner = true
-position = Vector2(885, 471.5)
+position = Vector2(2883, 539.5)
 shape = SubResource("RectangleShape2D_m74fc")
 
 [node name="Guy" parent="PLAYER" unique_id=1796156875 instance=ExtResource("5_vu001")]
@@ -69,6 +76,14 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 script = ExtResource("5_mumxs")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLAYER" unique_id=137842750]
+position = Vector2(-4851, -5614)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PLAYER" unique_id=1217231400]
+position = Vector2(10628, -5685)
+shape = SubResource("RectangleShape2D_yf5fn")
+
 [node name="Hitboxes" type="Sprite2D" parent="." unique_id=1306339180]
 position = Vector2(786, 51.000004)
 scale = Vector2(4.150244, 0.30522564)
@@ -76,6 +91,8 @@ scale = Vector2(4.150244, 0.30522564)
 [node name="FRONT" type="Parallax2D" parent="." unique_id=1442591032]
 scale = Vector2(1.5628406, 1.5628407)
 scroll_scale = Vector2(1.5, 1)
+repeat_size = Vector2(2560, 0)
+repeat_times = 3
 
 [node name="Sprite2D2" type="Sprite2D" parent="FRONT" unique_id=1624569120]
 position = Vector2(517.0074, -3289.523)
