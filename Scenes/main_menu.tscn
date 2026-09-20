@@ -21,9 +21,9 @@ func _ready():
 
 
 func update_leaderboard():
-	if not has_node(\"LeaderboardContainer/NamesContainer\"):
+	if not has_node(\"NamesContainer\"):
 		return
-	var entries = $LeaderboardContainer/NamesContainer.get_children()
+	var entries = $NamesContainer.get_children()
 
 	for i in range(5):
 		var panel = entries[i + 1]

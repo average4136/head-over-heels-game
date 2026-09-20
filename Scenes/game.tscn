@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://wovadvlseaw3"]
 
-[ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scenes/panel.gd" id="2_3dryh"]
+[ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cpuxc7o6cfr1w" path="res://Assets/tile-for-tiling.png" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://ccqn5filf72l6" path="res://Scenes/test_for_leaderboard.gd" id="3_wrm1d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5r6hy"]
 distance = -10.0
@@ -82,6 +83,7 @@ offset_left = 426.0
 offset_top = -72.0
 offset_right = 583.0
 offset_bottom = 5.0
+script = ExtResource("3_wrm1d")
 
 [node name="Button" type="Button" parent="test for leaderboard" unique_id=841595743]
 layout_mode = 1
@@ -93,4 +95,4 @@ grow_vertical = 2
 text = "end
 "
 
-[connection signal="pressed" from="test for leaderboard/Button" to="Camera2D/Panel" method="_pressed"]
+[connection signal="pressed" from="test for leaderboard/Button" to="Camera2D/Panel" method="_on_button_pressed"]
