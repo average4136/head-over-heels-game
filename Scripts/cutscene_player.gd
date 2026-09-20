@@ -28,9 +28,9 @@ func _ready() -> void:
 func _setup_slides() -> void:
 	pass
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept") or (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
-		_next_slide()
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		_end_cutscene()
 
 func _next_slide() -> void:
 	timer.stop()

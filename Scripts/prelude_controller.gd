@@ -32,10 +32,6 @@ func _play_prelude() -> void:
 	await DialogueManager.all_dialogue_finished
 	teleport_to_climb()
 
-func _unhandled_input(event: InputEvent) -> void:
-	# Pressing Space, Enter, or Escape skips the walk and warps immediately
-	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel"):
-		teleport_to_climb()
 
 func teleport_to_climb() -> void:
 	DialogueManager.stop_dialogue()
