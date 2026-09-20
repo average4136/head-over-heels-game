@@ -27,52 +27,97 @@ text = "Back"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1808376750]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 3.0
-offset_right = 874.0
-offset_bottom = 83.0
+offset_left = 33.0
+offset_top = 22.0
+offset_right = 464.0
+offset_bottom = 102.0
 theme_override_fonts/normal_font = ExtResource("2_ccovl")
 theme_override_font_sizes/normal_font_size = 60
 text = "CREDITS"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=991927583]
 layout_mode = 0
-offset_left = 431.0
-offset_top = 82.0
-offset_right = 862.0
-offset_bottom = 162.0
+offset_left = 43.0
+offset_top = 103.0
+offset_right = 474.0
+offset_bottom = 183.0
 theme_override_fonts/normal_font = ExtResource("2_ccovl")
 theme_override_font_sizes/normal_font_size = 40
 text = "PROGRAMMING"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=35362083]
 layout_mode = 0
-offset_left = 466.0
-offset_top = 177.0
-offset_right = 897.0
-offset_bottom = 257.0
+offset_left = 42.0
+offset_top = 344.0
+offset_right = 473.0
+offset_bottom = 424.0
 theme_override_fonts/normal_font = ExtResource("2_ccovl")
 theme_override_font_sizes/normal_font_size = 40
 text = "ARTISTS"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=255789024]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 298.0
-offset_right = 911.0
-offset_bottom = 378.0
+offset_left = 567.0
+offset_top = 100.0
+offset_right = 998.0
+offset_bottom = 180.0
 theme_override_fonts/normal_font = ExtResource("2_ccovl")
 theme_override_font_sizes/normal_font_size = 40
-text = "MUSIC"
+text = "MUSIC & SFX"
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="." unique_id=1450927180]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 410.0
-offset_right = 901.0
-offset_bottom = 490.0
+offset_left = 560.0
+offset_top = 349.0
+offset_right = 991.0
+offset_bottom = 429.0
 theme_override_fonts/normal_font = ExtResource("2_ccovl")
 theme_override_font_sizes/normal_font_size = 40
 text = "WRITING"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="." unique_id=1251971639]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 162.0
+offset_right = 478.0
+offset_bottom = 390.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 25
+text = "Peyton Petersen
+Luke McCullough
+Hannah Tremaine
+Christian Quin
+RJ Quin"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="." unique_id=1521159691]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 399.0
+offset_right = 624.0
+offset_bottom = 571.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 25
+text = "Hannah Tremaine (Level Objects & Characters)
+RJ Quin (Level Stage, Cutscenes, Menu Buttons, Logo)"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="." unique_id=1431503927]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 157.0
+offset_right = 997.0
+offset_bottom = 329.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 25
+text = "RJ Quin"
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="." unique_id=307149021]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 406.0
+offset_right = 994.0
+offset_bottom = 578.0
+theme_override_fonts/normal_font = ExtResource("2_ccovl")
+theme_override_font_sizes/normal_font_size = 25
+text = "Christian Quin"
 
 [connection signal="pressed" from="PanelContainer/Button" to="." method="_on_back_button_pressed"]
