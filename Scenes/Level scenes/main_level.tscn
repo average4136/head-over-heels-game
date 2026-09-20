@@ -1118,9 +1118,9 @@ scale = Vector2(1, 0.68)
 position = Vector2(-169, -101)
 
 [node name="star platform" parent="Space scene" unique_id=227261879 instance=ExtResource("20_ebg3b")]
-position = Vector2(-776, -224)
+position = Vector2(-722, -245)
 rotation = -0.2617994
-scale = Vector2(1.6000012, 1.12)
+scale = Vector2(1.36, 1.12)
 
 [node name="star platform2" parent="Space scene" unique_id=765817856 instance=ExtResource("20_ebg3b")]
 position = Vector2(720.00006, -360)
@@ -1224,7 +1224,7 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(-593, 1664)
+position = Vector2(-385, -2552)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
 position = Vector2(1040, -3048)
