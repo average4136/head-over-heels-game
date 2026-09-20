@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="2_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="3_7d2j5"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="4_k0s5y"]
+[ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="5_oskd4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0s5y"]
 
@@ -44,3 +45,23 @@ scale = Vector2(3.4314842, 5)
 [node name="StaticBody2D2" parent="." unique_id=181318515 instance=ExtResource("4_k0s5y")]
 position = Vector2(704, 48.000004)
 scale = Vector2(11.240002, 5.12)
+
+[node name="Launch booster" parent="." unique_id=1384817862 instance=ExtResource("5_oskd4")]
+position = Vector2(-1032.0001, -96)
+
+[node name="Blue_block2" parent="." unique_id=1246383732 instance=ExtResource("1_i0ptw")]
+position = Vector2(-856, -384)
+rotation = 1.5707964
+scale = Vector2(1.9600003, 0.6)
+
+[node name="Blue_block3" parent="." unique_id=351789983 instance=ExtResource("1_i0ptw")]
+position = Vector2(-752, -592)
+
+[node name="Blue_block4" parent="." unique_id=23454002 instance=ExtResource("1_i0ptw")]
+position = Vector2(-392, -616)
+
+[node name="Blue_block5" parent="." unique_id=223574707 instance=ExtResource("1_i0ptw")]
+position = Vector2(-48, -656)
+
+[node name="Blue_block6" parent="." unique_id=1384170651 instance=ExtResource("1_i0ptw")]
+position = Vector2(272, -688)

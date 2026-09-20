@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bqg68mukgpldk" path="res://Scenes/Objects/stone_platform.tscn" id="3_h3lg6"]
 [ext_resource type="PackedScene" uid="uid://0djhqq0lcepc" path="res://Scenes/Objects/cloud_block.tscn" id="5_fhco1"]
 [ext_resource type="PackedScene" uid="uid://dqyftoe55durm" path="res://Scenes/Objects/ice_block.tscn" id="5_kptn1"]
+[ext_resource type="PackedScene" uid="uid://ysms78opj7fm" path="res://Scenes/Objects/launch_booster.tscn" id="6_fhco1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fa70v"]
 
@@ -122,3 +123,6 @@ position = Vector2(-448, -464)
 
 [node name="StaticBody2D5" parent="." unique_id=1268497885 instance=ExtResource("5_kptn1")]
 position = Vector2(-199.99998, -464)
+
+[node name="Launch booster" parent="." unique_id=1384817862 instance=ExtResource("6_fhco1")]
+position = Vector2(544.00006, -592.00006)
