@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tjt0sjw4u7au" path="res://Assets/Stages/fields/mountains.png" id="2_8bkry"]
 [ext_resource type="Texture2D" uid="uid://bpsvs1cw38n0d" path="res://Assets/Stages/fields/base.png" id="2_vu001"]
 [ext_resource type="Texture2D" uid="uid://528gwsgvogbw" path="res://Assets/Stages/fields/bushesFront.png" id="3_8bkry"]
-[ext_resource type="PackedScene" uid="uid://bxxdsh4xifwoa" path="res://Scenes/Entities/Guy.tscn" id="4_mumxs"]
+[ext_resource type="PackedScene" uid="uid://bjr2pk7rk0ktn" path="res://Scenes/Entities/Guy-Custom.tscn" id="5_vu001"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m74fc"]
 size = Vector2(4019, 105)
@@ -31,8 +31,6 @@ position = Vector2(17.456263, -5.6584415)
 scale = Vector2(1.0100944, 1.0100944)
 texture = ExtResource("3_8bkry")
 
-[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("4_mumxs")]
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1612453333]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1991705216]
@@ -44,7 +42,9 @@ position = Vector2(786.00006, 51)
 scale = Vector2(4.150244, 0.30522564)
 
 [node name="PreludeCam" type="Camera2D" parent="StoneBlock" unique_id=1172104479]
-position = Vector2(-61.924088, -1444.8328)
+position = Vector2(-205.53008, 3423.6963)
 scale = Vector2(0.24094968, 3.276265)
-zoom = Vector2(0.5, 0.5)
-limit_enabled = false
+zoom = Vector2(0.1, 0.1)
+
+[node name="Guy2" parent="StoneBlock/PreludeCam" unique_id=1796156875 instance=ExtResource("5_vu001")]
+position = Vector2(582.00006, -1113)

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bjr2pk7rk0ktn"]
+
+[ext_resource type="Script" uid="uid://cyy8av8tue0b" path="res://Scripts/body.gd" id="1_3hn2r"]
+[ext_resource type="Texture2D" uid="uid://chj5bwgb2mlty" path="res://Assets/Hannah's Drawn Assets/new body.png" id="2_h30in"]
+[ext_resource type="Script" uid="uid://3fn74cbcjfm7" path="res://Scripts/head.gd" id="3_nwmqh"]
+[ext_resource type="Texture2D" uid="uid://cj684jc6nwgpa" path="res://Assets/Hannah's Drawn Assets/new head.png" id="4_dyc8q"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r6hy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bl7gc"]
+radius = 22.0
+height = 48.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bl7gc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_53v2a"]
+radius = 43.011627
+
+[node name="Guy" type="Node2D" unique_id=1796156875]
+
+[node name="Character physics (node2d)" type="Node2D" parent="." unique_id=1374272924]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Character physics (node2d)" unique_id=482596865]
+position = Vector2(2, -111)
+node_a = NodePath("../Body")
+node_b = NodePath("../Head")
+angular_limit_enabled = true
+angular_limit_lower = -1.2217305
+angular_limit_upper = 1.2217305
+
+[node name="Body" type="RigidBody2D" parent="Character physics (node2d)" unique_id=447719997]
+physics_material_override = SubResource("PhysicsMaterial_5r6hy")
+lock_rotation = true
+linear_damp = 2.0
+angular_damp = 5.0
+script = ExtResource("1_3hn2r")
+
+[node name="NewBody" type="Sprite2D" parent="Character physics (node2d)/Body" unique_id=2036346560]
+position = Vector2(-2.2888184e-05, -47.999996)
+scale = Vector2(0.18322203, 0.18322204)
+texture = ExtResource("2_h30in")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Body" unique_id=375401037]
+position = Vector2(0, -31)
+shape = SubResource("CapsuleShape2D_bl7gc")
+
+[node name="GroundRay" type="RayCast2D" parent="Character physics (node2d)/Body" unique_id=157841590]
+position = Vector2(0, -9)
+target_position = Vector2(0, 19)
+
+[node name="Camera2D" type="Camera2D" parent="Character physics (node2d)/Body" unique_id=1832002142]
+position = Vector2(-1, -218)
+zoom = Vector2(0.1, 0.1)
+limit_left = 0
+limit_right = 0
+drag_vertical_enabled = true
+drag_vertical_offset = -1.0
+
+[node name="Head" type="RigidBody2D" parent="Character physics (node2d)" unique_id=1180459420]
+position = Vector2(4, -59)
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_bl7gc")
+linear_damp = 0.2
+angular_damp = 0.2
+script = ExtResource("3_nwmqh")
+
+[node name="NewHead" type="Sprite2D" parent="Character physics (node2d)/Head" unique_id=803519001]
+position = Vector2(0.9501467, -103.671875)
+scale = Vector2(0.24717988, 0.24717987)
+texture = ExtResource("4_dyc8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character physics (node2d)/Head" unique_id=1748685107]
+position = Vector2(-4, -98)
+shape = SubResource("CircleShape2D_53v2a")
