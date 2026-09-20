@@ -17,13 +17,13 @@ func _process(delta) -> void:
 
 	time += delta
 
-	mseconds = fmod(time, 1) * 100
-	seconds = fmod(time, 60)
-	minutes = fmod(time, 3600) / 60
+	var total_msec: int = int(fmod(time, 1.0) * 100)
+	var total_sec: int = int(fmod(time, 60.0))
+	var total_min: int = int(time / 60.0)
 
-	$mseconds.text = "%02d:" % mseconds
-	$seconds.text = "%02d:" % seconds
-	$minutes.text = "%02d" % minutes
+	$minutes.text = "%02d:" % total_min
+	$seconds.text = "%02d." % total_sec
+	$mseconds.text = "%02d" % total_msec
 
 
 func _on_button_pressed() -> void:

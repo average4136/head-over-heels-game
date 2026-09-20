@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://tubmywu6v52o" path="res://Assets/Hannah's Drawn Assets/lady-arm1.png" id="29_64l46"]
 [ext_resource type="Script" uid="uid://d2s4w4236iei4" path="res://Scenes/Level scenes/gravity_changer.gd" id="29_xwawq"]
 [ext_resource type="PackedScene" uid="uid://dgtc6gb710wj4" path="res://Scenes/Objects/win_portal.tscn" id="31_c3nyq"]
+[ext_resource type="Script" uid="uid://ctt7gyxbqfsp5" path="res://Scripts/panel.gd" id="32_1kn2x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
 
@@ -1175,10 +1176,47 @@ libraries/ = SubResource("AnimationLibrary_txng3")
 autoplay = &"lady"
 
 [node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("3_rpe6i")]
-position = Vector2(400, -2864)
+position = Vector2(-704, 1655)
 
 [node name="Launch booster" parent="." unique_id=906805597 instance=ExtResource("8_cd86f")]
 position = Vector2(1040, -3048)
 
 [node name="WinPortal" parent="." unique_id=139379164 instance=ExtResource("31_c3nyq")]
 position = Vector2(-713, -3682)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2102436521]
+
+[node name="Panel" type="Panel" parent="HUD" unique_id=1652826112]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.200012
+offset_top = 0.16
+offset_right = 100.79999
+offset_bottom = 40.16
+grow_horizontal = 2
+script = ExtResource("32_1kn2x")
+
+[node name="minutes" type="Label" parent="HUD/Panel" unique_id=1684824641]
+layout_mode = 0
+offset_left = 45.200012
+offset_top = 8.84
+offset_right = 85.20001
+offset_bottom = 31.84
+text = "00:"
+
+[node name="seconds" type="Label" parent="HUD/Panel" unique_id=1512730252]
+layout_mode = 0
+offset_left = 69.20001
+offset_top = 8.84
+offset_right = 109.20001
+offset_bottom = 31.84
+text = "00:"
+
+[node name="mseconds" type="Label" parent="HUD/Panel" unique_id=490718868]
+layout_mode = 0
+offset_left = 92.20001
+offset_top = 8.84
+offset_right = 132.20001
+offset_bottom = 31.84
+text = "00"
