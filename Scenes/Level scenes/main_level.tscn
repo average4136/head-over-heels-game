@@ -39,6 +39,7 @@
 [ext_resource type="Script" uid="uid://c7teuwgciumwy" path="res://Scripts/level_narration.gd" id="37_3dbdo"]
 [ext_resource type="Texture2D" uid="uid://c7td0slghhm2a" path="res://Assets/Stages/fields/front.png" id="38_fphub"]
 [ext_resource type="Texture2D" uid="uid://dtbf2fua3gog" path="res://Assets/Stages/fields/sun glow.png" id="39_oby1a"]
+[ext_resource type="AudioStream" uid="uid://bfbpttxfsdih0" path="res://Assets/Music/HeelOver.mp3" id="40_oby1a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s05jb"]
 
@@ -1292,3 +1293,8 @@ scroll_offset = Vector2(-804, 1276)
 position = Vector2(335.99994, -7000)
 scale = Vector2(2.1984372, 2.198437)
 texture = ExtResource("39_oby1a")
+
+[node name="LevelSong" type="AudioStreamPlayer" parent="." unique_id=1619389316]
+stream = ExtResource("40_oby1a")
+volume_db = -5.0
+autoplay = true
