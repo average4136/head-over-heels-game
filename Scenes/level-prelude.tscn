@@ -17,7 +17,7 @@
 size = Vector2(4019, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72ksg"]
-size = Vector2(79.125, 830)
+size = Vector2(610, 1197)
 
 [node name="Prelude" type="Node2D" unique_id=1402624357]
 
@@ -101,12 +101,12 @@ texture = ExtResource("9_ikpg7")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1827039312]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1329833878]
-position = Vector2(-1194.4375, -310)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=43037841]
+position = Vector2(2991, -538)
 shape = SubResource("RectangleShape2D_72ksg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/CollisionShape2D" unique_id=43037841]
-position = Vector2(3796.4375, -7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1329833878]
+position = Vector2(-1194.4375, -310)
 shape = SubResource("RectangleShape2D_72ksg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1422921539]
