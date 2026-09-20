@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cdwckcet2rg5j" path="res://Assets/DownBad_Logo_V0.5.png" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://ba5m6iukkbsdj" path="res://Assets/settings.png" id="4_n45e2"]
 [ext_resource type="Texture2D" uid="uid://faotn6rhd2av" path="res://Assets/start.png" id="4_opfnp"]
+[ext_resource type="Script" uid="uid://7diueh3w2dp1" path="res://Scenes/startbutton.gd" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://bnrequoxvuipw" path="res://Assets/leaderboard.png" id="6_opfnp"]
+[ext_resource type="AudioStream" uid="uid://daiweei2go48f" path="res://Assets/Music/InYourHead.mp3" id="7_cp0ys"]
 
 [sub_resource type="GDScript" id="GDScript_n45e2"]
 script/source = "extends Control
@@ -103,6 +105,7 @@ theme_override_font_sizes/font_size = 50
 action_mode = 0
 button_mask = 5
 flat = true
+script = ExtResource("4_yhxw7")
 
 [node name="Start" type="Sprite2D" parent="Startbutton" unique_id=1680684949]
 position = Vector2(278, 104)
@@ -141,6 +144,10 @@ offset_bottom = 0.015991211
 position = Vector2(62.799988, 58)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_opfnp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1343132057]
+stream = ExtResource("7_cp0ys")
+autoplay = true
 
 [connection signal="pressed" from="Startbutton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]
