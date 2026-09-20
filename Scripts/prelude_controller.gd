@@ -1,14 +1,23 @@
 extends Node
 
-# Points directly to your team's main climb scene
 @export_file("*.tscn") var main_climb_scene: String = "res://Scenes/game.tscn"
 
+@onready var eye_fade: ColorRect = $"../CanvasLayer/EyeFade"
+
 func _ready() -> void:
+	# Start with black screen, then fade into the world
+	if eye_fade:
+		eye_fade.modulate.a = 1.0
+		eye_fade.visible = true
+		var tween = create_tween()
+		tween.tween_property(eye_fade, "modulate:a", 0.0, 1.8)
+		await tween.finished
+		eye_fade.visible = false
+	
 	_play_prelude()
 
 func _play_prelude() -> void:
-	# Initial delay so player lands and takes in their heavy head
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.5).timeout
 
 	DialogueManager.queue_line("boy", "what the-", null, 1.5)
 	DialogueManager.queue_line("boy", "MY HEAD", null, 2.0)
@@ -19,14 +28,12 @@ func _play_prelude() -> void:
 	DialogueManager.queue_line("boy", "WHA", null, 1.5)
 	DialogueManager.queue_line("narrator", "You need not be ashamed, here's what you must do", null, 3.5)
 
-	# Await until the narrator finishes the entire block
+	# When dialogue completes, warp to the climb map
 	await DialogueManager.all_dialogue_finished
-
-	# Teleport to the main climb scene
 	teleport_to_climb()
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Space or Escape lets the player skip the walk and warp immediately
+	# Pressing Space, Enter, or Escape skips the walk and warps immediately
 	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel"):
 		teleport_to_climb()
 
