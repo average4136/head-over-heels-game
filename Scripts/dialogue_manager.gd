@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+signal line_finished(speaker: String, text: String)
+signal all_dialogue_finished
+
 var voice_player: AudioStreamPlayer
 var subtitle_box: PanelContainer
 var subtitle_label: Label
@@ -8,12 +11,12 @@ var line_queue: Array[Dictionary] = []
 var is_playing: bool = false
 
 func _ready() -> void:
-	layer = 100 # Draws on top of all gameplay/cutscenes
+	layer = 100 # Draws on top of everything
 	
 	voice_player = AudioStreamPlayer.new()
 	add_child(voice_player)
 
-	# Container for subtitles
+	# Subtitle box styling
 	subtitle_box = PanelContainer.new()
 	subtitle_box.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
 	subtitle_box.offset_top = -130.0
@@ -22,7 +25,7 @@ func _ready() -> void:
 	subtitle_box.offset_right = -80.0
 	subtitle_box.visible = false
 
-	# Text styling
+	# Subtitle text styling
 	subtitle_label = Label.new()
 	subtitle_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	subtitle_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -44,6 +47,7 @@ func _play_next() -> void:
 	if line_queue.is_empty():
 		is_playing = false
 		subtitle_box.visible = false
+		all_dialogue_finished.emit()
 		return
 
 	is_playing = true
@@ -66,9 +70,10 @@ func _play_next() -> void:
 	if current["audio"] != null:
 		voice_player.stream = current["audio"]
 		voice_player.play()
-		wait_time = max(current["audio"].get_length(), current["duration"])
+		wait_time = max(current["audio"].get_length(), wait_time)
 
 	await get_tree().create_timer(wait_time).timeout
+	line_finished.emit(current["speaker"], current["text"])
 	_play_next()
 
 func stop_dialogue() -> void:

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ijvbbuxqffrd"]
+
+[ext_resource type="Script" uid="uid://c7teuwgciumwy" path="res://Scripts/level_narration.gd" id="1_ehsun"]
+
+[node name="Node" type="Node" unique_id=253093370]
+script = ExtResource("1_ehsun")

@@ -5,3 +5,4 @@
 
 [node name="CutscenePlayer" unique_id=1560959999 instance=ExtResource("1_bt1fc")]
 script = ExtResource("2_418q2")
+next_scene_path = "res://Scenes/prelude.tscn"

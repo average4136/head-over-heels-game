@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://crukrtjrpamiy"]
+
+[ext_resource type="PackedScene" uid="uid://cyajayqvahtgv" path="res://Scenes/Guy.tscn" id="1_ufcnh"]
+[ext_resource type="Script" uid="uid://c3ts47ctfbeet" path="res://Scripts/prelude_controller.gd" id="2_wsnjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx7xv"]
+size = Vector2(382, 20)
+
+[node name="Prelude" type="Node2D" unique_id=1402624357]
+
+[node name="Guy" parent="." unique_id=1796156875 instance=ExtResource("1_ufcnh")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=424600753]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1280620807]
+position = Vector2(1, 10)
+shape = SubResource("RectangleShape2D_tx7xv")
+
+[node name="PreludeController" type="Node" parent="." unique_id=256461134]
+script = ExtResource("2_wsnjc")
