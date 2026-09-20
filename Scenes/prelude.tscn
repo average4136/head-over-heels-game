@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c3ts47ctfbeet" path="res://Scripts/prelude_controller.gd" id="2_wsnjc"]
 [ext_resource type="Texture2D" uid="uid://18fofanlpi3m" path="res://Assets/Hannah's Drawn Assets/stone block.png" id="3_wsnjc"]
 [ext_resource type="Texture2D" uid="uid://ciukc00h70me7" path="res://Assets/Decorations/tracks decor.png" id="4_etii7"]
+[ext_resource type="AudioStream" uid="uid://bfbpttxfsdih0" path="res://Assets/Music/HeelOver.mp3" id="5_i8fdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tx7xv"]
 size = Vector2(4019, 105)
@@ -47,26 +48,11 @@ shape = SubResource("RectangleShape2D_72ksg")
 position = Vector2(3796.4375, -7)
 shape = SubResource("RectangleShape2D_72ksg")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1422921539]
-visible = false
-
-[node name="EyeFade" type="ColorRect" parent="CanvasLayer" unique_id=861508296]
-anchors_preset = -1
-anchor_left = -1.001
-anchor_top = -1.337
-anchor_right = 1.0
-anchor_bottom = 0.65900004
-offset_left = 0.15209961
-offset_top = 0.3760376
-offset_right = 1.0
-offset_bottom = 9.967987
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="TracksDecor" type="Sprite2D" parent="." unique_id=1953109589]
 position = Vector2(1850.9998, 364)
 scale = Vector2(0.4016333, 0.4935424)
 texture = ExtResource("4_etii7")
 
 [node name="OST" type="AudioStreamPlayer" parent="." unique_id=253812726]
+stream = ExtResource("5_i8fdx")
+volume_db = -5.474

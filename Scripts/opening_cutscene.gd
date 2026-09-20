@@ -3,7 +3,7 @@ extends "res://Scripts/cutscene_player.gd"
 func _ready() -> void:
 	super._ready() # Calls cutscene_player.gd's ready setup first
 	if ost:
-		ost.play(30.5) # Starts playback at 14.5 seconds
+		ost.play(30.0) 
 
 func _setup_slides() -> void:
 	slides = [
@@ -13,5 +13,6 @@ func _setup_slides() -> void:
 		{"text": "...and weighed me down.", "img": preload("res://Assets/Cutscenes/Boy_Brain_scared.png")},
 		{"text": "She was out of reach.", "img": preload("res://Assets/Cutscenes/Opening_Cutscene_001.png")},
 		{"text": "", "img": preload("res://Assets/Cutscenes/Boy_Brain_overwhelmed.png")},
-		{"text": "", "img": null}
+		{"text": "", "img": null, "time": 2.0},
+		{"text": "", "img": preload("res://Assets/Cutscenes/Op_Scene_shoes_dream_no_grass.png")}
 	]
