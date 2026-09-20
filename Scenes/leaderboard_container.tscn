@@ -58,17 +58,15 @@ func load_scores():
 [sub_resource type="GDScript" id="GDScript_ce3w2"]
 
 [node name="LeaderboardContainer" type="PanelContainer" unique_id=1965850263]
+custom_minimum_size = Vector2(500, 400)
+custom_maximum_size = Vector2(1150, -1)
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -174.0
-offset_top = -1.0
-offset_right = 174.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.4340278
+anchor_bottom = 1.0030864
 size_flags_horizontal = 0
+accessibility_region = true
 script = SubResource("GDScript_opfnp")
+metadata/_edit_use_anchors_ = true
 
 [node name="NamesContainer" type="VBoxContainer" parent="." unique_id=1484897702]
 custom_minimum_size = Vector2(800, 650)
