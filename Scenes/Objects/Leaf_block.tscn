@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cwbv4iwydbj34"]
+
+[ext_resource type="Texture2D" uid="uid://c4bg66vyxvnfx" path="res://Assets/Platform Images/leaf platform.png" id="1_7eegw"]
+
+[node name="Node2D" type="Node2D" unique_id=292330263]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=350888657]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=194909954]
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 8, 120, 24, 96, 48, 64, 64, 40, 64, 16, 64, -16, 56, -40, 40, -72, 16, -80, 8, -128, 8, -128, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionPolygon2D" unique_id=268404567]
+position = Vector2(4.623948, 31.794878)
+scale = Vector2(0.20443456, 0.19893254)
+texture = ExtResource("1_7eegw")

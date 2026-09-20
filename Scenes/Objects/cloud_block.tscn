@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://0djhqq0lcepc"]
+
+[ext_resource type="Texture2D" uid="uid://cv115sc0t1ndu" path="res://Assets/Platform Images/cloud platform.png" id="1_g7vtq"]
+
+[node name="Cloud block" type="Node2D" unique_id=532234708]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2033928933]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1064193431]
+position = Vector2(8, -8)
+polygon = PackedVector2Array(120, -40, -136, -40, -136, 0, -64, 32, 32, 32, 120, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionPolygon2D" unique_id=271466713]
+position = Vector2(-3.9999895, 3.4843755)
+scale = Vector2(0.25157234, 0.29024282)
+texture = ExtResource("1_g7vtq")

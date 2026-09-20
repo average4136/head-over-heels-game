@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dh3th1iwygrwr"]
+
+[ext_resource type="Texture2D" uid="uid://dgc84brbg7euh" path="res://Assets/Platform Images/blue block.png" id="1_yt66n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00yqa"]
+size = Vector2(256, 96)
+
+[node name="Blue_block" type="Node2D" unique_id=602105709]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=633991044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=816723700]
+shape = SubResource("RectangleShape2D_00yqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=1967883090]
+
+[node name="BlueBlock" type="Sprite2D" parent="StaticBody2D/CollisionShape2D/Sprite2D" unique_id=1966445378]
+scale = Vector2(0.14335491, 0.21333334)
+texture = ExtResource("1_yt66n")
