@@ -5,7 +5,7 @@ var minutes: int = 0
 var seconds: int = 0
 var mseconds: int = 0
 
-var timer_stopped: bool = false
+@export var timer_stopped: bool = false
 
 const SAVE_PATH := "user://leaderboard.json"
 const MAX_ENTRIES := 5
