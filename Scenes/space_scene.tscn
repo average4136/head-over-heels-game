@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d3eu5ubs45wai" path="res://Scenes/Objects/Grey_block.tscn" id="2_spkxt"]
 [ext_resource type="PackedScene" uid="uid://cbp0wqs0t0y8s" path="res://Scenes/Objects/moon_platform.tscn" id="3_vqv81"]
 [ext_resource type="Texture2D" uid="uid://do5gjr26uy436" path="res://Assets/Decorations/rocket decor.png" id="4_spkxt"]
+[ext_resource type="PackedScene" uid="uid://v5o01rr38e1d" path="res://Scenes/Objects/yellow_block.tscn" id="5_jq4nj"]
+[ext_resource type="PackedScene" uid="uid://cspyc620ry3bq" path="res://Scenes/Objects/star_platform.tscn" id="6_dxw6d"]
 
 [node name="Space Scene" type="Node2D" unique_id=1614508694]
 
@@ -30,7 +32,7 @@ position = Vector2(594, 251.00003)
 scale = Vector2(0.36703715, 0.9467006)
 
 [node name="Node2D5" parent="." unique_id=552745981 instance=ExtResource("2_spkxt")]
-position = Vector2(931, 173)
+position = Vector2(850, 133)
 
 [node name="Node2D6" parent="." unique_id=1898511095 instance=ExtResource("2_spkxt")]
 position = Vector2(73, 461)
@@ -47,3 +49,22 @@ scale = Vector2(0.6416152, 0.69061464)
 position = Vector2(-361.00003, 317)
 scale = Vector2(0.27518362, 0.27518368)
 texture = ExtResource("4_spkxt")
+
+[node name="yellow block" parent="." unique_id=605724736 instance=ExtResource("5_jq4nj")]
+position = Vector2(252, -341)
+
+[node name="yellow block2" parent="." unique_id=1517800864 instance=ExtResource("5_jq4nj")]
+position = Vector2(-336, -342)
+
+[node name="yellow block3" parent="." unique_id=956577508 instance=ExtResource("5_jq4nj")]
+position = Vector2(-237, -101)
+
+[node name="star platform" parent="." unique_id=1685131188 instance=ExtResource("6_dxw6d")]
+position = Vector2(-859, -280)
+
+[node name="star platform2" parent="." unique_id=1071983857 instance=ExtResource("6_dxw6d")]
+position = Vector2(612, -432)
+
+[node name="yellow block4" parent="." unique_id=1287986369 instance=ExtResource("5_jq4nj")]
+position = Vector2(-1232.0001, -242)
+scale = Vector2(0.48800763, 1.850894)
