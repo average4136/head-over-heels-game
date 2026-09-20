@@ -33,9 +33,12 @@ value = 1.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Volume" unique_id=2133720814]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 915.0
+offset_top = 22.0
+offset_right = 1185.9565
+offset_bottom = 98.0
 theme_override_fonts/font = ExtResource("2_i44u3")
+theme_override_font_sizes/font_size = 40
 text = "Master Volume"
 
 [node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=636734395]
@@ -43,10 +46,10 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/mute" unique_id=1905703565]
 layout_mode = 0
-offset_left = 34.0
-offset_top = -3.0
-offset_right = 264.0
-offset_bottom = 25.0
+offset_left = 29.0
+offset_top = -13.0
+offset_right = 259.0
+offset_bottom = 41.0
 theme_override_fonts/font = ExtResource("2_i44u3")
 theme_override_font_sizes/font_size = 40
 text = "Mute"
