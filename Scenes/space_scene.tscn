@@ -39,7 +39,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_6es0x"]
 resource_name = "spaceship movement"
-length = 6.0333333
+length = 9.966666
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -48,7 +48,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.57, 1.07, 1.45, 1.93, 2.4666667, 6.0333333),
+"times": PackedFloat32Array(0, 0.8, 1.8666667, 3.4, 5.3, 7, 9.966666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1488, -881.00006), Vector2(244.00009, -1045), Vector2(-587, -1016.00024), Vector2(-1259, -914.99994), Vector2(-1259, -914.99994), Vector2(-1949, -1029), Vector2(-1949, -1029)]
@@ -60,7 +60,7 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.57, 1.07, 1.45, 1.93, 2.45, 6.0333333),
+"times": PackedFloat32Array(0, 0.8, 1.8666667, 3.4, 5.3, 6.983333, 9.966666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [-1.2117052, -1.3782909, -2.1295042, -1.573313, -1.403462, -1.403462, -1.403462]
