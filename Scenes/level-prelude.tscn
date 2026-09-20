@@ -92,7 +92,7 @@ shape = SubResource("RectangleShape2D_tx7xv")
 
 [node name="PreludeController" type="Node" parent="." unique_id=256461134]
 script = ExtResource("8_oscsy")
-main_climb_scene = "uid://wovadvlseaw3"
+main_climb_scene = "uid://c2jx6j1b67800"
 
 [node name="StoneBlock" type="Sprite2D" parent="." unique_id=967663064]
 position = Vector2(725.00006, 53.000004)
