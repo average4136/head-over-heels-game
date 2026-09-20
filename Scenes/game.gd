@@ -1,4 +1,4 @@
-extends Panel
+extends Node2D
 const SAVE_PATH := "user://leaderboard.json"
 const MAX_ENTRIES := 5
 
@@ -25,7 +25,7 @@ func add_score(player_name: String, time: float):
 		return float(a["time"]) < float(b["time"])
 	)
 
-	# Keep only five scores
+	# Keep only top 5
 	if scores.size() > MAX_ENTRIES:
 		scores.resize(MAX_ENTRIES)
 
@@ -34,13 +34,3 @@ func add_score(player_name: String, time: float):
 
 	if file:
 		file.store_string(JSON.stringify(scores))
-
-
-func _on_end_game_button_pressed() -> void:
-	add_score("Test", 4.0)
-
-	print("Score saved!")
-
-	get_tree().change_scene_to_file(
-		"res://Scenes/leaderboard_container.tscn"
-	)
