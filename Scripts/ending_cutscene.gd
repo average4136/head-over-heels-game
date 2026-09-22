@@ -5,6 +5,7 @@ extends "res://Scripts/cutscene_player.gd"
 func _ready() -> void:
 	bgm_start_offset = 50.0
 	MenuTheme.playTheme = true # get menu theme ready
+	MenuTheme.stop_music_level() # prevent the song level from bleeding over
 	super._ready()
 
 func _setup_slides() -> void:

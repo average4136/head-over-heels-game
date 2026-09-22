@@ -16,7 +16,6 @@ func play_music(stream: AudioStream):
 func stop_music():
 	$TheSong.stop()
 	
-	
 func play_music_level(stream: AudioStream):
 	# Check if the same music is already playing to avoid restarting it
 	print(playLevelSong);
@@ -28,3 +27,13 @@ func play_music_level(stream: AudioStream):
 	
 func stop_music_level():
 	$LevelSong.stop()
+	
+var volumeFadeIn:bool = false;
+func fadeIn():
+	volumeFadeIn = true
+	
+func _process(delta: float) -> void:
+	if(volumeFadeIn):
+		if ($LevelSong.volume_db <= -5):
+			print("FADING IN")
+			$LevelSong.volume_db += delta * 4 # change this var for fade speed

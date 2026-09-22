@@ -88,6 +88,9 @@ func _play_next() -> void:
 		voice_player.stream = current["audio"]
 		voice_player.play()
 		wait_time = max(current["audio"].get_length(), wait_time)
+		
+		if (current["audio"].resource_path == "res://Assets/downbad_voicelines/gameplay_narrator_31.mp3"): # FINAL LINE
+			MenuTheme.fadeIn() # fade song in after
 	else:
 		print("DEBUG [DialogueManager]: No audio passed for line: '", current["text"], "'")
 		if wait_time <= 0.0:

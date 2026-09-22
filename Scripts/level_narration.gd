@@ -5,6 +5,8 @@ extends Node
 
 var portal_reached: bool = false
 
+var narrationFinished:bool = false;
+
 func _ready() -> void:
 	# If this node is nested inside a preview container or run within a prelude scene, abort completely
 	var curr = get_tree().current_scene
@@ -103,6 +105,7 @@ func _find_voiceline(base_filename: String) -> AudioStream:
 	var base_path = "res://Assets/downbad_voicelines/"
 	var exact_path = base_path + base_filename + ".mp3"
 	if ResourceLoader.exists(exact_path):
+		print("MP3 FOUND! ",exact_path)
 		return load(exact_path)
 
 	# Scan directory in case files have exported DAW hashes appended
@@ -115,5 +118,6 @@ func _find_voiceline(base_filename: String) -> AudioStream:
 				return load(base_path + file_name)
 			file_name = dir.get_next()
 
-	print("Notice: Audio file matching ", base_filename, " not found in voicelines folder.")
+	print("Notice: Audio file matching ", exact_path, " not found in voicelines folder.")
 	return null
+	

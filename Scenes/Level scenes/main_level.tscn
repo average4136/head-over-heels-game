@@ -1295,6 +1295,6 @@ scale = Vector2(2.1984372, 2.198437)
 texture = ExtResource("39_oby1a")
 
 [node name="LevelSong" type="AudioStreamPlayer" parent="." unique_id=1619389316]
+unique_name_in_owner = true
 stream = ExtResource("40_oby1a")
-volume_db = -5.0
-autoplay = true
+volume_db = -25.0

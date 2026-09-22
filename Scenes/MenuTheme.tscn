@@ -12,4 +12,4 @@ stream = ExtResource("2_v3gbg")
 
 [node name="LevelSong" type="AudioStreamPlayer" parent="." unique_id=1705612597]
 stream = ExtResource("3_n50d6")
-volume_db = -2.5
+volume_db = -20.0

@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if triggered:
+		print("MUSIC STOP")
 		MenuTheme.stop_music_level() # disable song level
 		return
 
